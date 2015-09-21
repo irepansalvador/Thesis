@@ -1,0 +1,144 @@
+\documentclass[officiallayout]{tktla_modified}
+%\documentclass[officiallayout,a4frame]{tktla}
+\usepackage[latin1]{inputenc}
+\usepackage{latexsym}
+	\usepackage{graphicx}
+
+%% ------Data to produce the front page ------------
+\title{Example Thesis \\ with a Long Title}
+\author{Irepan Salvador-Mart\'inez}
+\authorcontact{irepan.salvador@helsinki.fi\par
+  http://cs.helsinki.fi/John.Smith/}
+\pubtime{November}{2016}
+\reportno{0}
+\isbnpaperback{000-00-0000-0}
+\isbnpdf{000-00-0000-0}
+\issn{1238-8645}
+\printhouse{Unigrafia}
+\pubpages{7} % --- remember to update this! 
+
+% For article-based theses, the number of the last page of the list of
+% references of the preamble part + the total number of the pages of
+% the original articles and interleaf pages.
+
+%% ------Data to produce the Supervisor/Custos ------------
+\supervisorlist{Isaac Salazar-Ciudad, University of Helsinki, Finland}
+\preexaminera{Name, University, Country}
+\preexaminerb{Name, University, Country}
+\opponent{Name, University, Country}
+\custos{Name, University, Country}
+\generalterms{thesis, example, another example, still more examples,
+  more and more examples}
+\additionalkeywords{example, an example phrase with many words}
+\crcshort{A.0, C.0.0}
+\crclong{
+\item[A.0] Example Category
+\item[C.0.0] Another Example
+}
+\permissionnotice{
+  To be presented in \ldots{} text of a long permission notice. Text of
+  a long permission notice. Text of a long permission notice. Text of
+  a long permission notice. Text of a long permission notice. Text of
+  a long permission notice.
+}
+
+\newtheorem{theorem}{Theorem}[chapter]
+\newenvironment{proof}{\noindent\textbf{Proof.} }{$\Box$}
+
+%%%% -----------------------------------------------------------------
+%%%% ----------------BEGIN OF THE DOCUMENT----------------------------
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+%\begin{abstract}
+%\end{abstract}
+
+\begin{acknowledgements}
+  
+\end{acknowledgements}
+
+
+\tableofcontents
+
+\mainmatter
+
+%%%% -----------------------------------------------------------------
+%%%% ---------- BEGIN OF THE MAIN TEXT -------------------------------
+%%%% -----------------------------------------------------------------
+%%%% -----------------------------------------------------------------
+
+\mychapter{0}{List of publications}
+
+
+%%%% -----------------------------------------------------------------
+%%%% -----------------------------------------------------------------
+
+\mychapter{0}{Abbreviations}
+
+%%%% -----------------------------------------------------------------
+%%%% -----------------------------------------------------------------
+
+\chapter{Abstract}
+	\input{./Parts/abstract.tex}
+
+%%%% -----------------------------------------------------------------
+%%%% -----------------------------------------------------------------
+
+\chapter{Review of the literature}
+
+	\section{Complexity}
+	\input{./Parts/Literature_complexity.tex}
+
+	\section{Pattern formation}
+	\input{./Parts/Literature_pattern_formation.tex}
+
+	\section{Drosophila}
+	\input{./Parts/Literature_drosophila.tex}
+
+	\section{Ciona}
+	\input{./Parts/Literature_ciona.tex}
+
+%%%% -----------------------------------------------------------------
+%%%% -----------------------------------------------------------------
+
+\chapter{Aims of the study}
+.\input{./Parts/Aims}
+
+%%%% -----------------------------------------------------------------
+%%%% -----------------------------------------------------------------
+
+\chapter{Material and Methods}
+.\input{./Parts/Methods}
+
+%%%% -----------------------------------------------------------------
+%%%% -----------------------------------------------------------------
+
+\chapter{Results and Discussion}
+.\input{./Parts/Results_Discussion}
+
+
+%%%% -----------------------------------------------------------------
+%%%% -----------------------------------------------------------------
+
+\chapter{Concluding Remarks}
+.\input{./Parts/Conclussions}
+
+%%%% -----------------------------------------------------------------
+%%%% -----------------------------------------------------------------
+
+\listoffigures
+
+%%%% -----------------------------------------------------------------
+%%%% -----------------------------------------------------------------
+
+\begin{thebibliography}{00}
+\item Smith, John. Example Document.
+\end{thebibliography}
+
+%%%% -----------------------------------------------------------------
+%%%% -----------------------------------------------------------------
+\end{document}
