@@ -1,11 +1,24 @@
+%%% THIS IS THE TEMPLATE, MODIFIED FROM THE COMPUTER SCIENCE
+%%% TEMPLATE OF THE UNIVERSITY OF HELSINKI
 \documentclass[officiallayout]{tktla_modified}
 %\documentclass[officiallayout,a4frame]{tktla}
+
+%%%% ALL THE PACKAGES TO BE USED FOR THE DOCUMENT
 \usepackage[latin1]{inputenc}
 \usepackage{latexsym}
-	\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{nomencl}
+\renewcommand{\nomname}{Abbreviations}
+\usepackage[round]{natbib}
+%\bibliographystyle{plainnat}
+\bibliographystyle{chicago}
+%\usepackage[nottoc]{tocbibind}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ------Data to produce the front page ------------
-\title{Example Thesis \\ with a Long Title}
+\title{Estimating complexity and adaptation in space and time in the embryo
+%:\\ A statistical developmental biology approach
+}
 \author{Irepan Salvador-Mart\'inez}
 \authorcontact{irepan.salvador@helsinki.fi\par
   http://cs.helsinki.fi/John.Smith/}
@@ -25,16 +38,16 @@
 \supervisorlist{Isaac Salazar-Ciudad, University of Helsinki, Finland}
 \preexaminera{Name, University, Country}
 \preexaminerb{Name, University, Country}
-\opponent{Name, University, Country}
+\opponent{Johannes J{\"a}ger, Konrad Lorenz Institute, Austria}
 \custos{Name, University, Country}
-\generalterms{thesis, example, another example, still more examples,
-  more and more examples}
-\additionalkeywords{example, an example phrase with many words}
-\crcshort{A.0, C.0.0}
-\crclong{
-\item[A.0] Example Category
-\item[C.0.0] Another Example
-}
+%\generalterms{thesis, example, another example, still more examples,
+%  more and more examples}
+%\additionalkeywords{example, an example phrase with many words}
+%\crcshort{A.0, C.0.0}
+%\crclong{
+%\item[A.0] Example Category
+%\item[C.0.0] Another Example
+%}
 \permissionnotice{
   To be presented in \ldots{} text of a long permission notice. Text of
   a long permission notice. Text of a long permission notice. Text of
@@ -42,9 +55,10 @@
   a long permission notice.
 }
 
-\newtheorem{theorem}{Theorem}[chapter]
-\newenvironment{proof}{\noindent\textbf{Proof.} }{$\Box$}
+%\newtheorem{theorem}{Theorem}[chapter]
+%\newenvironment{proof}{\noindent\textbf{Proof.} }{$\Box$}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% -----------------------------------------------------------------
 %%%% ----------------BEGIN OF THE DOCUMENT----------------------------
 
@@ -53,7 +67,7 @@
 \frontmatter
 
 \maketitle
-
+\makenomenclature
 %\begin{abstract}
 %\end{abstract}
 
@@ -75,12 +89,12 @@
 
 
 %%%% -----------------------------------------------------------------
-%%%% -----------------------------------------------------------------
+%%%% ---------ABREVIATIONS------------------------------------------
 
-\mychapter{0}{Abbreviations}
+\printnomenclature
 
 %%%% -----------------------------------------------------------------
-%%%% -----------------------------------------------------------------
+%%%% ---------- ABSTRACT---------------------------------------------
 
 \chapter{Abstract}
 	\input{./Parts/abstract.tex}
@@ -89,19 +103,28 @@
 %%%% -----------------------------------------------------------------
 
 \chapter{Review of the literature}
+	
+An example for citation is here 
+\citep{Tomancak2002}.
+Bibliography automatically build at the end. Also an example of abbreviation with the BDGP database
+	\nomenclature{DGRP}{Drosophila Genome Reference Panel}	
+	\nomenclature{BDGP}{Berkeley Drosophila Genome Project}
+and DGRP
+is just here.
+	
 
 	\section{Complexity}
 	\input{./Parts/Literature_complexity.tex}
-
-	\section{Pattern formation}
-	\input{./Parts/Literature_pattern_formation.tex}
-
+	\clearpage 
+	\section{Adaptation}
+	\input{./Parts/Literature_adaptation.tex}
+	\clearpage
 	\section{Drosophila}
 	\input{./Parts/Literature_drosophila.tex}
-
+	\clearpage
 	\section{Ciona}
 	\input{./Parts/Literature_ciona.tex}
-
+	\clearpage
 %%%% -----------------------------------------------------------------
 %%%% -----------------------------------------------------------------
 
@@ -131,13 +154,12 @@
 %%%% -----------------------------------------------------------------
 
 \listoffigures
-
+\printnomenclature
 %%%% -----------------------------------------------------------------
 %%%% -----------------------------------------------------------------
 
-\begin{thebibliography}{00}
-\item Smith, John. Example Document.
-\end{thebibliography}
+%\bibliographystyle{plain}
+\bibliography{Bibliography}
 
 %%%% -----------------------------------------------------------------
 %%%% -----------------------------------------------------------------
