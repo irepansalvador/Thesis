@@ -1,5 +1,7 @@
 Measuring adaptation is an important topic in evolutionary biology.
+
 Since Darwin.. (REF Darwin)
+
 In here, I refer to adaptation as a phenotypic character (or modification in a phenotypic character) that arise by natural selection in response to the environment, or other external factor.
 Measuring adaptation at the phenotypic level requires a clear understanding of the function of the phenotypic character under study, and how the modification of this trait would affect the fitness of the bearer organism 
 	\citep{EmiliaSantos2015}. 
@@ -12,7 +14,7 @@ and BMP4
 during development. A proposed model for BMP4 and CaM role in beak size and shape explains both elongated and deep/wide beaks of these finches
 	\citep{Abzhanov2006}.
 
-So, even when natural selection acts in the adult phenotype (or in larva, in the case of species with a feeding larva stage), we should be able to find changes in development that would explain an adaptive change in the adult or larva.
+So, even when natural selection acts in the adult phenotype (or in the larva, in the case of species with a feeding larva stage), we should be able to find changes in development that would explain an adaptive change in the adult or larva.
 
 
 Some other remarkable examples of the genetic-developmental basis of adaptive change are:
@@ -23,7 +25,7 @@ Some other remarkable examples of the genetic-developmental basis of adaptive ch
 
 It is evident at this point than many of the developmental changes leading to an adaptation are (at least partially) caused by mutations in gene regulatory or coding sequences.
 Therefore, the effects of natural selection could be traceable looking at the adaptive changes in the genes expressed in different times and locations during development. There is an entire field within evolutionary biology, namely molecular evolution, dedicated to explain the sequence changes in molecules as DNA,
-	\nomenclature{DNA}{Deoxiribonucleic acid}
+	\nomenclature{DNA}{Deoxyribonucleic acid}
 RNA 
 	\nomenclature{RNA}{Ribonucleic acid}
 and proteins. 
@@ -42,17 +44,14 @@ A synonymous mutation does not affect the amino-acid sequence of the protein, al
 or the gene transcriptional efficiency (REF).
 A non-synonymous mutation does affect the amino-acid sequence of the protein whether by changing a single amino-acid (missense mutation) or by producing a stop codon (non-sense mutation) which results in a truncated version of the protein.
 
+As the non-synonymous mutations can affect dramatically the structure and function of the protein, it is expected that most of non-synonymous mutations would have a negative fitness effect.
+However, it is also expected that a fraction of non-synonymous mutations, or adaptive substitutions, would have a positive fitness effect that (depending on the strength of the fitness effect) could lead to the fixation of that mutation in the population.
 
-An important topic within the molecular evolution field is the identification of DNA sequence adaptive changes in a species. 
-For doing this, many statistical tests have been developed. 
+An important branch of the molecular evolution field is dedicated to the identification of adaptive substitutions in a species, which has lead to the development of many statistical tests. 
 Importantly, these tests are based on the neutral theory of evolution, proposed by Kimura
 	\citep{Kimura1968}.
-One of the most popular is the McDonald-Kreitman test (MKT),
-	\nomenclature{MKT}{MacDonald-Kreitman test}
-which estimates the proportion of the adaptive substitution resulted from natural selection. 
-Recently, more sophisticated methods based on the MKT, like the DFE test (REF Eyre), have been developed to correct for underestimation of adaptive evolution in the presence of slightly deleterious mutations.
 
-\subsubsection{Neutral theory of evolution}
+\subsection{Neutral theory of evolution}
 In 1968, Mooto Kimura calculated the average rate of nucleotide substitutions in the evolutionary history of mammals.
 The result of his calculations was that, on average, one nucleotide has been substituted every 2 years.
 For him, this very high rate of substitution was only explainable if most mutations were almost neutral in natural selection 
@@ -60,18 +59,112 @@ For him, this very high rate of substitution was only explainable if most mutati
 This was in contrast with the prevailing view at the time that practically no mutations are neutral (REF).
 More importantly, the neutral theory provided a set of testable predictions, providing a null-hypothesis of molecular evolution.
 This allowed the development of statistical methods to detect adaptive changes, i.e., we can say that a sequence has been under positive selection if the amount of changes exceeds the number of changes expected only by neutral evolution.
+One of the most popular tests is the McDonald-Kreitman test (MKT),
+	\nomenclature{MKT}{MacDonald-Kreitman test}
+which estimates the proportion of the adaptive substitution resulted from natural selection.
 
-\subsubsection{McDonald-Kreitman test}
-John H. MacDonald and Martin Kreitman developed this test in 1991 to 
+\subsection{McDonald-Kreitman test}
+John H. McDonald and Martin Kreitman developed this test in 1991 when analysing the divergence in the Adh 
+	\nomenclature{Adh}{Alcohol dehydrogenase}
+locus in three Drosophila species
+	\citep{McDonald1991}.
+The main assumption of the MKT is that the substitutions in a protein are neutral if the 
+inter-specific ratio of non-synonymous (Dn) to synonymous (Ds) changes is equal to the 
+intra-specific ratio of non-synonymous (Pn) to synonymous (Ps) changes (i.e. Dn/Ds = Pn/Ps).
+Any departure from these equality would imply the action of positive or negative selection.
+If some of the changes are result from positive selection, the ratio of non-synonymous to synonymous variation within species should be lower than the ratio of non-synonymous to synonymous variation between species (i.e. Dn/Ds > Pn/Ps). 
+In the case that the observed ratio of non-synonymous to synonymous variation between species is lower than the ratio of non-synonymous to synonymous variation within species (i.e. Dn/Ds < Pn/Ps) 
+then negative selection is at work.
 
-
-When positive or negative selection (natural selection) influences nonsynonymous variation, the ratios will no longer equal. 
-The ratio of nonsynonymous to synonymous variation between species is going to be lower than the ratio of nonsynonymous to synonymous variation within species (i.e. Dn/Ds  Pn/Ps) when negative selection is at work, and deleterious mutations strongly affect polymorphism.
-
-The ratio of nonsynonymous to synonymous variation within species is lower than the ratio of nonsynonymous to synonymous variation between species (i.e. Dn/Ds Pn/Ps) when we observe positive selection. 
 Since mutations under positive selection spread through a population rapidly, they don't contribute to polymorphism but do have an effect on divergence.
 
+Although the MKT has been proved robust to many sources of error (e.g., variation to mutation rate across the genome), it can underestimate the proportion of adaptive changes in the presence of slightly deleterious mutations
+	 \citep{Messer2013,Eyre-Walker2006a}.
+Recently, more sophisticated methods based on the MKT have been developed to correct for underestimation of adaptive evolution in the presence of slightly deleterious mutations. 
 
-\subsubsection{DFE test}
+
+\subsection{Distribution of Fitness Effects}
+
+To have a more precise estimate of the proportion of adaptive substitutions it is important to consider the relative contributions of the different types of mutations, based on their fitness effects.
+Because even when for simplicity the mutation effects are usually classified in advantageous, neutral, and deleterious, there is actually a continuum of selective effects, from strongly deleterious, 
+to highly adaptive mutations	
+	\citep{Eyre-Walker2007},
+with weakly deleterious, neutral and slightly adaptive mutations in between.
+
+The relative frequencies of all these type of mutations is called the Distribution of Fitness Effects (DFE).
+	\nomenclature{DFE}{Distribution of Fitness Effects}
+The DFE has other practical implications, like predicting the effects on the genetic variation in a population with low population size.
+In order to know the DFE, a few experimental approaches exist. The most direct method is whether to induce 
+	\citep{Sanjuan2004}
+or to collect
+	\citep{MUKAI1964}
+spontaneous mutations and assay their effects (fitness) in the laboratory.
+As can be expected, this experiments require many generations to gather sufficient data, so these approaches have been used mainly in micro organisms
+	\citep{Eyre-Walker2007}.
+A caveat of these experimental approaches is that, in order to identify the effect of a mutation, its effect has to be detectable in a fitness assay.
+Therefore, these methods give valuable information for mutations with relatively large effects.
+
+An alternative approach is to infer the DFE by analysing patterns of DNA sequence differences at intra and inter-specific level (polymorphism and divergence respectively).
+The methods using this approach rely mainly on two assumptions:
+i) the probability that a mutation spreads to a certain freq in a population (or to fixation) depends on the strength of selection (positive or negative) acting on it.
+Severely deleterious mutations have lower probability to reach a high frequency in a population.
+ii) the efficiency of selection depends on the effective population size. 
+With a high effective population size, selection is more efficient and a smaller proportion of mutation will behave as effectively neutral.
+
+The "absolute strength" of selection on a mutation is then measured as $N_{e}s$, the product of the effective population size ($N_{e}$)
+	\nomenclature{$N_{e}$}{Effective population size}
+by the selection coefficient ($s$)
+	\nomenclature{$s$}{Selection coefficient}
+of the mutation. Mutations with $N_{e}s$ much less than 1 are effectively neutral, while $N_{e}s$ greater than 100 have no chance to appear as polymorphism.
+
+\subsection{DFE-alpha}
+
+Eyre-Walker and collaborators 
+	\citep{Eyre-Walker2009}
+proposed a method to estimate both the DFE and the proportion of adaptive nucleotide substitutions ($\alpha$)
+	\nomenclature{$\alpha$}{Proportion of adaptive nucleotide substitutions}
+using polymorphism and divergence data.
+More specifically, they use the polymorphism site frequency spectrum (SFS) 
+	\nomenclature{SFS}{Site Frequency Spectrum}
+to estimate the DFE and then use this estimated DFE to estimate the proportion of substitutions under positive selection between species.
+This method, assumes that there are two types of nucleotide sites: 
+i) sites at which all mutations are neutral and ii) sites at which some of the mutations are subject to selection (positive or negative).
+Also it is assumed that any new adaptive mutation in a population would not be detected in the polymorphic phase but only in the divergent one, 
+and that the DFE can be represented with a gamma distribution.
+The advantage of using a gamma distribution is that very different distributions (e.g., normal, exponential, leptokurtic) can be represented using only a shape parameter and the mean of the distribution (Figure \ref{fig:Gamma}).
+
+\begin{figure}[h]
+  \includegraphics[width=7cm]{./Images/Gamma_dist.jpeg}
+  \centering
+  \caption{Example of different Distribution of Fitness Effects (DFE) represented by a gamma distribution.
+  Changing the shape parameter of a gamma distribution many distributions can be represented, from
+  a leptokurtic (shape parameter less than 1) to an exponential (shape parameter equal to 1) or a
+  skewed normal distribution (shape parameter greater than 1).
+   }
+  \label{fig:Gamma}
+\end{figure}
+
+
+The divergence at the neutral sites is then proportional to the mutation rate per site and the predicted divergence at the selected sites, in the absence of advantageous mutations, 
+is proportional to the product of the mutation rate and the average fixation probability of a selected mutation, 
+which is inferred based on the DFE and other parameters estimated from the polymorphism data analysis
+	\citep{Eyre-Walker2009}.
+The difference between the observed and predicted divergences therefore estimates the divergence due to adaptive substitutions.
+
+Using this method Eyre-Walker and collaborators 
+In Drosophila genes, we estimate
+that approximately 50\% of amino acid substitutions and approximately 20\% of substitutions in introns are adaptive
+	\citep{Eyre-Walker2009}.
+
+Molecular evolution simulations have been performed to test if the estimates of different tests, like the MKT and the more sophisticated DFE-alpha, are accurate under different realistic gene-structure and selection scenarios
+	\citep{Messer2013}.
+More specifically, the authors wanted to test how accurate these methods are in presence of genetic draft (stochastic effects generated by recurrent selective sweeps at closely linked sites)
+and background selection (interference among linked sites by lightly deleterious polymorphisms).
+
+They found that in the presence of slightly deleterious mutations, MKT estimates of $\alpha$ are severely underestimated.
+They also found that the DFE-alpha is very accurate to calculate alpha when changes is demography are considered
+	\citep{Messer2013}.
+.
+
 
 
