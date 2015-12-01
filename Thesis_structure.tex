@@ -15,6 +15,22 @@
 %\usepackage[nottoc]{tocbibind}
 \usepackage[T1]{fontenc}
 
+%%%
+
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{fancyref}
+\mdfdefinestyle{boxstyle}{%
+rightline=true,
+innerleftmargin=10,
+innerrightmargin=10,
+frametitlerule=true,
+frametitlerulecolor=red!40,
+backgroundcolor=red!20,
+frametitlerulewidth=2pt}
+
+\renewcommand{\theenumi}{\roman{enumi}}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ------Data to produce the front page ------------
 \title{Estimating complexity and adaptation in space and time in the embryo
