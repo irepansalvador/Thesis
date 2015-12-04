@@ -130,55 +130,108 @@ If we consider again the number of cells as the complexity measure, we would exp
 
 The above reasoning has lead to some researchers to propose that the complexity of an organism resides in the regulatory machinery that ends into the differentiation of the diverse cell types \citep{Davidson2001}. 
 
-For some, the combinatorial approach could also be seen as the solution for the "G-value paradox", as what really matters to be complex would not be how many genes an organism has, but how would these genes are differentially combined to produce more cell types in it.
+For some, the combinatorial approach could also be seen as a solution for the "G-value paradox", as what really matters to be complex would not be how many genes an organism has, but how would these genes are differentially combined to produce more cell types in it. Another proposed solution is "gene co-option" in which a gene, usually after a duplication, evolves a new "function" different from its original one (REF Carrol 2003).
 
 The differential gene expression in the various number of cell types are determined in great manner by the interplay of genes and their \textit{cis}-regulatory regions (DNA regions usually close to a gene which contains specific sequence motifs where proteins bind and affect its expression). The interaction between genes and their \textit{cis}-regulatory regions is sometimes referred as gene regulatory networks (GRNs) or "regulatory architecture" of the genome \citep{Davidson2001}.
 	\nomenclature{GRN}{Gene Regulatory Network}
+This approach to complexity relates to the "interaction among parts" definition of complexity mentioned at the beginning of this section.
+
+In addition to the interaction between \textit{cis}-regulatory regions and genes, there are other gene expression regulatory mechanisms that have been proposed to be crucial in the origin of complex organisms.
+This is the case of the microRNAs (miRNAs),
+	\nomenclature{miRNAs}{microRNAs}
+non-coding RNA molecules that negatively regulate gene expression.
+After the observation that miRNAs are found only in protostomes and deuterostomes and not in sponges or cnidarians, and that they are specifically expressed in certain cell-types, tissues or organs, it was proposed that regulation of gene expression by miRNAs could have played a significant role in the origins of complex organs and "body plans" \citep{Sempere2006}.
+
+\textbf{Other} authors highlight the importance of modules in facilitating the evolution of complex forms \citep{Carroll2001a}.
 
 
+\subsubsection{Different types of developmental genes}
+
+After acknowledging the importance of the spatio-temporal regulation of gene expression in development, it is useful to distinguish the type of genes that are directly involved in it.
+More than fifty years ago, Jacques Monod and Fran\c cois Jacob \citep{JACOB1961} published in a seminal work a model of the genetic regulatory mechanism in bacteria.
+The most important conclusion of this paper was the existence of "regulator" genes that control the production rate of proteins from "structural" genes, and that mutations in "regulator" genes affect the regulatory mechanism but not the structure of the regulated protein. In the same paper they suggested that these regulator genes may affect the synthesis of several different proteins \citep{JACOB1961}.
+
+Nowadays the process of gene activation is known in great detail. The so-called "regulator genes" are now known as transcription factors, proteins that bind to DNA to promote or repress the transcription of a gene. 
+%The discovery that 
+
+The information for the spatio-temporal regulation of gene expression during cell differentiation requires however more than transcription factors, as the differentiation of a cell depends in a great manner of extracellular signals from its neighbouring context \citep{Gilbert2014}.
+The molecule network involved in cell-cell communication, from the reception of a extracellular signal to the ultimate transcription of genes (usually going through many intermediate signal "transducers"), is known as a signalling pathway (see Figure \ref{fig:Signalling}).
+Due to the importance of both transcription factors as signalling pathway genes in cell differentiation, a brief description of each follows.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+  \includegraphics[width=10cm]{./Images/signalling.png}
+  \centering
+  \caption{
+  Scheme of an hypothetical signalling pathway. Left: The extracellular ligand (green) is not bound to the membrane receptor (red) so the signal transducer protein (blue/magenta) is inactivated. In the nucleus (dashed circle) the target gene (yellow box) is inactive. Right: As the ligand binds to the receptor, the cytoplasmic domain (depicted as a zigzag tail) of the receptor change to an active conformation, cleaving the signal transducer. Part of the signal transducer acts as a transcription factor, going into the nucleus where activates the transcription of the target gene after binding to its regulatory region.
+ }
+  \label{fig:Signalling}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Transcription factors} The transcription factors (TFs) are proteins that bind to specific regulatory regions, to induce or repress the expression of a gene.
+Based on the secondary structure of the protein binding domain, TFs can b e classified in four main families: helix-turn-helix, helix-loop-helix, zinc finger and leucine zipper (\citep{Carroll2001}.
+	\nomenclature{TF}{Transcription Factor}
+	
+The members of each family has been recognised in playing different roles in development. For example, it has been observed that in diverse metazoan species C2H2 zinc-figers TFs are over-represented in early development, as opposite to Homeobox TFs which are under-represented in the same period \citep{Schep2013}.
+Hox genes (a subset of the Homeobox TF family) are involved in the A/P patterning of many metazoan groups. Intriguingly, these genes were found to have spatial collinearity in mice and flies (REF). That means that the A/P expression of the Hox genes reflects their physical order along the chromosome.
+At the time of its discovery, collinearity of Hox genes were considered as a master plan for A/P patterning in animals (REF).
+However, after Hox genes were investigated in more species it became clear that in some species with Hox genes collinearity is not always present, and some species do not have Hox genes at all (REF).
+
+\paragraph{Signalling pathway genes} Signalling pathways are usually a complex network of molecules including extracellular diffusible signals, membrane receptors, intermediate signal transducer molecules and transcription factors.
+Signalling pathways usually begin with a extracellular signal that causes a conformational change in its cell membrane receptor after binding to it.
+The new conformation results in enzymatic activity in the cytoplasmic domains of the receptor protein, that phosphorylate other cytoplasmic proteins.
+Finally, one or more activated transcription factors induce or repress specific gene activity \citep{Gilbert2014}.
+
+Signalling pathways recurrently used during animal development are the Wnt, FGF and Shh pathways (for a detailed description of each signalling pathway, see \citep{Gilbert2014}.
+For example, the Shh pathway plays a fundamental role in the fruit fly segment polarization(REF) and wing development (REF), and in vertebrate limb (REF) and tooth development \citep{Jernvall2000b}.
 
 \subsection{Complexity in informational terms}
 
-\cite{Davidson2001} used above mentioned concepts in addition to others to explain development (and evolution) on informational terms. He said that development (which is the outcome of spatial and temporal series of differential gene expression) is controlled by a hardwired regulatory program built into the DNA and the metric of complexity is the diversity of the programs of gene expression that are "installed and executed" as the embryo develops. As Davidson, other authors have used informational/computational analogies to define development \citep{Apter1965,monod2012cytodifferentiation,mayr1997evolution} 
+\cite{Davidson2001} used the GRN concept in addition to others to explain development (and evolution) on informational terms. He said that development (which is the outcome of spatial and temporal series of differential gene expression) is controlled by a hardwired regulatory program built into the DNA and the metric of complexity is the diversity of the programs of gene expression that are "installed and executed" as the embryo develops. As Davidson, other authors have used informational/computational analogies to define development \citep{Apter1965,monod2012cytodifferentiation,mayr1997evolution} 
 
 To illustrate how the complexity of a regulatory network or "program" can increase in evolution (but a similar case could be said for development), Davidson describes an imaginary example:
 an early evolutionary state consists of a small gene battery (set of functionally linked genes expressed in concert) encoding proteins used for some differentiated cell type, which is activated by a small number of genes encoding transcription factors. The network activating the gene battery is itself controlled by a single upstream gene.
 In subsequent evolutionary states, the whole structure is said to become more complex as: the battery of genes is now used in some pattern formation system, new batteries of genes appear, new regulatory genes and new \textit{cis}-regulatory regions are introduced  \citep{Davidson2001}.
 
 Even when in this kind of examples would seem easy to discern a simple GRN from a complex one just from its topology, the high intricacy of real biological systems make this an extremely difficult if not impossible task. 
-Additional levels of complexity have to be taken into account, like feedback effects and the non-linear regulation of gene expression, which make the prediction of changes in regulatory states hard or even impossible to predict \citep{Jaeger2014devmech}.
-
-There are also important critiques of this informational approach. First, using an informational analogy to describe development implies the distinction between a "hardware" and a "software".
-The "hardware" would consist of the genome structure, regulatory components, cells, organs, etc., and the "sofware" would be the GRNs or the set of instructions that directs the performance of specific operations.
-For biological systems, this distinction is misleading, as there are recurrent feedback between its "hardware" and "software", so that the structure of development processes change through development \citep{susan2000ontogeny,Salazar-Ciudad2009,Jaeger2014devmech}.
-
-
-\subsection{Complexity in terms of dynamical systems theory}
-
-Estimating the combinatorial possibilities of a small set of regulatory genes, considering that each gene can regulate (whether positively or negatively) more than one gene's expression in addition to its own, could result in an astronomic number of possible gene topologies.
-
-
-
-increased in complexity as:
-
-- cis-regulatory regions GRN (davidson)
-
-- miRNA
-
-- nothing about spatial or statistical approach like our disparity measure
-
-
-explain something about non-genetic components (Newman, Gabor and Forgacs, Alberch, Isaac)
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
   \includegraphics[width=5cm]{./Images/GRNs.png}
   \centering
   \caption{
-  Some GRNs
+  Some GRNs . Cotterel and Harpe calculated... \citep{Cotterell2010}
  }
   \label{fig:GRNs}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+There are also important critiques of this informational approach. First, using an informational analogy to describe development implies the distinction between a "hardware" and a "software".
+The "hardware" would consist of the genome structure, regulatory components, cells, organs, etc., and the "software" would be the GRNs or the set of instructions that directs the performance of specific operations.
+For biological systems, this distinction is misleading, as there are recurrent feedback between its "hardware" and "software", so that the structure of development processes change through development \citep{susan2000ontogeny,Salazar-Ciudad2009,Jaeger2014devmech}.
+
+
+\subsection{Complexity in terms of dynamical systems theory}
+
+Estimating the combinatorial possibilities of a small set of regulatory genes, considering that each gene can regulate (whether positively or negatively) more than one gene's expression in addition to its own, could result in an astronomic number of possible gene topologies (see Figure \ref{fig:GRNs}).
+Also feedback effects and non-linear regulation of gene expression make the prediction of changes in regulatory states hard or even impossible to predict \citep{Jaeger2014devmech}.
+
+To overcome this limitations, some authors have propose to use dynamical systems theory, which deals with a complex system with many interacting components (a dynamical system), by representing its state as a point in a multidimensional space \citep{Alberch1991,ForgacsandStuartA.Newman.2005,Jaeger2014devmech}. 
+To illustrate this we could think of a specific cell type, with \textit{n} number of genes, which its cell state depends on the expression of each of the genes.
+The simpler case we could imagine would be a cell with only two genes. In this case, the cell would be in a two-dimensional "state space" (also called "phase space").
+
+Importantly, the dynamical system is governed by the relations between its components \citep{ForgacsandStuartA.Newman.2005}. In our example the relations would be represented by the interaction between genes, namely the gene regulatory network (GRN). 
+If in our example the expression level of one gene is affected by the expression level of the other gene, the system will not stay in any particular state, but it will change until it reaches a "stable steady state", in which the level of both genes are at equilibrium. 
+Given a specific GRN, the number of stable states would represent the possible differentiation states a cell can achieve (REF Slack book)
+
+Many modifications of the GRN would not have consequences in the ultimate differentiation state, as it will converge to the same "attractor" point.
+However, some modifications (or mutations) could produce a change in the "state space" leading to the formation of a new stable state (i.e., a new cell type).
+So within the framework of the dynamical systems theory, and keeping the number of cell types as our measure of complexity, there would be an increase in complexity when a mutation would change the gene regulatory machinery so that a new stable steady state is formed.
+
+
+\textbf{Make a figure?}
+%-nothing about spatial or statistical approach like our disparity measure
+%- explain something about non-genetic components? (Newman, Gabor and Forgacs, Alberch, Isaac)
+
+%\clearpage
