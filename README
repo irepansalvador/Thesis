@@ -1,0 +1,4 @@
+This is the work of my thesis.
+
+The main tex file is "Thesis_structure.tex", which specifies the structure of the thesis, defines the data for the title page and defines all the packages that are going to be used.
+The bibliography style is in the file "chicago.bst", that can be modified. The Bibliography.bib file, which contains all the bibliographic data, is the exported file from my personal Mendeley account, so it contains much more than the articles cited here.
