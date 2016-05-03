@@ -7,30 +7,41 @@
 \usepackage[latin1]{inputenc}
 \usepackage{latexsym}
 \usepackage{graphicx}
-\usepackage{nomencl}
+\usepackage[intoc]{nomencl}
 \renewcommand{\nomname}{Abbreviations}
-\usepackage[round]{natbib}
+\usepackage{etoolbox}
 %\bibliographystyle{plainnat}
+\usepackage[round]{natbib}
 \bibliographystyle{chicago}
+\setlength{\bibsep}{0pt} %% set the separatio between the references
 %\usepackage[nottoc]{tocbibind}
 \usepackage[T1]{fontenc}
-\setlength{\bibsep}{0pt}
-%%%
-
+%\usepackage{showframe} % just to show the alignment
+%%% CONFIGURE THE BOXES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage{fancyref}
-\mdfdefinestyle{boxstyle}{%
-rightline=true,
-innerleftmargin=10,
-innerrightmargin=10,
-frametitlerule=true,
-frametitlerulecolor=red!15,
-backgroundcolor=red!15,
-frametitlerulewidth=2pt}
+\mdfdefinestyle{boxstyle}{ rightline=true,
+innerleftmargin=10,innerrightmargin=10,frametitlerule=true,
+frametitlerulecolor=red!15, backgroundcolor=red!15,frametitlerulewidth=2pt}
 
+%%% change header and spacing of chapters %%%%%%%%%%%%%%%%%%
+\usepackage{titlesec}
+\titleformat{\chapter}[display] {\selectfont\huge\bfseries}{}{0pt}{\huge}
+\titlespacing{\chapter}{0pt}{-40pt}{5pt}
+\titlespacing{\section}{0pt}{15pt}{5pt}
+\titlespacing{\subsection}{0pt}{10pt}{2pt}
+\titlespacing{\subsubsection}{0pt}{5pt}{0pt}
+
+%% modify the itemize, without spaces and with roman numbers %%%%%%%%%%
+\usepackage{enumitem}
+\setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
 \renewcommand{\theenumi}{\roman{enumi}}
 
-
+%%%%% makes a patch to remove the spacing before the nomenclature or abbreviations
+\makeatletter
+\AtBeginEnvironment{thenomenclature}{%
+  \patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{}{}{} }
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ------Data to produce the front page ------------
@@ -96,7 +107,6 @@ in the embryo:
   
 \end{acknowledgements}
 
-
 \tableofcontents
 
 \mainmatter
@@ -104,23 +114,16 @@ in the embryo:
 %%%% -----------------------------------------------------------------
 %%%% ---------- BEGIN OF THE MAIN TEXT -------------------------------
 %%%% -----------------------------------------------------------------
-%%%% -----------------------------------------------------------------
-
 \mychapter{0}{List of publications}
 
-
-%%%% -----------------------------------------------------------------
 %%%% ---------ABREVIATIONS------------------------------------------
-
 \printnomenclature
 
-%%%% -----------------------------------------------------------------
 %%%% ---------- ABSTRACT---------------------------------------------
 
-\chapter{Abstract}
+\mychapter{0}{Abstract}
 	\input{./Parts/abstract.tex}
 
-%%%% -----------------------------------------------------------------
 %%%% -----------------------------------------------------------------
 
 \chapter{Review of the literature}
@@ -134,7 +137,6 @@ in the embryo:
 \section{On the statistical approach in Biology}
 	\input{./Parts/Statistical_approach.tex}
 	\clearpage 	
-	
 
 \section{Complexity}
 	\input{./Parts/Literature_complexity.tex}
