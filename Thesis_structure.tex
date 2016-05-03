@@ -9,14 +9,25 @@
 \usepackage{graphicx}
 \usepackage[intoc]{nomencl}
 \renewcommand{\nomname}{Abbreviations}
-\usepackage{etoolbox}
+%\usepackage{etoolbox}
 %\bibliographystyle{plainnat}
 \usepackage[round]{natbib}
 \bibliographystyle{chicago}
 \setlength{\bibsep}{0pt} %% set the separatio between the references
 %\usepackage[nottoc]{tocbibind}
 \usepackage[T1]{fontenc}
-%\usepackage{showframe} % just to show the alignment
+\usepackage{showframe} % just to show the alignment
+%\usepackage{layout}   %% prints the layout of the page when is indicated
+\let\cleardoublepage\clearpage %% delete the blank pages between sections
+
+%%% can fine tune the margins of the book %%%%%%%%%%%%%%%%
+\usepackage[
+  left=0.7in, right=0.7in,
+  bottom=0.75in,
+  bindingoffset=0.25in,
+  heightrounded,
+]{geometry}
+\usepackage{multicol}
 %%% CONFIGURE THE BOXES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage{fancyref}
@@ -28,6 +39,7 @@ frametitlerulecolor=red!15, backgroundcolor=red!15,frametitlerulewidth=2pt}
 \usepackage{titlesec}
 \titleformat{\chapter}[display] {\selectfont\huge\bfseries}{}{0pt}{\huge}
 \titlespacing{\chapter}{0pt}{-40pt}{5pt}
+\titlespacing*{name=\chapter,numberless}{0pt}{-10pt}{5pt}
 \titlespacing{\section}{0pt}{15pt}{5pt}
 \titlespacing{\subsection}{0pt}{10pt}{2pt}
 \titlespacing{\subsubsection}{0pt}{5pt}{0pt}
@@ -37,21 +49,22 @@ frametitlerulecolor=red!15, backgroundcolor=red!15,frametitlerulewidth=2pt}
 \setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
 \renewcommand{\theenumi}{\roman{enumi}}
 
-%%%%% makes a patch to remove the spacing before the nomenclature or abbreviations
-\makeatletter
-\AtBeginEnvironment{thenomenclature}{%
-  \patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{}{}{} }
-\makeatother
+%%%%% remove the spacing before the nomenclature (not necessary after the titlespacing mod)
+%\makeatletter
+%\AtBeginEnvironment{thenomenclature}{%
+%  \patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{}{}{} }
+%\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ------Data to produce the front page ------------
-\title{Estimating complexity and adaptation 
+\title{\hfill\break \hfill\break   %% 2 lines in blank (adding space)
+Estimating complexity and adaptation 
 %in space and time 
 in the embryo:
 \\ a statistical developmental biology approach
 }
 \author{Irepan Salvador-Mart\'inez}
-\authorcontact{irepan.salvador@helsinki.fi\par
+\authorcontact{irepan_salvador@hotmail.com\par
   http://cs.helsinki.fi/John.Smith/}
 \pubtime{November}{2016}
 \reportno{0}
@@ -72,6 +85,12 @@ in the embryo:
 \preexaminerb{Gregor Bucher, Georg-August-University G{\"o}ttingen, Germany}
 \opponent{Johannes J{\"a}ger, Konrad Lorenz Institute, Austria}
 \custos{Name, University, Country}
+
+\thesiscommitteea{Jukka Jernvall, University of Helsinki}
+\thesiscommitteeb{Osamu Shimmi, University of Helsinki}
+\thesiscommitteec{Mikael Fortelius, University of Helsinki}
+
+
 %\generalterms{thesis, example, another example, still more examples,
 %  more and more examples}
 %\additionalkeywords{example, an example phrase with many words}
@@ -95,7 +114,7 @@ in the embryo:
 %%%% ----------------BEGIN OF THE DOCUMENT----------------------------
 
 \begin{document}
-
+%\layout					%%% here to print LAYOUT
 \frontmatter
 
 \maketitle
@@ -107,13 +126,22 @@ in the embryo:
   
 \end{acknowledgements}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% reduces the space between lines in table of contents
+\renewcommand{\baselinestretch}{0.75}\normalsize
 \tableofcontents
+%% back to normal
+\renewcommand{\baselinestretch}{1.0}\normalsize
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \mainmatter
 
 %%%% -----------------------------------------------------------------
 %%%% ---------- BEGIN OF THE MAIN TEXT -------------------------------
 %%%% -----------------------------------------------------------------
+
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+
 \mychapter{0}{List of publications}
 
 %%%% ---------ABREVIATIONS------------------------------------------
@@ -127,17 +155,20 @@ in the embryo:
 %%%% -----------------------------------------------------------------
 
 \chapter{Review of the literature}
+
+\pagenumbering{arabic}% Remove page numbers (and reset to 1)
+
 \input{./Parts/Review_start.tex}
 
 \section{What is development?}
 	\input{./Parts/Development_definition.tex}
+	
 \section{On the history of developmental biology}
 	\input{./Parts/Introduction.tex}
 	
 \section{On the statistical approach in Biology}
 	\input{./Parts/Statistical_approach.tex}
 	\clearpage 	
-
 \section{Complexity}
 	\input{./Parts/Literature_complexity.tex}
 	\clearpage 
@@ -174,7 +205,7 @@ in the embryo:
 
 \chapter{Concluding Remarks}
 \input{./Parts/Conclusions}
-
+\clearpage
 %%%% -----------------------------------------------------------------
 %%%% -----------------------------------------------------------------
 
@@ -182,11 +213,15 @@ in the embryo:
 %\printnomenclature
 %%%% -----------------------------------------------------------------
 %%%% -----------------------------------------------------------------
-
 %\bibliographystyle{plain}
-{\scriptsize
+
+%%%%% The bibliography is written in a small fontsize and in 2 columns
+\begin{multicols}{2}
+{\footnotesize
 \bibliography{Bibliography}
 }
+\end{multicols}
+
 %%%% -----------------------------------------------------------------
 %%%% -----------------------------------------------------------------
 \end{document}
