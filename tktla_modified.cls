@@ -23,7 +23,7 @@ Science]
 \DeclareOption{fleqn}{\PassOptionsToClass{\CurrentOption}{book}}
 \DeclareOption{openbib}{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
-\LoadClass[b5paper,11pt]{book} %%%% two side modify inner and outer margin, as a book, FONT SIZE!
+\LoadClass[b5paper,10pt]{book} %%%% two side modify inner and outer margin, as a book, FONT SIZE!
 \ifx\tktla@afour\@undefined\special{papersize=176mm,250mm}\else\relax\fi
 \RequirePackage[nottoc]{tocbibind}
 \RequirePackage{fancyhdr}

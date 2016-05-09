@@ -1,61 +1,84 @@
 
 Embryonic development has amazed scientists and philosophers for centuries.
-
-Many reasons have been evoked for the perceivable complexity increase that transforms a single cell into a larva or an adult (even when complexity has eluded an unique definition).
-Aristotle claimed a "vital force" guided embryogenesis. %Eventually, 
-Vitalism was substituted by preformationism and epigenesis explanations in the 18th century.
 %
-Since the 1980's, when it became clear that genes play a key role in embryogenesis, 
-%Nowadays, 
-the causal mechanisms for such complexity increase are being searched for at the cellular and molecular level.
-
-Using the number of cell types as complexity measure, its increase during development is self-evident: the embryo begins with one cell type (zygote) and concludes with up to 200 cell types (in mammals). 
-This process can also be called embryo compartmentalization.
+Many reasons have been evoked for the perceivable complexity increase that transforms a single cell into a larva or an adult.
+% (even when complexity has eluded an unique definition).
+%Aristotle claimed a "vital force" guided embryogenesis. %Eventually, 
+%Vitalism was substituted by preformationism and epigenesis explanations in the 18th century.
+%
+%Since the 1980's, when it became clear that genes play a key role in embryogenesis, the causal mechanisms for such complexity increase are being searched for at the cellular and molecular level.
+%
+%Using the number of cell types as complexity measure, its increase during development is self-evident: in mammals, the embryo begins with one cell type and concludes with up to 200 cell types. 
+%This process can also be called embryo compartmentalization.
 %From many discoveries since the 1980's, it has become clear that some genes play a key role in the embryo compartmentalization. 
-At the level of gene expression, it its assumed that in early development, genes are initially expressed in large domains on the embryo. Then, at later stages, their expression become spatially restricted, until some genes are expressed in a cell-specific manner.
+%At the level of gene expression, it its assumed that the expression of the genes, that in early development are expressed in large domains on the embryo,
+During this process, at the level of gene expression, 
+it its assumed that genes change from being expressed in large spatial domains of the embryo in early development to spatially restricted domains (e.g., tissues, cells) in late development.
+%in early development,  Then, at later stages, their expression 
+%, until some genes are expressed in a cell-specific manner.
 %
-For many crucial developmental genes (e.g., Hox genes), the spatio-temporal expression dynamics, and how it relates to the embryo compartmentalization, has been thoroughly described.
-It is not clear however, if the dynamics are similar for the rest of the genes deployed in development, or if there are differences between different types of genes.
+For some crucial developmental genes (e.g., Hox genes), the spatio-temporal expression dynamics
+%, and how it relates to the embryo compartmentalization, 
+has been thoroughly described.
+It is not clear however, if the dynamics are similar for the rest of the genes,
+% deployed in development, 
+or if there are differences between different types of genes or differences between species.
 
------------------------------
-
-Adaptive reasons have been also said to be the cause for the increase in complexity.
-A change during development would be adaptive if it increases the fitness of its bearer, even when the effect of this developmental change is realized until the adult or larva.
+%-----------------------------
+\hfill\break 
+%Adaptations are among the causes that have been proposed for the increase in complexity.
+To some authors, adaptive reasons could be the cause for such increase in complexity.
+%Adaptive reasons have been also said to be the cause for the increase in complexity.
+%
+%A change during development would be adaptive if it increases the fitness of its bearer, even when the effect of this developmental change is realized until the adult or larva.
 %The increase in complexity (or any change in development) has been considered for some authors as the adaptations of the embryo to its environment.
-
-Many methods of molecular evolution estimate the action of natural selection based on the quasi-neutral evolution model.
-Under this model, an adaptive change that has been caused by a genetic mutation, can be traced in the DNA sequence, as a positive selected site would show less variance than other sites evolving neutrally.
-
-Recently, methods of population genomics use divergence ans polymorphism (inter-specific and intra-specific variation) to measure more precisely the proportion of adaptive mutation at the molecular level.
-
-----------------------------
-Importantly, if different developmental stages show distinct levels of positive selection or stabilizing selection,
-some specific patterns, when comparing the development trajectories of different species in a group, might be recognizable.
+%
+%
+Adaptations can be estimated with molecular evolution methods, analysing the genes expressed in different developmental stages or regions in the embryo. 
+%at the DNA sequence level with 
+%molecular evolution methods. 
+These methods estimate adaptive changes at the DNA sequence level, assuming that
+%These methods are based on the quasi-neutral evolution model that assumes that
+%Under this model, an adaptive change that has been caused by a genetic mutation, can be traced in the DNA sequence, as 
+a positive selected site would show less variance than other sites evolving neutrally.
+%
+%Recently, methods of population genomics use divergence ans polymorphism (inter-specific and intra-specific variation) to measure more precisely the proportion of adaptive mutation at the molecular level.
+%
+%----------------------------
+Importantly, different developmental stages might show distinct levels of positive or stabilizing selection, 
+%leading to some specific patterns might be recognizable
+that could be related to inter-specific divergence patterns proposed by the von Baer's laws or the hourglass model (HG). 
+%, when comparing the development of different species in a group.
 % specific patterns might appear (patterns of what?) when comparing the divergence between different species.
-Two related models currently under much discussion? are:
+%Two related models currently under much discussion? are:
 %This is related to already proposed models of divergence: 
-1)von Baer's laws and the hourglass model.
-The former states that the development of 2 species would be very similar in early stages and increasingly divergent in subsequent stages. In contrast, the latter states that development is less divergent at mid development.
+%1)von Baer's laws and the hourglass model.
+The former states that the development of two species would be very similar in early stages and increasingly divergent in subsequent stages. In contrast, the latter states that development is less divergent at mid development.
 
 %Such patterns could be due to selection or constrant..
 %The print in natural selection on the genome is useful to discern between these scenarios.
 %Some regarded each embryonic stage to have adaptation as the result of the constant interaction of the embryo with its environment (whether external or internal).
 %Others have distinguished the adaptations in the embryo from those from the adult, stating that the former are product of internal selection, instead of being product of natural selection, as the latter.
-------------------------------------------
-In here, I will use gene expression information to estimate 
-both complexity and adaptation in the embryo.
-
-I will use a statistical approach, this means that no special emphasis on specific genes or pathways would be made. 
-Instead, my intention is to provide a broad picture on the spatiotemporal change in complexity and adaptation in the embryo.
-
+%------------------------------------------
+\hfill\break 
+In here, I analysed gene expression information to estimate both complexity and adaptation in the embryo using a statistical approach.
+%, i.e., no special emphasis on specific genes or pathways is made. 
+%Instead, my intention is to provide a broad picture on the spatiotemporal change in complexity and adaptation in the embryo.
+%
 %I take advantage of available databases of gene expression.
 %I analyze complexity using two popular developmental biology models: Drosophila melanogaster and Ciona intestinalis.
-For the estimation of complexity, I analyzed gene expression data (from thousands of in situ hybridization experiments) of two popular developmental biology models: Drosophila melanogaster and Ciona intestinalis (from available databases) and developed quantitative measures of complexity.
+To measure complexity, I analysed publicly available gene expression data (thousands of in situ hybridization experiments)% of two popular developmental biology models: 
+ in \textit{Drosophila melanogaster} and \textit{Ciona intestinalis}, and developed quantitative measures of complexity.
+%
+To estimate adaptation, I combined the \textit{D. melanogaster} transcriptomic data with populations genomic data (from the DGRP project). With the DFE-alpha method 
+(which uses coding-region polymorphism and divergence to estimate the proportion of adaptive changes)
+, I charted a spatial map of adaptation of the fruit fly embryo's anatomy. 
+Finally, I analysed the pattern of positive selection through the entire life cycle of \textit{D. melanogaster} and how it correlated with specific genomic determinants (e.g., gene structure, codon bias)
 
-To analyze adaptation, I combined the D. melanogaster transcriptomic data with genomic data from the DGRP project. With the DFE-alpha method (which uses coding-region polymorphism data and coding-region divergence between D. yakuba and D. melanogaster to estimate the proportion of adaptive changes), I chart a spatial map of adaptation of the fruit fly embryo's anatomy. 
-
-Also, I analyze the pattern of positive selection through the entire life cycle of D. melanogaster.
-
-Briefly, 
-
-we found that low rates of adaptive change are found in the digestive system and high rates in the gonads and parts of the forming head. We also found that the regions that exhibit the highest rates of adaptation express, on average, genes that are phylogenetically young
+\hfill\break 
+Briefly, I found that \textit{Drosophila} and \textit{Ciona} complexity increases non-linearly with the major change before and after gastrulation, respectively, using three mathematical measures of gene expression compartmentalization in space. 
+In both species, transcription factors and signalling molecules showed an earlier compartmentalization, consistent with their proposed leading role in pattern formation.
+%
+In \textit{Drosophila}, gonads and head showed high adaptation during embryogenesis, although pupa and adult male stages exhibit the highest levels of adaptive change, and mid and late embryonic stages show high conservation, showing an HG pattern.
+%Furthermore, I propose gene structure complexity as an explanation for this HG-like pattern.
+Furthermore, I propose that the explanation for the lack of conservation in the early stages and the HG-like pattern could be a relaxation of natural selection and gene structure complexity, respectively.
