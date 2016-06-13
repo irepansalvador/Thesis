@@ -19,7 +19,7 @@
 \usepackage{showframe} % just to show the alignment
 %\usepackage{layout}   %% prints the layout of the page when is indicated
 \let\cleardoublepage\clearpage %% delete the blank pages between sections
-
+\usepackage{hyperref}
 %%% can fine tune the margins of the book %%%%%%%%%%%%%%%%
 \usepackage[
   left=0.7in, right=0.7in,
@@ -177,6 +177,9 @@ in the embryo:
 	\clearpage
 \section{Drosophila}
 	\input{./Parts/Literature_drosophila.tex}
+	\clearpage
+\section{Adaptation in the embryo and the Hourglass model in \textit{Drosophila} }
+	\input{./Parts/Literature_hourglass.tex}
 	\clearpage
 \section{Ciona}
 	\input{./Parts/Literature_ciona.tex}
