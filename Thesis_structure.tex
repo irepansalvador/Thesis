@@ -55,6 +55,7 @@ frametitlerulecolor=red!15, backgroundcolor=red!15,frametitlerulewidth=2pt}
 %  \patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{}{}{} }
 %\makeatother
 \usepackage{epigraph}
+\usepackage[font={footnotesize},labelfont=bf]{caption}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ------Data to produce the front page ------------
 \title{\hfill\break \hfill\break   %% 2 lines in blank (adding space)
@@ -168,22 +169,22 @@ in the embryo:
 	
 \section{On the statistical approach in Biology}
 	\input{./Parts/Statistical_approach.tex}
-	\clearpage 	
+%	\clearpage 	
 \section{Complexity}
 	\input{./Parts/Literature_complexity.tex}
-	\clearpage 
+%	\clearpage 
 \section{Adaptation}
 	\input{./Parts/Literature_adaptation.tex}
-	\clearpage
+%	\clearpage
 \section{Drosophila}
 	\input{./Parts/Literature_drosophila.tex}
-	\clearpage
+%	\clearpage
 \section{The Hourglass model in \textit{Drosophila} }
 	\input{./Parts/Literature_hourglass.tex}
-	\clearpage
+%	\clearpage
 \section{Ciona}
 	\input{./Parts/Literature_ciona.tex}
-	\clearpage
+%	\clearpage
 %%%% -----------------------------------------------------------------
 %%%% -----------------------------------------------------------------
 
@@ -200,7 +201,23 @@ in the embryo:
 %%%% -----------------------------------------------------------------
 	
 \chapter{Results and Discussion}
-\input{./Parts/Results_Discussion}
+
+\section{Complexity and compartmentalization in \textit{Drosophila}}
+	\input{./Parts/Results_Art_I.tex}
+	\clearpage
+\section{Complexity and compartmentalization in \textit{Ciona}}
+	\input{./Parts/Results_Art_II.tex}
+	\clearpage
+%\section{Note on species comparison}
+%	\input{./Parts/Results_Art_.tex}
+%	\clearpage
+\section{Adaptation in \textit{Drosophila}'s embryo space}
+	\input{./Parts/Results_Art_III.tex}
+	\clearpage
+\subsection{Adaptation trough \textit{Drosophila} life cycle}
+	\input{./Parts/Results_Art_IV.tex}
+	\clearpage
+
 
 
 %%%% -----------------------------------------------------------------
