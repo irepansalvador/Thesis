@@ -9,9 +9,76 @@ Then, I will explore the relationship between complexity in evolution and develo
 
 \subsection{Different definitions of complexity}
 
+
+\subsubsection{Complexity in informational terms}
+
+\paragraph{Entropy}
+
+
+\paragraph{Joint information}
+
+
+\paragraph{Computational metaphors}
+
+Davidson used the GRN concept to explain development (and evolution) using a computational metaphor. For him, development is the outcome of spatial and temporal series of differential gene expression, that is controlled by a regulatory program built into the DNA. As Davidson, other authors have used computational analogies to define development \citep{Apter1965,monod2012cytodifferentiation,mayr1997evolution} 
+
+%To illustrate how the complexity of a regulatory network or "program" can increase in evolution (but a similar case could be said for development), Davidson describes an imaginary example:
+%an early evolutionary state consists of a small gene battery (set of functionally linked genes expressed in concert) encoding proteins used for some differentiated cell type, which is activated by a small number of genes encoding transcription factors. The network activating the gene battery is itself controlled by a single upstream gene.
+%In subsequent evolutionary states, the whole structure is said to become more complex as: the battery of genes is now used in some pattern formation system, new batteries of genes appear, new regulatory genes and new \textit{cis}-regulatory regions are introduced  \citep{Davidson2001}.
+A computational program, that is part of a computer system, contains a set of instructions that performs a specific task. The computer program needs a hardware, the set of physical objects that compose the computational system and where the computational program can be stored and execute.
+If the cell is considered as a computer system with the GRN as the computer program, then the hardware would be all the components of the cell including the genomic and cell structure and all the molecules present in the cell.
+However, in contrast to a computer system, the separation between the program and the hardware is not clear in a cell.The "genetic program" is affected by the components present in the cell ("hardware"), which in turn changes depending on the program \citep{susan2000ontogeny,Jaeger2014devmech}.
+%
+%There are also important critiques of this informational approach. First, using an informational analogy to describe development implies the distinction between a "hardware" and a "software".
+%The "hardware" would consist of the genome structure, regulatory components, cells, organs, etc., and the "software" would be the GRNs or the set of instructions that directs the performance of specific operations.
+%For biological systems, this distinction is misleading, as there are recurrent feedback between its "hardware" and "software", so that the structure of development processes change through development \citep{susan2000ontogeny,Salazar-Ciudad2009,Jaeger2014devmech}.
+
+Using again the computational metaphor, Davidson considered that the metric of complexity is the diversity of the programs of gene expression that are "installed and executed" as the embryo develops \citep{Davidson2001}. For illustrating his point Davidson describes an imaginary example: first, there is a set of downstream genes activated by a small network of TFs (each of them with only one \textit{cis}-regulatory element), which in turn is controlled by a single upstream TF; then, TFs of the network gain cis-regulatory elements (so the circuitry is more intricate) and newly recruited intermediate regulatory TFs activate a different set of down-stream genes. Otherwise, the initial set of downstream genes is still controlled by the single upstream TF \citep{Davidson2001}.
+   
+Thus, in Davidson example, a small hierarchical network changes so that an additional layer is gained (intermediate TF) and the topology of the network changes: instead of one outcome (the initial set of downstream genes), now two outcomes are possible (with the additional set of downstream genes activated by the new intermediate TF).
+Even when in his example it would seem easy to discern a simple GRN from a complex one just from its topology, the high intricacy of real biological GRN would make their distinction (at least by visual inspection) a very difficult task.
+
+%an early evolutionary state consists of a small gene battery (set of functionally linked genes expressed in concert) encoding proteins used for some differentiated cell type, which is activated by a small number of genes encoding transcription factors. The network activating the gene battery is itself controlled by a single upstream gene.
+%In subsequent evolutionary states, the whole structure is said to become more complex as: the battery of genes is now used in some pattern formation system, new batteries of genes appear, new regulatory genes and new \textit{cis}-regulatory regions are introduced
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[h]
+%  \includegraphics[width=5cm]{./Images/GRNs.png}
+%  \centering
+%  \caption{
+%  Some GRNs . Cotterel and Harpe calculated... \citep{Cotterell2010}
+% }
+%  \label{fig:GRNs}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\subsubsection{Complexity in terms of dynamical systems theory}
+%
+%Dynamical systems theory (DST) has been proposed as an alternative to analyse complex GRNs. DST is branch of mathematics used to describe complex systems usually with differential or difference equations. 
+%In developmental biology, DST has been used to identify the set of networks that can produce a certain output. 
+%For example, Cotterel and Sharpe defined all the possible regulatory topologies of a simple three-gene GRN (in which each gene can activate or inhibit the expression of any gene including its own), and then identified the subset of network capable of the formation of a single stripe of gene expression in a one-dimensional cell array. They determined that only 471 of the possible 3379 topologies were capable of such task \citep{Cotterell2010}.
+%
+%
+%Estimating the combinatorial possibilities of a small set of regulatory genes, considering that each gene can regulate (whether positively or negatively) more than one gene's expression in addition to its own, could result in an astronomic number of possible gene topologies (see Figure \ref{fig:GRNs}).
+%Also feedback effects and non-linear regulation of gene expression make the prediction of changes in regulatory states hard or even impossible to predict \citep{Jaeger2014devmech}.
+%
+%To overcome this limitations, some authors have propose to use dynamical systems theory, which deals with a complex system with many interacting components (a dynamical system), by representing its state as a point in a multidimensional space \citep{Alberch1991,ForgacsandStuartA.Newman.2005,Jaeger2014devmech}. 
+%To illustrate this we could think of a specific cell type, with \textit{n} number of genes, which its cell state depends on the expression of each of the genes.
+%The simpler case we could imagine would be a cell with only two genes. In this case, the cell would be in a two-dimensional "state space" (also called "phase space").
+%
+%Importantly, the dynamical system is governed by the relations between its components \citep{ForgacsandStuartA.Newman.2005}. In our example the relations would be represented by the interaction between genes, namely the gene regulatory network (GRN). 
+%If in our example the expression level of one gene is affected by the expression level of the other gene, the system will not stay in any particular state, but it will change until it reaches a "stable steady state", in which the level of both genes are at equilibrium. 
+%Given a specific GRN, the number of stable states would represent the possible differentiation states a cell can achieve (REF Slack book)
+%
+%Many modifications of the GRN would not have consequences in the ultimate differentiation state, as it will converge to the same "attractor" point.
+%However, some modifications (or mutations) could produce a change in the "state space" leading to the formation of a new stable state (i.e., a new cell type).
+%So within the framework of the dynamical systems theory, and keeping the number of cell types as our measure of complexity, there would be an increase in complexity when a mutation would change the gene regulatory machinery so that a new stable steady state is formed.
+
+
 \subsubsection{McShea's view of complexity}
 
-Daniel W. McShea has provided an useful general definition of biological complexity. According to him: "complexity of an organism is the amount of differentiation among its parts or, where variation is discontinuous, the number of part types" \citep{McShea1996,McShea2015}.
+Daniel W. McShea has provided useful definitions of biological complexity. One of his definitions is: "complexity of an organism is the amount of differentiation among its parts or, where variation is discontinuous, the number of part types" \citep{McShea1996,McShea2015}.
 This definition can be used at different hierarchical levels of biological organization, e.g., tissues, cells, genes.
 Indeed, a measure of morphological complexity that has been favoured by some authors 
 %(perhaps because of its intuitiveness), 
@@ -39,51 +106,7 @@ This could be illustrated with the number genes (object complexity) and the numb
 Using these definitions, two different organisms would have the same object complexity if they have the same number of genes, but one would have a higher process complexity it has more gene-gene interactions than the other.
 
 
-
-\subsubsection{Complexity in informational terms}
-
-\cite{Davidson2001} used the GRN concept in addition to others to explain development (and evolution) on informational terms. He said that development (which is the outcome of spatial and temporal series of differential gene expression) is controlled by a hardwired regulatory program built into the DNA and the metric of complexity is the diversity of the programs of gene expression that are "installed and executed" as the embryo develops. As Davidson, other authors have used informational/computational analogies to define development \citep{Apter1965,monod2012cytodifferentiation,mayr1997evolution} 
-
-To illustrate how the complexity of a regulatory network or "program" can increase in evolution (but a similar case could be said for development), Davidson describes an imaginary example:
-an early evolutionary state consists of a small gene battery (set of functionally linked genes expressed in concert) encoding proteins used for some differentiated cell type, which is activated by a small number of genes encoding transcription factors. The network activating the gene battery is itself controlled by a single upstream gene.
-In subsequent evolutionary states, the whole structure is said to become more complex as: the battery of genes is now used in some pattern formation system, new batteries of genes appear, new regulatory genes and new \textit{cis}-regulatory regions are introduced  \citep{Davidson2001}.
-
-Even when in this kind of examples would seem easy to discern a simple GRN from a complex one just from its topology, the high intricacy of real biological systems make this an extremely difficult if not impossible task. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
-  \includegraphics[width=5cm]{./Images/GRNs.png}
-  \centering
-  \caption{
-  Some GRNs . Cotterel and Harpe calculated... \citep{Cotterell2010}
- }
-  \label{fig:GRNs}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-There are also important critiques of this informational approach. First, using an informational analogy to describe development implies the distinction between a "hardware" and a "software".
-The "hardware" would consist of the genome structure, regulatory components, cells, organs, etc., and the "software" would be the GRNs or the set of instructions that directs the performance of specific operations.
-For biological systems, this distinction is misleading, as there are recurrent feedback between its "hardware" and "software", so that the structure of development processes change through development \citep{susan2000ontogeny,Salazar-Ciudad2009,Jaeger2014devmech}.
-
-
-\subsubsection{Complexity in terms of dynamical systems theory}
-
-Estimating the combinatorial possibilities of a small set of regulatory genes, considering that each gene can regulate (whether positively or negatively) more than one gene's expression in addition to its own, could result in an astronomic number of possible gene topologies (see Figure \ref{fig:GRNs}).
-Also feedback effects and non-linear regulation of gene expression make the prediction of changes in regulatory states hard or even impossible to predict \citep{Jaeger2014devmech}.
-
-To overcome this limitations, some authors have propose to use dynamical systems theory, which deals with a complex system with many interacting components (a dynamical system), by representing its state as a point in a multidimensional space \citep{Alberch1991,ForgacsandStuartA.Newman.2005,Jaeger2014devmech}. 
-To illustrate this we could think of a specific cell type, with \textit{n} number of genes, which its cell state depends on the expression of each of the genes.
-The simpler case we could imagine would be a cell with only two genes. In this case, the cell would be in a two-dimensional "state space" (also called "phase space").
-
-Importantly, the dynamical system is governed by the relations between its components \citep{ForgacsandStuartA.Newman.2005}. In our example the relations would be represented by the interaction between genes, namely the gene regulatory network (GRN). 
-If in our example the expression level of one gene is affected by the expression level of the other gene, the system will not stay in any particular state, but it will change until it reaches a "stable steady state", in which the level of both genes are at equilibrium. 
-Given a specific GRN, the number of stable states would represent the possible differentiation states a cell can achieve (REF Slack book)
-
-Many modifications of the GRN would not have consequences in the ultimate differentiation state, as it will converge to the same "attractor" point.
-However, some modifications (or mutations) could produce a change in the "state space" leading to the formation of a new stable state (i.e., a new cell type).
-So within the framework of the dynamical systems theory, and keeping the number of cell types as our measure of complexity, there would be an increase in complexity when a mutation would change the gene regulatory machinery so that a new stable steady state is formed.
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Complexity Increase in Development}
 
 The increase in complexity in an organism during embryogenesis is probably one of the most intuitive processes of animal development.
@@ -238,35 +261,52 @@ Additionally to all these regulatory levels that occur within a cell, the spatio
 %Signalling pathways recurrently used during animal development are the Wnt, FGF and Shh pathways (for a detailed description of each signalling pathway, see \citep{Gilbert2014}.
 %For example, the Shh pathway plays a fundamental role in the fruit fly segment polarization(REF) and wing development (REF), and in vertebrate limb (REF) and tooth development \citep{Jernvall2000b}.
 
+\subsection{Analysis of gene expression as a proxy of compartmentalization and complexity in the embryo}
 
-\subsection{Complexity Increase in Evolution}
-
-The increase in complexity in evolution has has been a topic of interest for more than a century.
-Early views of evolution saw the increase in complexity as inexorable, with all the species descending from simpler ancestral forms \citep{lamarck1809zoo,haeckel1874menschen}, and with the human species as the latest and more perfect product of the evolution of animals \citep{haeckel1874menschen}.
+SEARCH FOR EXAMPLES THAT ARE SIMILAR TO MY STUDY, AND THAT CAN BE USED AS A PROXY OF COMPARTMENTALIZATION 
 
 
-Recent views recognize that complexity of can increase or decrease in a lineage.
-Using the number of cell-types as complexity measure, there are clear examples of taxa that have decreased their complexity over time, specially in parasites \citep{Canning2003,Arthur2010} (although morphological simplification can not be considered universal in parasitic taxa \citealp{poulin2011evolutionary}).
-An example would be the orthonectids, a phylum of parasites (Orthonectida) of marine invertebrates with only two types of cells, external ciliated and internal reproductive cells without any internal organs. 
-%animal group formerly known as the "Mesozoa", which are worm-like parasites of marine invertebrates.
-Because of their simple morphology (only two cell types and no organs) this animal group was formerly known as "Mesozoa" and considered to be "living fossils" or intermediate forms between Protozoans and Metazoans.
-Now, even when they remain poorly studied animals, it is thought that they are descendants of more complex ancestors, probably some lophotrochozoan group \citep{Arthur2010}, as
-%The Orthonectida, for example, is a phylum of parasites of marine invertebrates with only two types of cells, external ciliated and internal reproductive cells without any internal organs. 
-molecular phylogenetic analysis provided evidence that they are more closely related to tripoblastic animals than to protists or diplobastic taxa \citep{Hanelt1996}.
-Therefore, these animals most probably evolved from a more complex free living animal and decreased their morphological complexity after they adopted a parasitic life style.
 
 
-\subsubsection{Is there a trend towards increasing complexity?}
-
-As explained above, it seems that there is no unique trend to increase the complexity over time. Therefore, the complexity of a specific lineage might decrease, increase or stay the same (see Figure \ref{fig:Complexity_min}a).
-%As the organisms have a wide range of morphological complexities, it is useful to use an statistical approach to identify a trend towards increasing complexity.
-If we consider unicellularity as the minimum complexity, it can be said that complexity has remained more or less constant in evolution, as unicellular organisms like bacteria, have been present from 3.5 billion years.
-
-If we look at maximum complexity a trend for increasing complexity would be apparent, as the initial complexity would have increased with the appearance of simple multicellular organisms (only few cell types) and would have further increase until the appearance of organisms composed of hundreds of cell types.
-
-It is important to notice that this apparent trend towards increasing complexity does not necessarily imply that it has been selected for \citep{McShea2015}.
-
-If complexity would follow a random walk scenario starting from unicellular organisms (in a random walk the mean distance of a point after $n$ time steps is $\sqrt[2]{n}$), the mean and maximum would show a trend towards increasing complexity \ref{fig:Complexity_min} given that there is a minimum complexity requirement (it is not possible to have less than one cell) \citep{gould1996fullhouse}.
+%\subsection{Complexity Increase in Evolution}
+%
+%The increase in complexity in evolution has has been a topic of interest for more than a century.
+%Early views of evolution saw the increase in complexity as inexorable, with all the species descending from simpler ancestral forms \citep{lamarck1809zoo,haeckel1874menschen}, and with the human species as the latest and more perfect product of the evolution of animals \citep{haeckel1874menschen}.
+%
+%
+%Recent views recognize that complexity of can increase or decrease in a lineage.
+%Using the number of cell-types as complexity measure, there are clear examples of taxa that have decreased their complexity over time, specially in parasites \citep{Canning2003,Arthur2010} (although morphological simplification can not be considered universal in parasitic taxa \citealp{poulin2011evolutionary}).
+%An example would be the orthonectids, a phylum of parasites (Orthonectida) of marine invertebrates with only two types of cells, external ciliated and internal reproductive cells without any internal organs. 
+%%animal group formerly known as the "Mesozoa", which are worm-like parasites of marine invertebrates.
+%Because of their simple morphology (only two cell types and no organs) this animal group was formerly known as "Mesozoa" and considered to be "living fossils" or intermediate forms between Protozoans and Metazoans.
+%Now, even when they remain poorly studied animals, it is thought that they are descendants of more complex ancestors, probably some lophotrochozoan group \citep{Arthur2010}, as
+%%The Orthonectida, for example, is a phylum of parasites of marine invertebrates with only two types of cells, external ciliated and internal reproductive cells without any internal organs. 
+%molecular phylogenetic analysis provided evidence that they are more closely related to tripoblastic animals than to protists or diplobastic taxa \citep{Hanelt1996}.
+%Therefore, these animals most probably evolved from a more complex free living animal and decreased their morphological complexity after they adopted a parasitic life style.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[h]
+%  \includegraphics[width=12cm]{./Images/complexity_min.jpeg}
+%  \centering
+%  \caption{a) Two lineages with different complexity change through their evolutionary trajectories.
+%  b) Representation of the minimum, mean and maximum complexity of many lineages over evolutionary time in which the minimum stay constant while the mean and maximum increase.
+%Redrawn from \citep{Arthur2010}.
+% }
+%  \label{fig:Complexity_min}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\subsubsection{Is there a trend towards increasing complexity?}
+%
+%As explained above, it seems that there is no unique trend to increase the complexity over time. Therefore, the complexity of a specific lineage might decrease, increase or stay the same (see Figure \ref{fig:Complexity_min}a).
+%%As the organisms have a wide range of morphological complexities, it is useful to use an statistical approach to identify a trend towards increasing complexity.
+%If we consider unicellularity as the minimum complexity, it can be said that complexity has remained more or less constant in evolution, as unicellular organisms like bacteria, have been present from 3.5 billion years.
+%
+%If we look at maximum complexity a trend for increasing complexity would be apparent, as the initial complexity would have increased with the appearance of simple multicellular organisms (only few cell types) and would have further increase until the appearance of organisms composed of hundreds of cell types.
+%
+%It is important to notice that this apparent trend towards increasing complexity does not necessarily imply that it has been selected for \citep{McShea2015}.
+%
+%If complexity would follow a random walk scenario starting from unicellular organisms (in a random walk the mean distance of a point after $n$ time steps is $\sqrt[2]{n}$), the mean and maximum would show a trend towards increasing complexity \ref{fig:Complexity_min} given that there is a minimum complexity requirement (it is not possible to have less than one cell) \citep{gould1996fullhouse}.
 
 %If complexity, measured as the number of cell types, follows a random walk starting from unicellular organisms a trend of increasing complexity would be apparent.
 %In a random walk scenario, in which the mean distance of a point after $n$ time steps is $\sqrt[2]{n}$, the mean and maximum would show a trend towards increasing complexity \ref{fig:Complexity_min} \citep{gould1996fullhouse}.
@@ -282,14 +322,44 @@ If complexity would follow a random walk scenario starting from unicellular orga
 
 %However, if we could depict the change in complexity in all lineages (see Figure \ref{fig:Complexity_min}b), we probably would see that the range of complexity has increased over time, with the a lower limit or minimum complexity that has stayed the same and with an increase in mean and maximun (or upper limit) of complexity \citep{McShea1996,Arthur2010}.
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
-  \includegraphics[width=12cm]{./Images/complexity_min.jpeg}
+\clearpage
+
+\setcounter{figure}{2}% Modify counter of figure so it maches the order, as here im not using \begin{figure}
+
+\begin{mdframed}[style=boxstyle,frametitle={Box1. On the relationship between the increase of complexity in Evolution and Development}]\label{Box1:Evo_complexity}
+
+The connection between the increase in complexity during development and evolutionary time it has been largely discussed.
+Haeckel was one of the first who made explicit hypotheses about the connection between the development and evolutionary patterns in his "Biogenetic Law" (see section X).
+
+This implies that the increase in complexity we see during development is a reflection of a similar increase in complexity that has occurred through evolution.
+
+Early views of evolution saw the increase in complexity as inexorable, with all the species descending from simpler ancestral forms \citep{lamarck1809zoo,haeckel1874menschen}, and with the human species as the latest and more perfect product of the evolution of animals \citep{haeckel1874menschen}.
+
+
+Recent views recognize that complexity of can increase or decrease in a lineage.
+Using the number of cell-types as complexity measure, there are clear examples of taxa that have decreased their complexity over time, specially in parasites \citep{Canning2003,Arthur2010} (although morphological simplification can not be considered universal in parasitic taxa \citealp{poulin2011evolutionary}). Therefore, it seems that there is no unique trend to increase the complexity over time. Therefore, the complexity of a specific lineage might decrease, increase or stay the same (see Figure \ref{boxfigure}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par
+{\centering
+  \includegraphics[width=0.8\textwidth]{./Images/complexity_min.jpeg}
   \centering
-  \caption{a) Two lineages with different complexity change through their evolutionary trajectories.
+  \captionof{figure}{Two lineages with different complexity change through their evolutionary trajectories.
   b) Representation of the minimum, mean and maximum complexity of many lineages over evolutionary time in which the minimum stay constant while the mean and maximum increase.
-Redrawn from \citep{Arthur2010}.
- }
-  \label{fig:Complexity_min}
-\end{figure}
+Redrawn from \citep{Arthur2010}.}
+\label{boxfigure}
+}
+\par
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+If we consider unicellularity as the minimum complexity, it can be said that complexity has remained more or less constant in evolution, as unicellular organisms like bacteria, have been present from 3.5 billion years.
+
+If we look at maximum complexity a trend for increasing complexity would be apparent, as the initial complexity would have increased with the appearance of simple multicellular organisms (only few cell types) and would have further increase until the appearance of organisms composed of hundreds of cell types.
+
+It is important to notice that this apparent trend towards increasing complexity does not necessarily imply that it has been selected for \citep{McShea2015}.
+
+If complexity would follow a random walk scenario starting from unicellular organisms (in a random walk the mean distance of a point after $n$ time steps is $\sqrt[2]{n}$), the mean and maximum would show a trend towards increasing complexity \ref{boxfigure} given that there is a minimum complexity requirement (it is not possible to have less than one cell) \citep{gould1996fullhouse}.
+
+\end{mdframed}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
