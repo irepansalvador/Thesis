@@ -198,17 +198,17 @@ More specifically, they use the polymorphism site frequency spectrum (SFS) to es
 
 This method, assumes that there are two types of nucleotide sites: 
 i) sites at which all mutations are neutral and ii) sites at which some of the mutations are subject to selection (positive or negative).
-Also it is assumed that any new adaptive mutation in a population would not be detected in the polymorphic phase but only in the divergent one (as the advantageous mutations would fix rapidly in a population), and that the DFE can be represented with a gamma distribution.
+Also it is assumed that any new adaptive mutation in a population would not be detected in the polymorphic phase but only in the divergent one (as the advantageous mutations would fix rapidly in a population), and that the DFE can be represented with a gamma distribution (Figure \ref{fig:Gamma}).
 
-The advantage of using a gamma distribution is that very different distributions (e.g., normal, exponential, leptokurtic) can be represented using only a shape parameter and the mean of the distribution (Figure \ref{fig:Gamma}).
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
-  \includegraphics[width=7cm]{./Images/Gamma_dist.jpeg}
+  \includegraphics[width=6cm]{./Images/Gamma_dist_2.png}
   \centering
   \caption{Example of different Distribution of Fitness Effects (DFE) represented by a gamma distribution. Many distributions can be represented by modifying the shape parameter of a gamma distribution, from a leptokurtic (shape parameter less than 1) to an exponential (shape parameter equal to 1) or a skewed normal distribution (shape  greater than 1).
    }
   \label{fig:Gamma}
 \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The divergence at the neutral sites is then proportional to the mutation rate per site and the predicted divergence at the selected sites (in the absence of advantageous mutations) is proportional to the product of the mutation rate together with the average fixation probability of a selected mutation.
 This probability of fixation is is inferred based on the DFE and other parameters estimated from the polymorphism data analysis\citep{Eyre-Walker2009}.
@@ -223,3 +223,26 @@ They found that in the presence of slightly deleterious mutations, MKT estimates
 %
 %This is because genetic draft leaves similar signatures to a recent population expansion, namely distortions of the SFS at synomymous sites, and the DFE-alpha interprets these SFS distortions as being a consequence of demography and attempts to correct for it.
 %Importantly, this caveat in using the DFE-alpha is only relevant when demography changes wants to be estimated, but not when alpha is the parameter of interest, as in here.
+
+\subsubsection{Inferring natural selection using a population genomics approach}
+
+For taking advantage of these new methods that infer adaptation combining polymorphism and divergence data, a populations genomics approach is necessary. 
+In the last years, different projects have sequenced, in different species, the genome of many individuals of a population (or a set of populations) \citep{The1000GenomesProjectConsortium2010,Mackay2012,Pool2012,Wallberg2014}, providing a valuable resource of genomic polymorphism data at the population level.
+
+In this study, I used data from the \textit{Drosophila melanogaster} Genetic Reference Panel (DGRP) \citep{Mackay2012}, which consists of inbred \textit{D. melanogaster} lines.
+Importantly, the lines are derived from a single outbred population, so they capture natural variation (as genetic polymorphism) and are ideal to use with methods like the DFE-alpha. 
+
+	\nomenclature{DGRP}{The \textit{Drosophila melanogaster} Genetic Reference Panel}
+
+
+\subsection{The \textit{Drosophila melanogaster} Genetic Reference Panel}
+
+The DGRP is a publicly available tool for molecular population genomics analyses.
+%
+It consists of 192 inbred strains derived from a single outbred \textit{Drosophila melanogaster} population.
+The inbred lines were constructed from collected mated females from a Raleigh (North Carolina, USA) population, followed by 20 generations of full-sibling inbreeding of their progeny \citep{Mackay2012}.
+168 inbred lines were then sequenced using Illumina (129 lines), 454 sequencing (10 lines) or both (29 lines). Therefore, the DGRP contains a representative sample of naturally segregating genetic variation.
+
+\citealp{Mackay2012} used the DGRP sequence data in combination with genome data from \textit{Drosophila simulans} and \textit{Drosophila yakuba} to analyse polymorphism and divergence, the recombination landscape, and infer the action of natural selection on an unprecedented genome-wide scale.
+They found that the patterns of polymorphism differ by autosomal chromosome region, and between the X chromosome and autosomes, contrary to the divergence patterns.
+Using version of the MKT test, they estimated that on average 25\% of the fixed sites between \textit{D. melanogaster} and \textit{D. yakuba} are adaptive (24\% non-synonymous, 30\% in introns and 7\% in UTR sites) \citep{Mackay2012}.
