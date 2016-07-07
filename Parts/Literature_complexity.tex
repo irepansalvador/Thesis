@@ -12,7 +12,33 @@ Then, I will explore the relationship between complexity in evolution and develo
 
 \subsubsection{Complexity in informational terms}
 
-\paragraph{Entropy}
+The use of informational terms (e.g., transcription, translation and code) in biology are widespread, specially in molecular biology \citep{Smith2000,yockey2005information}
+More than just the use of informational terms in biology, information theory concepts like Shannon's entropy and joint information have been used as a proxy to measure complexity.
+In the following paragraphs, I will briefly describe briefly these concepts and provide some examples of their use to address biological complexity.
+
+\paragraph{Shannon's entropy}
+
+Shannon's entropy is a measure of uncertainty. Given a set of $n$ possible events whose probabilities of occurrence are $p_{1}, p_{2}...,p_{n}$, Shannon's entropy ($H$) can be defined as:
+
+$$H = -\sum_{i=1}^{n} p_{i} \log p_{i}$$
+
+For a given $n$, the maximum $H$ is equal to $\log n$ when all the events have the same probability (i.e., $\frac{1}{n}$) \citep{Shannon1948}. The logarithmic base corresponds to binary digits units, or \textit{bits}.
+
+This can be illustrated measuring H for a base pair position in the DNA sequence. As in principle, each DNA site can take four possible values (A, T, G or C) its maximal entropy can be calculated as:
+
+$$H_{max} = -\sum_{i=A,T,G,C}^{} p(i) \log_{2} p(i) = \log_{2} 4 = 2 bits $$
+
+Cristoph Adami have used Shannon's entropy to define a "physical complexity" measure, that refers to the "amount of information that is stored in that sequence about a particular environment" \citep{Adami2002}.
+%
+More specifically, Adami's complexity measure compares the maximum entropy of a specific DNA sequence with the "actual" entropy based on the actual probabilities $p_{j}(i)$ for each position $j$ in the sequence. Given a pool of N sequences, $p_{j}(i)$ is estimated by counting the number $n_{j}(i)$  of occurrences of nucleotide $i$ at position $j$, so that $p_{j}(i)=n_{j}(i)/N$ (for all positions $j =1,...,L$ of the sequence with length $L$) \citep{Adami2000}. 
+The information content of a DNA sequence is then $I = H_{max} - H $  where:
+
+$$H = -\sum_{j=1}^{L} \sum_{i=A,T,G,C}^{} p_{j}(i) \log_{2} p_{j}(i) $$
+
+Adami assumes that if a sequence has not been under selective pressures each position in the sequence would have any of the four nucleotides with the same probabilities, so the actual entropy would be equal to the maximal, and consequently the information would be zero \citep{Adami2002a}. 
+%In the presence of selection, the probabilities of finding a particular nucleotide in a specific size would be non-random, giving a positive value of the information. He finally proposes that if natural selection is efficient "physical complexity" will increase and that it would decrease if is not \citep{Adami2002a}.
+He also considers that the "physical complexity" would serve as a good predictor of functional complexity \citep{Adami2004}. His information measure is related to the degree of conservation of the a given sequence, which in the case of protein sequence has indeed been used to identify the functionality of a protein \citep{Casari1995,Kellis2003,Hannenhalli2000}.
+
 
 
 \paragraph{Joint information}
