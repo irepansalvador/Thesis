@@ -22,9 +22,9 @@ Shannon's entropy is a measure of uncertainty. Given a set of $n$ possible event
 
 $$H = -\sum_{i=1}^{n} p_{i} \log p_{i}$$
 
-For a given $n$, the maximum $H$ is equal to $\log n$ when all the events have the same probability (i.e., $\frac{1}{n}$) \citep{Shannon1948}. The logarithmic base corresponds to binary digits units, or \textit{bits}.
+For a given $n$, the maximum $H$ is equal to $\log n$ when all the events have the same probability (i.e., $\frac{1}{n}$) \citep{Shannon1948}. The logarithmic base of 2 corresponds to binary digits units, or \textit{bits}.
 
-This can be illustrated measuring H for a base pair position in the DNA sequence. As in principle, each DNA site can take four possible values (A, T, G or C) its maximal entropy can be calculated as:
+This can be illustrated measuring $H$ for a nucleotide position in the DNA sequence. As in principle, each DNA site can take four possible values (A, T, G or C), its maximal entropy can be calculated as:
 
 $$H_{max} = -\sum_{i=A,T,G,C}^{} p(i) \log_{2} p(i) = \log_{2} 4 = 2 bits $$
 
@@ -35,14 +35,30 @@ The information content of a DNA sequence is then $I = H_{max} - H $  where:
 
 $$H = -\sum_{j=1}^{L} \sum_{i=A,T,G,C}^{} p_{j}(i) \log_{2} p_{j}(i) $$
 
-Adami assumes that if a sequence has not been under selective pressures each position in the sequence would have any of the four nucleotides with the same probabilities, so the actual entropy would be equal to the maximal, and consequently the information would be zero \citep{Adami2002a}. 
+Adami assumes that if a sequence has not been under selective pressures each position in the sequence would have any of the four nucleotides with the same probabilities, so the actual entropy would be equal to the maximal, and consequently the information would be zero \citep{Adami2002}. 
 %In the presence of selection, the probabilities of finding a particular nucleotide in a specific size would be non-random, giving a positive value of the information. He finally proposes that if natural selection is efficient "physical complexity" will increase and that it would decrease if is not \citep{Adami2002a}.
-He also considers that the "physical complexity" would serve as a good predictor of functional complexity \citep{Adami2004}. His information measure is related to the degree of conservation of the a given sequence, which in the case of protein sequence has indeed been used to identify the functionality of a protein \citep{Casari1995,Kellis2003,Hannenhalli2000}.
+He also considers that the "physical complexity" would serve as a good predictor of functional complexity \citep{Adami2004}. 
+His information measure is related to the degree of conservation of a given sequence, which in the case of protein sequence has indeed been used to identify its functionality \citep{Casari1995,Kellis2003,Hannenhalli2000}.
 
 
+\paragraph{Mutual information}
 
-\paragraph{Joint information}
+A concept related to Shannon's entropy that has been used in biological sciences is the concept of mutual information. Mutual information is a measure of the information in one variable about another. It is measured using the "conditional entropy" concept (the entropy of a variable $Y$ given that $X$ is known)  introduced also by \citet{Shannon1948}.
+The mutual information $I(X;Y)$ of variables $X$ and $Y$ can be expressed as:
+ 
+ $$I(X;Y) = H(X) - H(X|Y)$$
 
+where $H(X)$ is the Shannon's entropy of $X$ and $H(X|Y)$ is the conditional entropy of $X$ given $Y$. As Shannon's entropy, the conditional entropy is a measure of uncertainty. In this case, $H(X|Y)$ measures how uncertain we are of $Y$ on the average when we know $X$ \citep{Shannon1948}.
+
+Therefore, mutual information measures how much information of one variable is contained in the other. It can also be though as a similarity measure \citep{yockey2005information}, as if $X$ is identical to $Y$, the information of knowing $X$ determines the value of $Y$.
+Some decades ago, it was thought that the DNA sequence of a coding gene would determine not only the sequence of a protein, but also its 3D folded structure \citep{Anfinsen1973}. If this would be the case, the mutual information measure would be then useful to predict the 3D structure of the protein from its DNA sequence. 
+However, it is nowadays clear that other factors like post-translational modifications and the physico-chemical environment of the protein affect its structure \citep{Kang2009}.
+
+This lack of correspondence between both types of sequences have restrict the application of the mutual information as a similarity measure to compare DNA \citep{Lichtenstein2015} or protein sequences \citep{Gloor2005} separately.
+
+However it has been proved useful to analyse different aspects DNA and protein sequences, the informational approach has not been successfully applied to higher organisation levels (i.e., cells, tissues, organism) \citep{Longo2012}. It has also been noted \citep{Jaeger2014devmech} that the use of the informational approach is not appropriate to the study of development, simply because Shannon's information can not 
+increase while it is transmitted. If applied to development, it would imply that the amount of information (or complexity) of the egg and the adult remain constant \citep{Jaeger2014devmech}, which contradicts the generalized notion that the complexity increases during embryogenesis.
+ 
 
 \paragraph{Computational metaphors}
 
