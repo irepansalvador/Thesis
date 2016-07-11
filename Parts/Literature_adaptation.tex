@@ -142,13 +142,24 @@ Importantly, MKT assumes for simplicity that non-synonymous mutations are either
 %
 Mutations under positive selection therefore would be expected to spread through a population rapidly so they would not contribute to polymorphism but only to divergence substitutions.
 
-Therefore, in the presence of mutations under positive selection, the ratio of non-synonymous to synonymous variation within species should be lower than the ratio of non-synonymous to synonymous variation between species (i.e. $Dn/Ds > Pn/Ps$). 
+Therefore, in the presence of mutations under positive selection, the ratio of non-synonymous to synonymous variation within species should be lower than the ratio of non-synonymous to synonymous variation between species (i.e. $Dn/Ds > Pn/Ps$; see Fig. \ref{fig:MKT}). 
 On the contrary, if the observed ratio of non-synonymous to synonymous variation between species is lower than the ratio of non-synonymous to synonymous variation within species (i.e., $Dn/Ds < Pn/Ps$) then negative selection is at work.
 	\nomenclature{$Dn$}{Non-synonymous (inter-specific) divergence per site}
 	\nomenclature{$Ds$}{Synonymous (inter-specific) divergence per site}
 	\nomenclature{$Pn$}{Synonymous (intra-specific) polymorphism per site}
 	\nomenclature{$Ps$}{Synonymous (intra-specific) polymorphism per site}
 %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+  \includegraphics[width=10cm]{./Images/MKT.png}
+  \centering
+  \caption{\textbf{McDonald-Kreitman Test (MKT).} MKT compares the ratio of non-synonymous ($Dn$; red circle) to synonymous ($Ds$; green circle) divergence ($Dn/Ds$) to the ratio of non-synonymous ($Pn$; red star) to synonymous ($Ps$; green star) polymorphic changes ($Pn/Ps$). Positive selection is detected when $Dn/Ds > Pn/Ps$, as in the example shown in the left.
+   }
+  \label{fig:MKT}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Although the MKT has been proved robust to many sources of error (e.g., variation to mutation rate across the genome), it can be affected by the presence of slightly deleterious mutations or demography \citep{Messer2013,Eyre-Walker2006a}. 
 %
 The effect of slightly deleterious mutations are related to the effective population size ($N_{e}$). In a population with a low $N_{e}$, slightly deleterious mutations would have more probabilities of fixation by random genetic drift contributing more to polymorphism than to divergence, underestimating the proportion of adaptive changes \citep{Messer2013}.
