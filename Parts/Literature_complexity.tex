@@ -13,7 +13,7 @@ Then, I will explore the relationship between complexity in evolution and develo
 \subsubsection{Complexity in informational terms}
 
 The use of informational terms (e.g., transcription, translation and code) in biology are widespread, specially in molecular biology \citep{Smith2000,yockey2005information}
-More than just the use of informational terms in biology, information theory concepts like Shannon's entropy and joint information have been used as a proxy to measure complexity.
+More than just the use of informational terms in biology, information theory concepts like Shannon's entropy and mutual information have been used as a proxy to measure complexity.
 In the following paragraphs, I will briefly describe briefly these concepts and provide some examples of their use to address biological complexity.
 
 \paragraph{Shannon's entropy}
@@ -51,31 +51,31 @@ The mutual information $I(X;Y)$ of variables $X$ and $Y$ can be expressed as:
 where $H(X)$ is the Shannon's entropy of $X$ and $H(X|Y)$ is the conditional entropy of $X$ given $Y$. As Shannon's entropy, the conditional entropy is a measure of uncertainty. In this case, $H(X|Y)$ measures how uncertain we are of $Y$ on the average when we know $X$ \citep{Shannon1948}.
 
 Therefore, mutual information measures how much information of one variable is contained in the other. It can also be though as a similarity measure \citep{yockey2005information}, as if $X$ is identical to $Y$, the information of knowing $X$ determines the value of $Y$.
-Some decades ago, it was thought that the DNA sequence of a coding gene would determine not only the sequence of a protein, but also its 3D folded structure \citep{Anfinsen1973}. If this would be the case, the mutual information measure would be then useful to predict the 3D structure of the protein from its DNA sequence. 
-However, it is nowadays clear that other factors like post-translational modifications and the physico-chemical environment of the protein affect its structure \citep{Kang2009}.
+Some decades ago, there were great expectations on the use of informational measures to predict some features of an organism based on its DNA or protein sequences. For example, it was thought that the DNA sequence of a coding gene would determine not only the sequence of a protein, but also its 3D folded structure \citep{Anfinsen1973}.
+However, it is nowadays clear that other factors like post-translational modifications and the physico-chemical environment of the protein affect its structure \citep{Kang2009} and that the DNA sequence is not sufficient to predict it.
 
-This lack of correspondence between both types of sequences have restrict the application of the mutual information as a similarity measure to compare DNA \citep{Lichtenstein2015} or protein sequences \citep{Gloor2005} separately.
+This lack of correspondence between DNA and proteins have restrict the application of the mutual information as a similarity measure that compares DNA \citep{Lichtenstein2015} or protein sequences \citep{Gloor2005} separately.
 
-However it has been proved useful to analyse different aspects DNA and protein sequences, the informational approach has not been successfully applied to higher organisation levels (i.e., cells, tissues, organism) \citep{Longo2012}. It has also been noted \citep{Jaeger2014devmech} that the use of the informational approach is not appropriate to the study of development, simply because Shannon's information can not 
+However it has been proved useful to analyse different aspects of these molecular sequences, the informational approach has not been successfully applied to higher organisation levels (i.e., cells, tissues, organism) \citep{Longo2012}. It has also been noted \citep{Jaeger2014devmech} that the use of the informational approach is not appropriate to the study of development, simply because Shannon's information can not 
 increase while it is transmitted. If applied to development, it would imply that the amount of information (or complexity) of the egg and the adult remain constant \citep{Jaeger2014devmech}, which contradicts the generalized notion that the complexity increases during embryogenesis.
  
 
-\paragraph{Computational metaphors}
-
-Davidson used the GRN concept to explain development (and evolution) using a computational metaphor. For him, development is the outcome of spatial and temporal series of differential gene expression, that is controlled by a regulatory program built into the DNA. As Davidson, other authors have used computational analogies to define development \citep{Apter1965,monod2012cytodifferentiation,mayr1997evolution} 
+\subsubsection{Computational metaphors}
+Many authors have used computational analogies to define development \citep{Apter1965,monod2012cytodifferentiation,mayr1997evolution,Davidson2001}. Eric H. Davidson used the gene regulatory network (GRN) concept and a computational metaphor to explain development (and evolution). A GRN consists of DNA cis-regulatory elements, i.e., the regions in the vicinity of each gene which contain the specific sequence motifs at which those regulatory proteins which affect its expression bind; plus the set of genes which encode these specific regulatory proteins (i.e., transcription factors) \citep{Davidson2001}. For Davidson, development is then the outcome of spatial and temporal series of differential gene expression, that is controlled by a "regulatory program" (the GRN) built into the DNA.
+	\nomenclature{GRN}{Gene Regulatory Network}
 
 %To illustrate how the complexity of a regulatory network or "program" can increase in evolution (but a similar case could be said for development), Davidson describes an imaginary example:
 %an early evolutionary state consists of a small gene battery (set of functionally linked genes expressed in concert) encoding proteins used for some differentiated cell type, which is activated by a small number of genes encoding transcription factors. The network activating the gene battery is itself controlled by a single upstream gene.
 %In subsequent evolutionary states, the whole structure is said to become more complex as: the battery of genes is now used in some pattern formation system, new batteries of genes appear, new regulatory genes and new \textit{cis}-regulatory regions are introduced  \citep{Davidson2001}.
 A computational program, that is part of a computer system, contains a set of instructions that performs a specific task. The computer program needs a hardware, the set of physical objects that compose the computational system and where the computational program can be stored and execute.
 If the cell is considered as a computer system with the GRN as the computer program, then the hardware would be all the components of the cell including the genomic and cell structure and all the molecules present in the cell.
-However, in contrast to a computer system, the separation between the program and the hardware is not clear in a cell.The "genetic program" is affected by the components present in the cell ("hardware"), which in turn changes depending on the program \citep{susan2000ontogeny,Jaeger2014devmech}.
+However, in contrast to a computer system, the separation between the program and the hardware is not clear in a cell. The "genetic program" is affected by the components present in the cell ("hardware"), which in turn changes depending on the program \citep{susan2000ontogeny,Jaeger2014devmech}.
 %
 %There are also important critiques of this informational approach. First, using an informational analogy to describe development implies the distinction between a "hardware" and a "software".
 %The "hardware" would consist of the genome structure, regulatory components, cells, organs, etc., and the "software" would be the GRNs or the set of instructions that directs the performance of specific operations.
 %For biological systems, this distinction is misleading, as there are recurrent feedback between its "hardware" and "software", so that the structure of development processes change through development \citep{susan2000ontogeny,Salazar-Ciudad2009,Jaeger2014devmech}.
 
-Using again the computational metaphor, Davidson considered that the metric of complexity is the diversity of the programs of gene expression that are "installed and executed" as the embryo develops \citep{Davidson2001}. For illustrating his point Davidson describes an imaginary example: first, there is a set of downstream genes activated by a small network of TFs (each of them with only one \textit{cis}-regulatory element), which in turn is controlled by a single upstream TF; then, TFs of the network gain cis-regulatory elements (so the circuitry is more intricate) and newly recruited intermediate regulatory TFs activate a different set of down-stream genes. Otherwise, the initial set of downstream genes is still controlled by the single upstream TF \citep{Davidson2001}.
+Using again the computational metaphor, Davidson considered that these programs of gene expression, which are "installed and executed" as the embryo develops, could serve as a metric of complexity \citep{Davidson2001}. For illustrating his point Davidson describes an imaginary example of a GRN that increases its complexity in evolution: first, there is a set of downstream genes activated by a small network of TFs (each of them with only one \textit{cis}-regulatory element), which in turn is controlled by a single upstream TF; then, TFs of the network gain cis-regulatory elements (so the circuitry is more intricate) and newly recruited intermediate regulatory TFs activate a different set of down-stream genes. Otherwise, the initial set of downstream genes is still controlled by the single upstream TF \citep{Davidson2001}.
    
 Thus, in Davidson example, a small hierarchical network changes so that an additional layer is gained (intermediate TF) and the topology of the network changes: instead of one outcome (the initial set of downstream genes), now two outcomes are possible (with the additional set of downstream genes activated by the new intermediate TF).
 Even when in his example it would seem easy to discern a simple GRN from a complex one just from its topology, the high intricacy of real biological GRN would make their distinction (at least by visual inspection) a very difficult task.
@@ -244,8 +244,8 @@ For some authors, the increase in complexity in an organism during development (
 %
 %At the molecular level, the definition of "interaction among parts" and "number of parts" can be easily associated, as the the differential gene expression in the various number of cell types are determined in great manner by the interaction of between gene products and their \textit{cis}-regulatory regions (DNA regions usually close to a gene which contains specific sequence motifs where proteins bind and affect its expression).
 %%
-The interaction between genes and their \textit{cis}-regulatory regions is also referred as gene regulatory networks (GRNs) or "regulatory architecture" of the genome \citep{Davidson2001}.
-	\nomenclature{GRN}{Gene Regulatory Network}%\textit{cis}-regulatory regions 
+%The interaction between genes and their \textit{cis}-regulatory regions is also referred as gene regulatory networks (GRNs) or "regulatory architecture" of the genome \citep{Davidson2001}.
+%	\nomenclature{GRN}{Gene Regulatory Network}%\textit{cis}-regulatory regions 
 
 
 %\textbf{Other} authors highlight the importance of modules in facilitating the evolution of complex forms \citep{Carroll2001a}.
