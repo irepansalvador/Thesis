@@ -169,6 +169,48 @@ In addition, this definition does not take into account that embryos do not only
 
 The notion of an increase in complexity during embryogenesis is tightly related to the concept of embryo compartmentalization.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+
+\setcounter{figure}{2}% Modify counter of figure so it maches the order, as here im not using \begin{figure}
+
+\begin{mdframed}[style=boxstyle,frametitle={Box1. On the relationship between the increase of complexity in Evolution and Development}]\label{Box1:Evo_complexity}
+
+The connection between the increase in complexity during development and evolutionary time it has been largely discussed.
+Haeckel was one of the first who made explicit hypotheses about the connection between the development and evolutionary patterns in his "Biogenetic Law" (see section X).
+
+This implies that the increase in complexity we see during development is a reflection of a similar increase in complexity that has occurred through evolution.
+
+Early views of evolution saw the increase in complexity as inexorable, with all the species descending from simpler ancestral forms \citep{lamarck1809zoo,haeckel1874menschen}, and with the human species as the latest and more perfect product of the evolution of animals \citep{haeckel1874menschen}.
+
+
+Recent views recognize that complexity of can increase or decrease in a lineage.
+Using the number of cell-types as complexity measure, there are clear examples of taxa that have decreased their complexity over time, specially in parasites \citep{Canning2003,Arthur2010} (although morphological simplification can not be considered universal in parasitic taxa \citealp{poulin2011evolutionary}). Therefore, it seems that there is no unique trend to increase the complexity over time. Therefore, the complexity of a specific lineage might decrease, increase or stay the same (see Figure \ref{boxfigure}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par
+{\centering
+  \includegraphics[width=0.8\textwidth]{./Images/complexity_min.jpeg}
+  \centering
+  \captionof{figure}{Two lineages with different complexity change through their evolutionary trajectories.
+  b) Representation of the minimum, mean and maximum complexity of many lineages over evolutionary time in which the minimum stay constant while the mean and maximum increase.
+Redrawn from \citep{Arthur2010}.}
+\label{boxfigure}
+}
+\par
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+If we consider unicellularity as the minimum complexity, it can be said that complexity has remained more or less constant in evolution, as unicellular organisms like bacteria, have been present from 3.5 billion years.
+
+If we look at maximum complexity a trend for increasing complexity would be apparent, as the initial complexity would have increased with the appearance of simple multicellular organisms (only few cell types) and would have further increase until the appearance of organisms composed of hundreds of cell types.
+
+It is important to notice that this apparent trend towards increasing complexity does not necessarily imply that it has been selected for \citep{McShea2015}.
+
+If complexity would follow a random walk scenario starting from unicellular organisms (in a random walk the mean distance of a point after $n$ time steps is $\sqrt[2]{n}$), the mean and maximum would show a trend towards increasing complexity \ref{boxfigure} given that there is a minimum complexity requirement (it is not possible to have less than one cell) \citep{gould1996fullhouse}.
+
+\end{mdframed}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsubsection{Compartmentalization in development}
 
 In here, I will refer to compartmentalization as the subdivision of the embryo in different parts (or compartments) during development. 
@@ -251,7 +293,7 @@ For some authors, the increase in complexity in an organism during development (
 %\textbf{Other} authors highlight the importance of modules in facilitating the evolution of complex forms \citep{Carroll2001a}.
 
 
-\subsubsection{Gene expression regulation}
+\paragraph{Gene expression regulation}
 
 It is widely acknowledged that the spatio-temporal regulation of gene expression in development is crucial for the progressive compartmentalization of the embryo. 
 %After acknowledging the importance of the spatio-temporal regulation of gene expression in development, 
@@ -303,105 +345,39 @@ Additionally to all these regulatory levels that occur within a cell, the spatio
 %Signalling pathways recurrently used during animal development are the Wnt, FGF and Shh pathways (for a detailed description of each signalling pathway, see \citep{Gilbert2014}.
 %For example, the Shh pathway plays a fundamental role in the fruit fly segment polarization(REF) and wing development (REF), and in vertebrate limb (REF) and tooth development \citep{Jernvall2000b}.
 
-\subsection{Analysis of gene expression as a proxy of compartmentalization and complexity in the embryo}
+\subsection{Spatial complexity}
 
-SEARCH FOR EXAMPLES THAT ARE SIMILAR TO MY STUDY, AND THAT CAN BE USED AS A PROXY OF COMPARTMENTALIZATION 
+Until this point, I have focused on the concept of compartmentalization 
+%(and the molecular regulatory mechanisms that might be responsible for it) 
+as one aspect that reflects the increase in complexity during development.
+Another aspect that is intuitively related to the increasing embryonic complexity is the shape (or form) of the embryo. Focusing on the shape of the embryo, embryonic development can be thought as a process that starts with a simple spherical or oblate fertilized egg and that ends with complex shapes and forms (in the adult or larva) \citep{Forgacs_Newman2005}.
+
+\subsubsection{Morphometrics}
+
+In the last decades, morphometric tools have been used widely as a tool to quantify, characterize and compare biological shapes \citep{JamesRohlf1993}. In morphometrics, shape refers to the geometric properties of an object that are invariant to location, scale and orientation \citep{Slice2005}. Many of the modern morphometrics analyses are based on the use of "landmarks", which refer to precisely located points that establish a clear one-to-one correspondence between the samples under study \citep{Klingenberg2010}. Although there are many different morphometric methods, they can be divided in four main categories: "traditional morphometrics", "geometric morphometrics", outline analysis and surface analysis \citep{Slice2005}. In the next paragraphs I will briefly explain these different methods. For an extensive review, see \citep{Bookstein1997,Dryden1998,Zelditch2008,Slice2005}.
+
+The "traditional" methods refer to the application of multivariate statistics (e.g., principal component analysis) to the direct measurement of lengths, widths or ratios of specific structures. Some typical applications of these methods were the classification of species or sexes \citep{Jolicoeur1960} using lentghs, widths or anlges between landmarks \citep{Dryden1998}.
+
+Geometric morphometrics analyses use instead geometric coordinates of morphological landmarks \citep{zelditch2012geometric}. 
+
+Outline analyses are specially relevant when it is not possible to identify comparable landmarks between samples. 
+
+
+Uses Fourier decomposition to produce "harmonics" that describe the positions of the points along the outline. The harmonics can be converted into shape coordinates and ultimately into principal components.
+
+ semilandmarks are the points along a curve. If strategically spaced, they can be submitted to Procrustes analysis and analyzed just like ordinary landmarks.
+Sliding semilandmarks - The position of semilandmarks can be optimized by sliding them along the outline curve as part of Procrustes analysis to provide the best fit between shapes. 
+
+\subparagraph{Eigenshape and extendend eigenshape analysis} 
+Eigenshape analyses use a different approach to outline coordinates where the standardization is not done with Procrustes, but by calculating angles between points to provide map around the curve. Principal components scores are derived from the angular data. Extended eigenshape analysis - Same as eigenshape, but a series of homologous landmarks are used to pin the outline at points along the perimeter
+of an object.
 
 
 
+\paragraph{Surface analyses}
 
-%\subsection{Complexity Increase in Evolution}
 %
-%The increase in complexity in evolution has has been a topic of interest for more than a century.
-%Early views of evolution saw the increase in complexity as inexorable, with all the species descending from simpler ancestral forms \citep{lamarck1809zoo,haeckel1874menschen}, and with the human species as the latest and more perfect product of the evolution of animals \citep{haeckel1874menschen}.
+%\subsection{Analysis of gene expression as a proxy of compartmentalization and complexity in the embryo}
 %
+%SEARCH FOR EXAMPLES THAT ARE SIMILAR TO MY STUDY, AND THAT CAN BE USED AS A PROXY OF COMPARTMENTALIZATION 
 %
-%Recent views recognize that complexity of can increase or decrease in a lineage.
-%Using the number of cell-types as complexity measure, there are clear examples of taxa that have decreased their complexity over time, specially in parasites \citep{Canning2003,Arthur2010} (although morphological simplification can not be considered universal in parasitic taxa \citealp{poulin2011evolutionary}).
-%An example would be the orthonectids, a phylum of parasites (Orthonectida) of marine invertebrates with only two types of cells, external ciliated and internal reproductive cells without any internal organs. 
-%%animal group formerly known as the "Mesozoa", which are worm-like parasites of marine invertebrates.
-%Because of their simple morphology (only two cell types and no organs) this animal group was formerly known as "Mesozoa" and considered to be "living fossils" or intermediate forms between Protozoans and Metazoans.
-%Now, even when they remain poorly studied animals, it is thought that they are descendants of more complex ancestors, probably some lophotrochozoan group \citep{Arthur2010}, as
-%%The Orthonectida, for example, is a phylum of parasites of marine invertebrates with only two types of cells, external ciliated and internal reproductive cells without any internal organs. 
-%molecular phylogenetic analysis provided evidence that they are more closely related to tripoblastic animals than to protists or diplobastic taxa \citep{Hanelt1996}.
-%Therefore, these animals most probably evolved from a more complex free living animal and decreased their morphological complexity after they adopted a parasitic life style.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{figure}[h]
-%  \includegraphics[width=12cm]{./Images/complexity_min.jpeg}
-%  \centering
-%  \caption{a) Two lineages with different complexity change through their evolutionary trajectories.
-%  b) Representation of the minimum, mean and maximum complexity of many lineages over evolutionary time in which the minimum stay constant while the mean and maximum increase.
-%Redrawn from \citep{Arthur2010}.
-% }
-%  \label{fig:Complexity_min}
-%\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%\subsubsection{Is there a trend towards increasing complexity?}
-%
-%As explained above, it seems that there is no unique trend to increase the complexity over time. Therefore, the complexity of a specific lineage might decrease, increase or stay the same (see Figure \ref{fig:Complexity_min}a).
-%%As the organisms have a wide range of morphological complexities, it is useful to use an statistical approach to identify a trend towards increasing complexity.
-%If we consider unicellularity as the minimum complexity, it can be said that complexity has remained more or less constant in evolution, as unicellular organisms like bacteria, have been present from 3.5 billion years.
-%
-%If we look at maximum complexity a trend for increasing complexity would be apparent, as the initial complexity would have increased with the appearance of simple multicellular organisms (only few cell types) and would have further increase until the appearance of organisms composed of hundreds of cell types.
-%
-%It is important to notice that this apparent trend towards increasing complexity does not necessarily imply that it has been selected for \citep{McShea2015}.
-%
-%If complexity would follow a random walk scenario starting from unicellular organisms (in a random walk the mean distance of a point after $n$ time steps is $\sqrt[2]{n}$), the mean and maximum would show a trend towards increasing complexity \ref{fig:Complexity_min} given that there is a minimum complexity requirement (it is not possible to have less than one cell) \citep{gould1996fullhouse}.
-
-%If complexity, measured as the number of cell types, follows a random walk starting from unicellular organisms a trend of increasing complexity would be apparent.
-%In a random walk scenario, in which the mean distance of a point after $n$ time steps is $\sqrt[2]{n}$, the mean and maximum would show a trend towards increasing complexity \ref{fig:Complexity_min} \citep{gould1996fullhouse}.
-% 
-%in which the organisms increase or decrease their complexity in a process similar to a random walk or diffusion, with a minimum complexity requirement. 
-%could result in an apparent complexity increase.
-%
-%In this case, given that the first organisms would have been simple, and there is a low complexity boundary (it is not possible to be simpler than an unicellular organims), even if the complexity of different lineages would have changed in a random walk fashion (see Figure \ref{fig:Complexity_min}b) the mean and maximum complexity would increase in evolution \citep{gould1996fullhouse}.
-
-%McShea has proposed three different mechanisms that would account for the same trend of increasing the mean and maximum complexity: 1) a strongly driven mechanism, 2) a weakly driven mechanism and 3) a Passive
-
-%EXPLAIN MORE ABOUT THE MINIMUM-MEAN-MAX
-
-%However, if we could depict the change in complexity in all lineages (see Figure \ref{fig:Complexity_min}b), we probably would see that the range of complexity has increased over time, with the a lower limit or minimum complexity that has stayed the same and with an increase in mean and maximun (or upper limit) of complexity \citep{McShea1996,Arthur2010}.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
-
-\setcounter{figure}{2}% Modify counter of figure so it maches the order, as here im not using \begin{figure}
-
-\begin{mdframed}[style=boxstyle,frametitle={Box1. On the relationship between the increase of complexity in Evolution and Development}]\label{Box1:Evo_complexity}
-
-The connection between the increase in complexity during development and evolutionary time it has been largely discussed.
-Haeckel was one of the first who made explicit hypotheses about the connection between the development and evolutionary patterns in his "Biogenetic Law" (see section X).
-
-This implies that the increase in complexity we see during development is a reflection of a similar increase in complexity that has occurred through evolution.
-
-Early views of evolution saw the increase in complexity as inexorable, with all the species descending from simpler ancestral forms \citep{lamarck1809zoo,haeckel1874menschen}, and with the human species as the latest and more perfect product of the evolution of animals \citep{haeckel1874menschen}.
-
-
-Recent views recognize that complexity of can increase or decrease in a lineage.
-Using the number of cell-types as complexity measure, there are clear examples of taxa that have decreased their complexity over time, specially in parasites \citep{Canning2003,Arthur2010} (although morphological simplification can not be considered universal in parasitic taxa \citealp{poulin2011evolutionary}). Therefore, it seems that there is no unique trend to increase the complexity over time. Therefore, the complexity of a specific lineage might decrease, increase or stay the same (see Figure \ref{boxfigure}.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\par
-{\centering
-  \includegraphics[width=0.8\textwidth]{./Images/complexity_min.jpeg}
-  \centering
-  \captionof{figure}{Two lineages with different complexity change through their evolutionary trajectories.
-  b) Representation of the minimum, mean and maximum complexity of many lineages over evolutionary time in which the minimum stay constant while the mean and maximum increase.
-Redrawn from \citep{Arthur2010}.}
-\label{boxfigure}
-}
-\par
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-If we consider unicellularity as the minimum complexity, it can be said that complexity has remained more or less constant in evolution, as unicellular organisms like bacteria, have been present from 3.5 billion years.
-
-If we look at maximum complexity a trend for increasing complexity would be apparent, as the initial complexity would have increased with the appearance of simple multicellular organisms (only few cell types) and would have further increase until the appearance of organisms composed of hundreds of cell types.
-
-It is important to notice that this apparent trend towards increasing complexity does not necessarily imply that it has been selected for \citep{McShea2015}.
-
-If complexity would follow a random walk scenario starting from unicellular organisms (in a random walk the mean distance of a point after $n$ time steps is $\sqrt[2]{n}$), the mean and maximum would show a trend towards increasing complexity \ref{boxfigure} given that there is a minimum complexity requirement (it is not possible to have less than one cell) \citep{gould1996fullhouse}.
-
-\end{mdframed}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
