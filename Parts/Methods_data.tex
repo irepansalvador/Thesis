@@ -1,0 +1,47 @@
+The work presented here is based on the analysis of publicly available data contained in many databases, shortly introduced in the Review of the Literature section. In the next paragraphs I will describe how the data used in here was acquired and processed, for the details, see the corresponding study.
+
+\subsubsection{In situ Hybridization data}
+
+\paragraph{\textit{D. melanogaster} (study I and III)}
+
+Images were downloaded from the FlyExpress Database version 5.1 \citep{Kumar2011} on February 2013. Only genes with laterally oriented images for the six stages used in BDGP \citep{Tomancak2002} were considered.
+
+Images were systematically retrieved and resized to 320 x 128 pixels (as in \citealp{Konikoff2012}) with ad-hoc Perl scripts.
+%
+The gene expression pattern was obtained using an adaptive threshold based on the mean and variance of a grey-scale version of each image. Three different threshold were used, resulting in three different filtered gene expression patterns of each original in situ image. I visually selected the image that resembled the most to the original gene expression pattern. Genes with ubiquitous expression in stages 1-3 and 4-6 were considered as entirely black images.
+
+To correct for small variation in the shape of the embryos I adjusted each embryo to an stage ideal embryo shape, with an algorithm I made to morphometrically deform the real embryo contour of each image to the corresponding stage ideal shape.
+Finally I applied a "smoothing filter" to produce a smooth expression pattern and eliminate isolated white/black pixels. I also manually filtered images from the literature or directly from BDGP of Transcription Factors or Growth Factor genes that did not have information in FlyExpress. These manually filtered images were also morphometrically deformed with the algorithm mentioned above. The resulting dataset contained 1218 genes with expression information in the six stages used in BDGP.
+
+In addition to the whole-mount in situ RNA-hybridization images, the BDGP database contains, for each gene, the list of the embryonic anatomical structures in which such gene is expressed \citep{Tomancak2007}. Each gene expression is described by one or several of those of anatomical terms by an expert. 
+This information was retrieved from the BDGP downloads page (http://insitu.fruitfly.org/insitu/html/downloads.html/), which contains the annotations of almost 8,000 genes. We removed genes with only "no staining" as anatomical term, leaving a total of 5762 genes.
+
+\paragraph{\textit{C. intestinalis} (study II)}
+
+I downloaded the in situ hybridization data (ish.zip file) from the download section of the ANISEED database on 28th of December 2015. 
+The expression data for the first three stages is at the cell level, while in the tailbud stages is at the tissues or specific regions of the embryo level. 
+I extracted the information of the 32 cells, 64 cells, 112 cells, early tailbud, mid tailbud and late tailbud stages. Only expression data from experiments reported to have Wild type phenotype, "public" publication status, with in situ hybridization as experiment design and whose probe was assigned to a Kyoto Hoya (KH) \citep{Satou2008} gene model.
+I excluded data from experiments whose image characterization was reported as "not sure" or too broadly as "part of whole embryo".
+
+The number of genes analyzed is n=745 for the 32-cell stage, n=758 for the 64-cell stage, n=809 for the 112-cell stage, n=1082 for the early tailbud, 1092 for the mid tailbud and 887 for the late tailbud. 
+
+\subsection{Transcriptomics ans population genomic data}
+
+\paragraph{modENCODE (study III and IV)}
+
+Gene expression levels in reads per kilobase per million mapped reads (RPKM) units for 30 developmental stages were retrieved from \citet{Gelbart2013}, who analyzed RNA-seq throughput data from the modENCODE project \citep{Graveley2011}.
+
+For using RNA-seq data to compare expression between samples, a normalization step was performed to adjust for varying sequencing depths and other potential technical effects across replicates (see study III)
+
+\paragraph{DGRP (study II and IV)}
+
+The population genomic data comes from 168 inbred lines of \textit{D. melanogaster} sequenced in the Freeze 1.0 of the Drosophila Genetic Reference Panel (DGRP) project \citep{Mackay2012}. The DGRP population was created collecting gravid females from a single population of Raleigh, North Carolina (USA), and following the full-sibling inbreeding approach during 20 generations to obtain full homozygous individuals. 
+DGRP lines showing high values of residual heterozygosity (>9\%) that were observed to be associated with large polymorphic inversions \citep{Huang2014} were not included.
+
+Due to requirements of the software used to estimate the rate of adaptive substitution, 
+the original data of 168 lines set was reduced to 128 isogenic lines by randomly sampling the polymorphisms at each site without replacement. Finally, residual heterozygous sites and sites with no quality value were excluded from the analysis.
+
+
+
+
+

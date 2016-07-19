@@ -135,7 +135,7 @@ in the embryo:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% reduces the space between lines in table of contents
-\renewcommand{\baselinestretch}{0.9}\normalsize
+\renewcommand{\baselinestretch}{0.8}\normalsize
 \tableofcontents
 %% back to normal
 \renewcommand{\baselinestretch}{1.0}\normalsize
@@ -201,7 +201,17 @@ in the embryo:
 %%%% -----------------------------------------------------------------
 
 \chapter{Material and Methods}
-\input{./Parts/Methods}
+	\section{Data mining and handling}
+	\input{./Parts/Methods_data.tex}
+		
+	\section{Compartmentalization and complexity measures}
+	\input{./Parts/Methods_compartmentalization.tex}
+
+
+	\section{Estimating adaptation}
+%	\input{./Parts/Methods_adaptation.tex}
+
+%\input{./Parts/Methods}
 \clearpage
 
 %%%% -----------------------------------------------------------------
