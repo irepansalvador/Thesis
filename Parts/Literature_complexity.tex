@@ -2,8 +2,8 @@
 \setlength{\epigraphwidth}{.7\textwidth}
 \epigraph{\textit{"The embryo in the course of development generally rises in organisation (...) I am aware that it is hardly possible to define clearly what is meant by the organisation being higher or lower. But no one probably will dispute that the butterfly is higher than the caterpillar."}}{Charles Darwin 1859}
 
-In this section, I will talk about the increase in complexity during embryonic development.
-I will first try to explain different existing definitions of organismic complexity.
+In this section, I will talk about the increase in complexity during embryonic development. Is important to mention that there is no consensus in the definition of complexity, or how to measure it. It is indeed hard to find a definition of complexity that could be applied to the many different phenomena. A common intuitive notion of complexity relates to a system composed of many elements in a system and multiple interactions between these elements. However, some could see something as complex that is considered simple to others. Therefore, in this work I will use three different measures that relate to different intuitive aspects of complexity during embryonic development. \textbf{REVISAR}
+I will first try to explain different existing definitions of complexity applied to organisms and why I preferentially selected one and no another.
 Then, I will explore the relationship between complexity in evolution and development, and discuss the possibility of a trend in terms of complexity increase.
 
 
@@ -56,9 +56,25 @@ However, it is nowadays clear that other factors like post-translational modific
 
 This lack of correspondence between DNA and proteins have restrict the application of the mutual information as a similarity measure that compares DNA \citep{Lichtenstein2015} or protein sequences \citep{Gloor2005} separately.
 
-However it has been proved useful to analyse different aspects of these molecular sequences, the informational approach has not been successfully applied to higher organisation levels (i.e., cells, tissues, organism) \citep{Longo2012}. It has also been noted \citep{Jaeger2014devmech} that the use of the informational approach is not appropriate to the study of development, simply because Shannon's information can not 
-increase while it is transmitted. If applied to development, it would imply that the amount of information (or complexity) of the egg and the adult remain constant \citep{Jaeger2014devmech}, which contradicts the generalized notion that the complexity increases during embryogenesis.
- 
+However it has been proved useful to analyse different aspects of these molecular sequences, the informational approach has not been successfully applied to higher organisation levels (i.e., cells, tissues, organism) \citep{Longo2012}. 
+%It has also been noted \citep{Jaeger2014devmech} that the use of the informational approach is not appropriate to the study of development, simply because Shannon's information can not increase while it is transmitted. If applied to development, it would imply that the amount of information (or complexity) of the egg and the adult remain constant \citep{Jaeger2014devmech}, which contradicts the generalized notion that the complexity increases during embryogenesis.
+
+\paragraph{Algorithmic complexity}
+Another definition of complexity that has been very popular is the algorithmic complexity. The algorithmic complexity (also called Kolmogorov complexity) of a data string would be the shortest algorithm necessary to describe such string. As the description of a string can be thought as a program to produce the data \citep{Wolfram2002} \textbf{BUSCAR UNA REFERENCIA MAS ANTIGUA}, the algorithmic complexity can also be defined as the shortest program that can produce the data.
+
+Algorithmic complexity is related to randomness, as in algorithmic information theory if a program is as long as the data itself, then the data is considered to be algorithmically random \citep{Wolfram2002}. This measure of complexity that seems specially suited to analyse data strings  is not easily applicable to other issues, like measuring phenotypic complexity. Even in the case of strings, it has been said that it is impossible to distinguish if most long sequences are random or not \citep{Wolfram2002}. 
+
+Also, it has been proposed that it is impossible to calculate the program-size complexity of anything, as it is impossible to prove that certain program is the shortest to produce some object (it would be only possible to prove upper bounds in its complexity if a program that produce the desired output is found; \citealp{chaitin1999unknowable}).
+Some other authors have also said that algorithmic complexity, in which randomness is equated to high complexity, does not correspond to an intuitive notion of biological complexity \citep{Adami2002}, as living organisms are expected to show organization or order, far from randomness. 
+
+\paragraph{Spatial information}
+There are also information-based measures applied to space. For example, Michael \citet{Batty1974} used Shannon's definition of information and applied it to "spatial systems". He was specially interested in applying his measure to spatial systems such as a cities (Batty is a geographer). A brief description of Batty's method follows, for a full description see \citep{Batty1974,Batty2014}. For a certain location $i$, with a population $P_{i}$, the probability $p_{i}$ is defined as the proportion of the population in $i$: $p_{i} = P_{i}/P$.  To extend this to a probability density, the $p_{i}$ is divided by the space available for the population, which is $\Delta x_{i}$. So the spatial entropy formula becomes:
+
+$$S = - \sum_{i}^{} p_{i} \log \frac{ p_{i} }{ \Delta x_{i} } $$
+
+With this measure, the spatial entropy (and therefore spatial complexity) will reach its maximum when the probability is uniform $p_{i} = n$, and the distribution of land $X$ in the different locations is also uniform $\Delta x_{i} = \sum_{i}^{} \Delta x_{i} / n$. One application of this measure is to calculate if the entropy of the distribution density in a city has increased over time \citep{Batty2010}.
+
+Another measure of spatial complexity based on information theory that has been proposed is the "spatial joint information" \citep{Salazar-Ciudad2001a} which indicates the relative entropy of a 1D arrangement, between cells with different "states" (based on the expression level of some gene). \citet{Salazar-Ciudad2001a}, used this measure to estimate the complexity of gene expression patterns in 1D cell arrangements produced with model genetic networks.
 
 \subsubsection{Computational metaphors}
 Many authors have used computational analogies to define development \citep{Apter1965,monod2012cytodifferentiation,mayr1997evolution,Davidson2001}. Eric H. Davidson used the gene regulatory network (GRN) concept and a computational metaphor to explain development (and evolution). A GRN consists of DNA cis-regulatory elements, i.e., the regions in the vicinity of each gene which contain the specific sequence motifs at which those regulatory proteins which affect its expression bind; plus the set of genes which encode these specific regulatory proteins (i.e., transcription factors) \citep{Davidson2001}. For Davidson, development is then the outcome of spatial and temporal series of differential gene expression, that is controlled by a "regulatory program" (the GRN) built into the DNA.
@@ -69,7 +85,7 @@ Many authors have used computational analogies to define development \citep{Apte
 %In subsequent evolutionary states, the whole structure is said to become more complex as: the battery of genes is now used in some pattern formation system, new batteries of genes appear, new regulatory genes and new \textit{cis}-regulatory regions are introduced  \citep{Davidson2001}.
 A computational program, that is part of a computer system, contains a set of instructions that performs a specific task. The computer program needs a hardware, the set of physical objects that compose the computational system and where the computational program can be stored and execute.
 If the cell is considered as a computer system with the GRN as the computer program, then the hardware would be all the components of the cell including the genomic and cell structure and all the molecules present in the cell.
-However, in contrast to a computer system, the separation between the program and the hardware is not clear in a cell. The "genetic program" is affected by the components present in the cell ("hardware"), which in turn changes depending on the program \citep{susan2000ontogeny,Jaeger2014devmech}.
+However, in contrast to a computer system, the separation between the program and the hardware is not clear in a cell. The "genetic program" is affected by the components present in the cell ("hardware"), which in turn changes depending on the program \citep{susan2000ontogeny,Jaeger2014devmech}.  For example, it is acknowledged that a cell might elicit different responses after the binding of an extracellular growth factor to a receptor in its membrane, depending the presence or relative abundance of key signal transducer molecules \citep{Dailey2005}. In other words, it can be said that the set of gene products present a cell define its "state" \citep{Forgacs_Newman2005}, and depending on the current state of a cell (which is in turn the product of the previous cell state plus extracellular signal), it will respond differently to a specific signal. This is the case from the very early stages of development, as the zygote transcription is regulated by the gene products that were maternally deposited. Also, it is important to mention that cells not only change their state during development, they also change their spatial distribution. A change in the spatial distribution (at a specific time during development) might have an affect in the outcome of development process \citep{Salazar-Ciudad2010}, for example, if some cells migrate or invaginate while producing a growth factor ligand, the cells that will receive the signal will be different. Therefore, it is cleat that not all the information necessary for the development is contained in the genome or GRNs.
 %
 %There are also important critiques of this informational approach. First, using an informational analogy to describe development implies the distinction between a "hardware" and a "software".
 %The "hardware" would consist of the genome structure, regulatory components, cells, organs, etc., and the "software" would be the GRNs or the set of instructions that directs the performance of specific operations.
@@ -78,7 +94,7 @@ However, in contrast to a computer system, the separation between the program an
 Using again the computational metaphor, Davidson considered that these programs of gene expression, which are "installed and executed" as the embryo develops, could serve as a metric of complexity \citep{Davidson2001}. For illustrating his point Davidson describes an imaginary example of a GRN that increases its complexity in evolution: first, there is a set of downstream genes activated by a small network of TFs (each of them with only one \textit{cis}-regulatory element), which in turn is controlled by a single upstream TF; then, TFs of the network gain cis-regulatory elements (so the circuitry is more intricate) and newly recruited intermediate regulatory TFs activate a different set of down-stream genes. Otherwise, the initial set of downstream genes is still controlled by the single upstream TF \citep{Davidson2001}.
    
 Thus, in Davidson example, a small hierarchical network changes so that an additional layer is gained (intermediate TF) and the topology of the network changes: instead of one outcome (the initial set of downstream genes), now two outcomes are possible (with the additional set of downstream genes activated by the new intermediate TF).
-Even when in his example it would seem easy to discern a simple GRN from a complex one just from its topology, the high intricacy of real biological GRN would make their distinction (at least by visual inspection) a very difficult task.
+%Even when in his example it would seem easy to discern a simple GRN from a complex one just from its topology, the high intricacy of real biological GRN would make their distinction (at least by visual inspection) a very difficult task.
 
 %an early evolutionary state consists of a small gene battery (set of functionally linked genes expressed in concert) encoding proteins used for some differentiated cell type, which is activated by a small number of genes encoding transcription factors. The network activating the gene battery is itself controlled by a single upstream gene.
 %In subsequent evolutionary states, the whole structure is said to become more complex as: the battery of genes is now used in some pattern formation system, new batteries of genes appear, new regulatory genes and new \textit{cis}-regulatory regions are introduced
@@ -124,10 +140,11 @@ Daniel W. McShea has provided useful definitions of biological complexity. One o
 This definition can be used at different hierarchical levels of biological organization, e.g., tissues, cells, genes.
 Indeed, a measure of morphological complexity that has been favoured by some authors 
 %(perhaps because of its intuitiveness), 
-is the number of cell types that compose an organism 
-	\citep{Valentine1994,Bell1997,Bonner2004}.
-Importantly, with this definition, complexity at different levels are not necessarily correlated.
+is the number of cell types that compose an organism \citep{Valentine1994,Bell1997,Bonner2004}.
+This definition of complexity is not exempt of complications, as there is no clear criteria of how to define a cell type or how to determine, during development, when a new cell type has formed.
 
+Importantly, with this definition (complexity as the number of parts), the complexity at different levels are not necessarily correlated.
+%
 %These "parts" might be body segments (e.g., of an insect) or genes.
 %It is evident that these definitions are problematic.
 %It is doubtful to say that some centipede is more complex than a beetle, just based in the different number of segments they have.
@@ -139,7 +156,7 @@ This lack of correspondence at different levels using "the number of part types"
 %Some decades ago, there was the expectation that the morphological complexity should correlate with the number of genes in an organism. 
 %With the release of the first eukaryotic genome sequences, such correspondence was not observed.
 Before that, the lack of correspondence between genome size and organism complexity (using again an intuitive notion of complexity),  or "C-value paradox", was also noted.
-
+The lack of correspondence between the number of genes with an intuitive notion of complexity is now partly explain by some authors by the amount of post-transcriptional regulation. It has been therefore propose that alternative splicing (\textbf{REF}) or the amount of miRNA regulation is related with the complexity in vertebrates (\textbf{REF}). \textbf{PARTE DE LA PARADOJA SE RESUELVE CON EL HECHO DE COMO SE REGULA EL DESARROLLO EN LOS ORGANISMOS, QUE NO ES DEPENDIENTE SOLAMENTE DEL NUMERO DE GENES, POR EJEMPLO LA TOPOLOGIA DE REDES ES UN MECHANISMO QUE AFECTA LA COMPLEJIDAD FENOTIPICA }
 
 McShea also makes the distinction between "object complexity" that refers to the number of parts of a system and "process complexity" that refers to the interaction among parts in a system \citep{McShea1996}.
 %An alternative definition of complexity includes not only the "number of parts" but also the "interaction among parts" 
@@ -149,7 +166,7 @@ Using this definition, two different organisms would have the same object comple
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Complexity Increase in Development}
+\subsection{Complexity Increase in Development and Evolution}
 
 The increase in complexity in an organism during embryogenesis is probably one of the most intuitive processes of animal development.
 
@@ -162,31 +179,31 @@ Using the number of cell types, the increase of complexity during development is
 
 %Using the number of cell types again as a proxy of morphological complexity, it can be said that during metazoan development, complexity increases as the zygote divides and differentiates into an adult with multiple cell types. 
 
-This definition of complexity is not exempt of complications, as there is no clear criteria of how to define a cell type or how to determine when a new cell type has formed during development. 
+%This definition of complexity is not exempt of complications, as there is no clear criteria of how to define a cell type or how to determine when a new cell type has formed during development. 
 %For example, it could be that at the morphological level a cell seems to be undifferentiated, but when isolating it from its neighbour cells, it differentiates in an autonomous way into a specific cell type, suggesting that the cell fate was already determined without the necessity of further interactions with other cells.
 %
-In addition, this definition does not take into account that embryos do not only get more cell types, but they also get organized in specific patterns in space and time in the embryo, which also could be considered as an increase in complexity over developmental time.
-
-The notion of an increase in complexity during embryogenesis is tightly related to the concept of embryo compartmentalization.
+%In addition, this definition does not take into account that embryos do not only get more cell types, but they also get organized in specific patterns in space and time in the embryo, which also could be considered as an increase in complexity over developmental time.
+%
+%The notion of an increase in complexity during embryogenesis is tightly related to the concept of embryo compartmentalization.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
-
-\setcounter{figure}{2}% Modify counter of figure so it maches the order, as here im not using \begin{figure}
-
-\begin{mdframed}[style=boxstyle,frametitle={Box1. On the relationship between the increase of complexity in Evolution and Development}]\label{Box1:Evo_complexity}
-
-The connection between the increase in complexity during development and evolutionary time it has been largely discussed.
-Haeckel was one of the first who made explicit hypotheses about the connection between the development and evolutionary patterns in his "Biogenetic Law" (see section X).
-
-This implies that the increase in complexity we see during development is a reflection of a similar increase in complexity that has occurred through evolution.
-
+%\clearpage
+%
+%\setcounter{figure}{2}% Modify counter of figure so it maches the order, as here im not using \begin{figure}
+%
+%\begin{mdframed}[style=boxstyle,frametitle={Box1. On the relationship between the increase of complexity in Evolution and Development}]\label{Box1:Evo_complexity}
+\subsubsection{ On the relationship between the increase of complexity in Evolution and Development}
+The connection between the increase in complexity during development and evolutionary time has been largely discussed.
+Haeckel was one of the first who made explicit hypotheses about the connection between the development and evolutionary patterns in his "Biogenetic Law" (see Box 1).
+%
+These laws imply that the increase in complexity we see during development is a reflection of a similar increase in complexity that has occurred through evolution.
+%
 Early views of evolution saw the increase in complexity as inexorable, with all the species descending from simpler ancestral forms \citep{lamarck1809zoo,haeckel1874menschen}, and with the human species as the latest and more perfect product of the evolution of animals \citep{haeckel1874menschen}.
 
 
 Recent views recognize that complexity of can increase or decrease in a lineage.
-Using the number of cell-types as complexity measure, there are clear examples of taxa that have decreased their complexity over time, specially in parasites \citep{Canning2003,Arthur2010} (although morphological simplification can not be considered universal in parasitic taxa \citealp{poulin2011evolutionary}). Therefore, it seems that there is no unique trend to increase the complexity over time. Therefore, the complexity of a specific lineage might decrease, increase or stay the same (see Figure \ref{boxfigure}.
+Using the number of cell-types as complexity measure, there are clear examples of taxa that have decreased their complexity over time, specially in parasites \citep{Canning2003,Arthur2010} (although morphological simplification can not be considered universal in parasitic taxa \citealp{poulin2011evolutionary}).In the other hand, there are many lineages that have remain unicellular (therefore their complexity would have remained constant), while some lineages (e.g., vertebrates) have increased their complexity. Therefore, it seems that there is no unique trend to increase the complexity over time. Therefore, the complexity of a specific lineage might decrease, increase or stay the same (see Figure \ref{boxfigure}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \par
 {\centering
@@ -195,24 +212,24 @@ Using the number of cell-types as complexity measure, there are clear examples o
   \captionof{figure}{Two lineages with different complexity change through their evolutionary trajectories.
   b) Representation of the minimum, mean and maximum complexity of many lineages over evolutionary time in which the minimum stay constant while the mean and maximum increase.
 Redrawn from \citep{Arthur2010}.}
-\label{boxfigure}
+%\label{boxfigure}
 }
 \par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-If we consider unicellularity as the minimum complexity, it can be said that complexity has remained more or less constant in evolution, as unicellular organisms like bacteria, have been present from 3.5 billion years.
+If we consider uni-cellularity as the minimum complexity, it can be said that complexity has remained more or less constant in evolution, as unicellular organisms like bacteria, have been present from 3.5 billion years. However, if we consider instead maximum complexity a trend for increasing complexity would be apparent, as complexity would have increased with the appearance of simple multicellular organisms (only few cell types) and would have further increase until the appearance of organisms composed of hundreds of cell types. Some authors consider that this apparent trend of increasing complexity is the product of natural selection (\textbf{REF}). This notion can lead to circular reasoning, saying that organisms are complex because they have been selected for that, and that they have been selected because they are complex. \textbf{EXPLICAR MEJOR}
 
-If we look at maximum complexity a trend for increasing complexity would be apparent, as the initial complexity would have increased with the appearance of simple multicellular organisms (only few cell types) and would have further increase until the appearance of organisms composed of hundreds of cell types.
-
-It is important to notice that this apparent trend towards increasing complexity does not necessarily imply that it has been selected for \citep{McShea2015}.
-
-If complexity would follow a random walk scenario starting from unicellular organisms (in a random walk the mean distance of a point after $n$ time steps is $\sqrt[2]{n}$), the mean and maximum would show a trend towards increasing complexity \ref{boxfigure} given that there is a minimum complexity requirement (it is not possible to have less than one cell) \citep{gould1996fullhouse}.
-
-\end{mdframed}
+Other authors consider that this apparent trend does not necessarily imply that it has been selected for \citep{McShea2015}, and that this trend might appear even in scenarios without natural selection. 
+For example, if we consider an evolutionary scenario in which the complexity of the organisms follow a random walk scenario without any selection regime but with the condition of a lower boundary (i.e., is not possible to have less than once cell), and starting from unicellular organisms, we will see an increase of the maximum complexity. with an initial increase in the mean complexity (in a random walk the mean distance of a point after $n$ time steps is $\sqrt[2]{n}$)
+%, the mean and maximum would show a trend towards increasing complexity \ref{boxfigure} given that there is a minimum complexity requirement (it is not possible to have less than one cell) \citep{gould1996fullhouse}.
+\textbf{DESCRIBIRLO MAS CLARAMENTE}
+%\end{mdframed}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Compartmentalization in development}
 
+The notion of an increase in complexity during embryogenesis is tightly related to the concept of embryo compartmentalization.
+%
 In here, I will refer to compartmentalization as the subdivision of the embryo in different parts (or compartments) during development. 
 How the different parts of the embryo can be defined based on the cell-phenotype or gene expression profile.
 
@@ -311,7 +328,7 @@ At least two regulatory levels have been suggested to have a causal role in the 
 %
 It could be expected however that the complexity of an organism could be reflected at any level of gene expression regulation, whether transcriptional, post-transcriptional, translational or post-translational.
 
-Additionally to all these regulatory levels that occur within a cell, the spatio-temporal regulation of gene expression depends on signalling between neighbouring cells \citep{Gilbert2014}. Importantly, cell-cell signalling can affect the transcriptional state of a cell (through a signalling pathway). Additionally, the specific response of a signalling event is dependent on the transcriptional state of the cell.
+Additionally to all these regulatory levels that occur within a cell, the spatio-temporal regulation of gene expression depends on signalling between neighbouring cells and morphogenetic events \citep{Gilbert2014}. Importantly, cell-cell signalling can affect the transcriptional state of a cell (through a signalling pathway). Additionally, the specific response of a signalling event is dependent on the transcriptional state of the cell.
 
 %The molecule network involved in cell-cell communication, from the reception of a extracellular signal to the ultimate transcription of genes (usually going through many intermediate signal "transducers"), is known as a signalling pathway.
 
@@ -353,13 +370,18 @@ as one aspect that reflects the increase in complexity during development.
 Another aspect that is intuitively related to the increasing embryonic complexity is the shape (or form) of the embryo. 
 Focusing on the shape of the embryo, embryonic development can be thought as a process that starts with a simple spherical or oblate fertilized egg and that ends with complex shapes and forms (in the adult or larva) \citep{Forgacs_Newman2005}. 
 
-In addition to the external shape of the embryo, the shape complexity of its internal structures (e.g., organs) is expected to increase during development \citep{Sharpe2003}. In order to analyse the shape of the internal parts of an embryo, staining and imaging methods are usually required. One useful approach is the use of techniques that highlight the distribution of a tissue-specific gene products (e.g., whole-mount in situ mRNA hybridization or immuno-histochemistry techniques).
-Therefore, the shape of gene expression patterns (represented in 2D or 3D) can be used to describe the complexity of the embryo. When analyzing the shape of a gene expression through development, it could be that the expression pattern: 1) does not change its complexity, 2) becomes more complex, or 3) becomes less complex.
-However, it would be expected that when analysing a large number of genes, the shape complexity would increase at a statistical level.
+In addition to the external shape of the embryo, the shape complexity of its internal structures (e.g., organs) is expected to increase during development \citep{Sharpe2003}.  However, is not always possible to appreciate the morphological change of inner structures at simple view. The first attempts to describe the shape of internal organs during the development in vertebrates was in the 19th century, and it required  section cutting and wax reconstruction (Hopwood). The use of staining techniques have facilitated the visualization of the inner morphology of the embryo. Techninques such as the horseradish peroxidase staining facilitated not only the visualization of the inner morphology, they were also crucial to create the first fate maps, while being able to trace the cell-lineage of different organs. 
+
+Since now is known that many genes are expressed in a tissue/cell type specific manner, another useful tecnique to visualize inner structures is the use of labelling techniques that highlight the distribution of such tissue-specific gene products (e.g., whole-mount in situ mRNA hybridization or immuno-histochemistry techniques).
+\textbf{GENE EXPLICA EN PART DISTRIBUCION Y FORMA DE ORGANOS AUNQUE NO SEA UNA CORRESPONDENCIA DE UNO A UNO.}
+
+If the embryo external and internal morphology are expected to increase their spatial complexity, and the gene expression patterns (visualized with a labelling technique) is expected to correspond to specific regions (e.g., internal organs) or the whole embryo (in case the expression is ubiquitous), therefore the shape of gene expression patterns can be used to describe the morphological complexity of the embryo.
+% When analysing the shape of a gene expression through development, it could be that the expression pattern: 1) does not change its complexity, 2) becomes more complex, or 3) becomes less complex.
+Also, it could be expected that when analysing a large number of genes, the shape complexity would increase at a statistical level.
 %
 %also be expected to increase its spatial complexity during development. 
 
-In order to analyse the complexity of the shape of an object is necessary to quantitatively measure and analyse it. The study of morphometrics refers to the quantitative analysis of morphological shape. In the last decades, morphometric tools have been used widely as a tool to quantify, characterize and compare biological shapes \citep{JamesRohlf1993}. In the next paragraphs I will briefly explain the most important morphometric methods. For an extensive review, see \citep{Bookstein1997,Dryden1998,Zelditch2008,Slice2005}.
+The study of morphometrics refers to the quantitative analysis of morphological shape. In the last decades, morphometric tools have been used widely as a tool to quantify, characterize and compare biological shapes \citep{JamesRohlf1993}. In the next paragraphs I will briefly explain the most important morphometric methods. For an extensive review, see \citep{Bookstein1997,Dryden1998,Zelditch2008,Slice2005}.
 
 
 \subsubsection{Morphometrics}
