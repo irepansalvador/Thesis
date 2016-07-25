@@ -1,27 +1,12 @@
-\textbf{CHECK BIBLIOGRAPHY AND TEXT IN GENERAL OF THE WHLE SECTION!}
 
-To estimate adaptation during \textit{D. melanogaster} embryogenesis, I used the DFE-alpha method (see section \ref{alpha}; \citealp{Eyre-Walker2009}), which infers adaptation combining polymorphism and divergence data. 
-In the last years, different population-genomic projects have sequenced, in different species, the genome of many individuals of a population (or a set of populations) \citep{The1000GenomesProjectConsortium2010,Mackay2012,Pool2012,Wallberg2014}, providing a valuable resource of genomic polymorphism data at the population level.
+To estimate adaptation during \textit{D. melanogaster} embryogenesis, the DFE-alpha method and the software provided with it was used (see section \ref{alpha}; \citealp{Eyre-Walker2009}), which infers adaptation combining polymorphism and divergence data.
 
-\subsection{Population genomic data}
+The DFE-alpha software (DFE-alpha, Eyre-Walker and Keightley 2009 ;see below) requires that all sites to have been sampled in the same number of chromosomes. Therefore, the original DGRP dataset was reduced to from 168 to 128 isogenic lines by randomly sampling the polymorphisms at each site without replacement. Residual heterozygous sites and sites with no quality value were excluded from the analysis.
 
-In this study, I used data from the \textit{Drosophila melanogaster} Genetic Reference Panel (DGRP) (see section \ref{DGRP}; \citealp{Mackay2012}), which consists of inbred \textit{D. melanogaster} lines.
-Importantly, the lines are derived from a single outbred population, so they capture natural variation (as genetic polymorphism) and are ideal to use with methods like the DFE-alpha. 
+The DFE-alpha software estimate several population genomic parameters (i.e., $\alpha$, $\omega_{\alpha}$ and $\omega_{D}$) from a set of genes rather than from a single gene as estimates based on single genes can be affected by the lack of segregating (divergent) sites. Therefore, to estimate adaptation a group of genes was randomly sampled (bootstrap with replacement) (see Methods studies III and IV). 
+As neutral reference the positions 8-30 of short introns ($\leq$ 65 bp) were used (as in \citealp{Heyn2014}). For validation, 4-fold degenerate sites were also used (as a proxy for the neutral mutation rate).
 
-More specifically, the DGRP data comes from 168 inbred lines of a North American population of \textit{D. melanogaster}(DGRP Freeze 1, Mackay et al. 2012).
-
-The program used for estimating the rate of adaptation (DFE-alpha, Eyre-Walker and Keightley 2009 ;see below) needs all sites to have been sampled in the same number of chromosomes, so the original dataset was reduced to 128 isogenic lines by randomly sampling the polymorphisms at each site without replacement.
-
-We used the release 5 of the Berkeley Drosophila Genome Project (BDGP 5, http://www.fruitfly.org/sequence/release5genomic.shtml/) as the reference genome (REF).
-The divergence statistics were estimated from a multiple genomic alignment between DGRP lines and \textit{D. yakuba} using BDGP 5 coordinates (publicly available in http://popdrowser.uab.cat REF).
-
+The release 5 of the Berkeley Drosophila Genome Project was used as the reference genome (http://www.fruitfly.org/sequence/release5genomic.shtml/). The divergence statistics were estimated from a multiple genomic alignment between DGRP lines and \textit{D. yakuba} using BDGP 5 coordinates (available in http://popdrowser.uab.cat; \citealp{Ramia2012}).
 The number of sites and substitutions and the folded site frequency spectrum (SFS) were computed using an ad hoc Perl script.
 
-\subsection{Estimation of natural selection}
-
-To estimate the rate of adaptation we used the DFE-alpha method and the software provided with it. The program is intended to estimate several population genomic parameters (alpha, etc) in a group of genes rather than in a single one, because estimates in an individual gene are noisy and can be affected by the lack of segregating (divergent) sites. 
-Because of that, for performing the analysis, we randomly sampled groups of genes with replacement to estimate the rate of adaptive evolution (see Bootstrapping, Methods).
-As the neutral reference, we used the positions 8-30 of short introns ( less or equal than 65 bp) following (Heyn REF), to determine the rate of adaptation in a particular sequence (in this case, 0-fold degenerate sites). For a validation analysis, we also used 4-fold degenerate sites as a proxy for the neutral mutation rate.
-The MKT does not take into account the segregation of slightly deleterious alleles, biasing downward the adaptive rate, while the DFE-alpha method does and, thus, provides a more accurate estimation than the MKT and other methods that do not take polymorphism data into account (REF Eyre-walker) .
-
-The DFE-alpha method, in contrast to the $dN/dS$ ratio, allows the estimation of the proportion of non-synonymous substitutions that are actually adaptive, neutral or slightly deleterious. Finally, to estimate the rate of adaptive evolution using DFE-alpha, it is necessary to combine data from several genes because estimates from a single gene are noisy and often undefined because of the lack of segregating (or divergent) sites for some site classes.
+Ortholog genes between \textit{D. yakuba} \textit{D. melanogaster} were obtained from FlyBase (http://flybase.org/). \textit{D. yakuba} was used as outgroup species as, due to the time since their divergence, there is less chance of ancestral polymorphism contributing to divergence, diminishing the effect of low divergence affecting the estimates of adaptive evolution \citep{Keightley2012}. For more details, see study III and IV.

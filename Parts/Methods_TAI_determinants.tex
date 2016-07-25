@@ -1,0 +1,52 @@
+\subsection{Transcriptome age}
+
+\subsubsection{Gene phylogenetic age}
+A phylogenetic age to each gene was assigned using the phylostratigraphic maps of \textit{D. melanogaster} (from \citealp{Drost2014}). The age assigned to each gene is based on the phylogenetic level at which ortholog genes are found. 
+Therefore, each gene is assigned to a discrete age category, or phylostratum (PS), corresponding to hierarchically ordered phylogenetic nodes along the tree of life database \citep{Drost2015}. 
+	\nomenclature{PS}{Phylostratum}
+
+I downloaded the PS dataset on May 2015 (available from http://dx.doi.org/ 10.6084/ m9.figshare.1244948/). For study III, the number of analysable genes for the spatio-temporal and anatomical term analyses were 555 and 2722 genes, respectively (genes with PS values and analysable with the DFE-alpha method, see above).
+
+
+\subsubsection{Region phylogenetic age} 
+
+The Transcriptome Age Index (TAI) is defined as the weighted arithmetic mean of phylostrata, using gene expression intensities as weights \citep{Domazet-Loso2010}.
+	\nomenclature{TAI}{Transcriptome Age Index}
+
+In here, I calculated the TAI for each region and territory of the embryo in a developmental stage, using the relative area of expression of a gene in a region or territory as weights instead of the expression intensity.
+Therefore, for each region and territory $j$, the TAI was calculated as:
+%
+$$ TAI_{j} = \frac{ \sum_{i=1}^{n} ps_{i}A_{ij} }{ \sum_{i=1}^{n} A_{ij} }$$
+%
+where $ps_{i}$ denotes the PS of gene $i$ , $A_{ij}$ is the relative area of gene $i$ in the region or territory $j$, and $n$ the number of genes expressed in such region or territory. A relatively low value of $TAI_{j}$ represents a high mean evolutionary age of the transcriptome in the region or territory j, and conversely. The TAI was calculated using the myTAI R package \citep{Drost2014}.
+
+%\subsubsection{Genomic determinants}
+
+The following genomic features, called in here "genomic determinants" were obtained using coding exons and short introns annotations for \textit{D. melanogaster}, obtained from FlyBase release 5.50. 
+
+\textbf{Intron length.} Average distance, in base pairs, between the exons of a gene.
+
+\textbf{Intergenic distance.} Average number of base pairs between two adjacent genes.
+
+\textbf{Gene size.} Length of the coding region of a gene.
+
+\textbf{Messenger complexity.} Number of transcripts divided by the total number of exons.
+
+\textbf{Number of transcripts and exons.} Number of different transcripts and exons of a gene, respectively.
+
+\textbf{Codon bias.} Measured as the Frequency of optimal codons (Fop). Was estimated using CodonW (\citealp{Peden1999}; http://codonw.sourceforge.net/).
+	\nomenclature{Fop}{Frequency of optimal codons (a measure of codon bias)}
+This index is estimated as the ratio of optimal codons to synonymous codons. Its values range between 0, where no optimal codons are used, and 1, where only optimal codons are used.
+
+\textbf{Expression bias.} Proportion of development stages in which a gene is expressed. Based on \citep{Yanai2005} and \citep{Larracuente2008}, we estimated the expression bias, $\tau$ as:
+%
+$$ \tau = \frac{ \sum_{j=1}^{n} 1- \log S_{j} / \log S_{max} }  { n-1 } $$
+%
+where $S$ is the logarithm of the RPKM and $n$ is the number of developmental stages. $\tau$ ranges from 0 to 1, with values close to 0 indicating broadly expressed genes and values close to 1 indicating genes with highly biased expression.
+
+\textbf{Expression level.} Estimated as the logarithm of the maximum expression in RPKM units.
+
+\textbf{Recombination levels.} Recombination rates estimates at 100 kb non-overlapping windows, crossing-over events (from \citealp{Comeron2012}).
+
+%%Testes and immune genes
+%%In order to discard that the adaptation patterns found are due to an excess of male-biased genes, testes specific genes or immune-related genes, that are known of being under positive adaptation[31,50–52], we removed genes related to this functions [72]. For that, we downloaded the Gene Ontology (GO) terms for our gene set through the R package biomaRt [73] using the D. melanogaster ENSEMBL database. When a gene was associated to any of those terms, it was removed for performing the analysis.
