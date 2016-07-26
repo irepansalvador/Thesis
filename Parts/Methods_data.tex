@@ -1,23 +1,24 @@
-The work presented here is mainly based on the analysis of publicly available data contained in many databases, shortly introduced in the Review of the Literature section. In the next paragraphs I will describe how the data used in here was acquired and processed, for the details, see the corresponding study.
+The work presented here is mainly based on the analysis of publicly available data contained in many databases, introduced in the Review of the Literature section. In the next paragraphs I will describe briefly how the data used in here was acquired and processed. For more details see the corresponding study.
 
 \subsection{In situ Hybridization data}
 
 \subsubsection{\textit{D. melanogaster} (study I and III)}
+\label{insitu_drosophila}
+\paragraph{Image acquisition and filtering.}
 
-\paragraph{Image acquisition and filtering}
+Images were systematically downloaded (with an ad hoc Perl script) from FlyExpress version 5.1 \citep{Kumar2011} on February 2013. Only genes with laterally oriented images for the six stages used in BDGP \citep{Tomancak2002} were considered.
 
-Images were downloaded from the FlyExpress Database version 5.1 \citep{Kumar2011} on February 2013. Only genes with laterally oriented images for the six stages used in BDGP \citep{Tomancak2002} were considered.
+Images were resized as in \citet{Konikoff2012}) and the gene expression pattern was extracted using an adaptive threshold, based on the mean and variance of a grey-scale version of each image (see study I). Genes with ubiquitous expression in stages 1-3 and 4-6 were considered as entirely black images.
+To correct for small variations in the shape of the embryos, I morphometrically deformed each embryo to an stage ideal embryo shape (see study I). Finally, I applied a "smoothing filter" and eliminate isolated white/black pixels. 
+I manually filtered images from the literature or directly from BDGP of Transcription Factors or Growth Factor genes that did not have information in FlyExpress.
+ 
+For study I, the resulting dataset contained 1218 genes with expression information in the six stages used in BDGP. For study III, obsolete or repeated genes were removed from the 1218 genes, after checking for gene annotation updates with the \textit{biomaRt} package \citep{Durinck2009}, leaving a dataset of 1199 genes.
 
-Images were systematically retrieved and resized to 320 x 128 pixels (as in \citealp{Konikoff2012}) with ad-hoc Perl scripts. 
-The gene expression pattern was obtained selecting one of three filtered images, obtained with an adaptive threshold based on the mean and variance of a grey-scale version of each image (see study I for details). Genes with ubiquitous expression in stages 1-3 and 4-6 were considered as entirely black images.
+\paragraph{Main spatio-temporal expression profiles (study I).}
+I performed a time series cluster analysis (with the STEM software; \citealp{Ernst2006}) using the relative area of expression to know which are the most common spatio-temporal profiles. The resulting clusters were analysed with a GO term analysis with the same software, as it is integrated with the Gene Ontology.
 
-To correct for small variation in the shape of the embryos I adjusted each embryo to an stage ideal embryo shape, with an algorithm I made to morphometrically deform the real embryo contour of each image to the corresponding stage ideal shape.
-Finally I applied a "smoothing filter" and eliminate isolated white/black pixels. 
-I also manually filtered images from the literature or directly from BDGP of Transcription Factors or Growth Factor genes that did not have information in FlyExpress. 
-For study I, the resulting dataset contained 1218 genes with expression information in the six stages used in BDGP. For study III, after updating the gene identifiers, repeated genes were removed, leaving a dataset of 1199 genes. \textbf{CHECK}
-
-\paragraph{Anatomical terms}
-In addition to the whole-mount in situ RNA-hybridization images, the BDGP database contains, for each gene, the list of the embryonic anatomical structures in which such gene is expressed \citep{Tomancak2007}. Each gene expression is described by one or several of those of anatomical terms by an expert. 
+\paragraph{Anatomical terms (study III).}
+In addition to the whole-mount in situ mRNA hybridization images, the BDGP database contains, for each gene, the list of the embryonic anatomical structures in which such gene is expressed \citep{Tomancak2007}. Each gene expression is described by one or several of those of anatomical terms by an expert. 
 This information was retrieved from the BDGP downloads page (http://insitu.fruitfly.org/ insitu/html/ downloads.html/), which contains the annotations of almost 8,000 genes. We removed genes with "no staining" as anatomical term in any stage, leaving a total of 5762 genes.
 
 \subsubsection{\textit{C. intestinalis} (study II)}
@@ -28,6 +29,7 @@ I extracted the information of the 32 cells, 64 cells, 112 cells, early tailbud,
 I excluded data from experiments whose image characterization was reported as "not sure" or too broadly as "part of whole embryo".
 
 The number of genes analyzed is n=745 for the 32-cell stage, n=758 for the 64-cell stage, n=809 for the 112-cell stage, n=1082 for the early tailbud, 1092 for the mid tailbud and 887 for the late tailbud. 
+The gene expression as text-based annotation was transformed into a 3D expression pattern using 3D embryo models (see below) with the Meshlab software version v1.3.3\_64bit (Meshlab Visual Computing Lab ISTI-CNR; see study II for details).
 
 \paragraph{Transcription factors and signalling genes}
 I used the comprehensive list of TFs (http:// ghost.zool.kyoto-u.ac.jp/ TF\_KH.html) and SIGs (http:// ghost.zool.kyoto-u.ac.jp/ ST\_KH.html) deposited in the Ghost database (last access in July 2015).
@@ -37,11 +39,10 @@ The SIGs genes consist of genes of receptor tyrosine kinase pathways including l
 
 \paragraph{3D embryo models}
 
-I downloaded from the ANISEED database (from the biometry.zip folder; for more details see study II) files with a quantitative description of the geometry of individual blastomeres of the 32-cell, 64-cell and 112-cell stages. These files include the volume of each blastomere in percentage of the whole embryo \citep{Tassy2006}, used in the relative volume analysis.
+I downloaded, from the ANISEED database, 3D embryo models (at a single-cell resolution) for the 32-cell, 64-cell and 112-cell stages. Also for these stages, I downloaded files (biometry.zip folder; see study II) with a quantitative description of the geometry of individual blastomeres, including the volume of each blastomere relative to the whole embryo \citep{Tassy2006} used in the relative volume analysis.
+For the tailbud stages I used a 3D model of \textit{C. intestinalis} mid tailbud (stage 22) anatomy at a single cell resolution \citep{Nakamura2012}, downloaded as a file "3DVMTE\_THratio1.86.wrl" from http://chordate.bpni.bio .keio.ac.jp/3DVMTE/.
+From this file, I manually extracted the information of different tissues into separate 3D files and processed them using diverse filters of the Meshlab software version v1.3.3 (Meshlab Visual Computing Lab ISTI-CNR; see study II).
 
-Also, I downloaded 3D embryo models for these stages from the ANISEED database, available at a single-cell resolution. 
-For the tailbud stages I used a 3D model of \textit{Ciona intestinalis} mid tailbud (stage 22) anatomy at a single cell resolution \citep{Nakamura2012}, downloaded as a file "3DVMTE\_THratio1.86.wrl" from http://chordate.bpni.bio .keio.ac.jp/3DVMTE/.
-From this file, I manually extracted the information of different tissues into separate 3D files and processed them using diverse filters of the Meshlab software version v1.3.3\_64bit (Meshlab Visual Computing Lab ISTI-CNR; see study II for details).
 
 \subsection{Transcriptomics and population genomic data}
 
