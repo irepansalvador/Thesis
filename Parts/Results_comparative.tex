@@ -27,20 +27,18 @@ However less dramatic, I found significant differences between the 32-cell and 6
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsubsection{Main spatio-temporal profiles in \textit{Drosophila}}
+%With a time series cluster analysis \citep{Ernst2006} of the relative area of expression, 
+Using a time series cluster analys, I found the eight main spatio-temporal profiles of gene expression in the embryonic development of \textit{Drosophila} (study I, Fig. 5). As expected, the most common profile (n=297 genes) follows the global profile of non-linear decrease in the first stages (I, Fig 5).
+%
+I also found both linear increase and decrease profiles and a "hill-like" profile (initial increase and further decrease with the higher values at stage 7-8)
+%
+The linear decrease profile (n=167 genes) was enriched with "mitotic cell cycle" (GO:0000278), "RNA processing" (GO:0006396) and "chromatin modification" (GO:0016568) GOterm genes, highlighting biological processes that first are present in the whole embryo and become more and more restricted in space as development proceeds.
+%discussion
+The "mitotic cell cycle" term, for example, most likely relates to the fast mitotic cycles in the earliest embryo. During stage 1-3 nine fast and synchronic mitotic divisions take place in the entire embryo, then in stage 4-6 mitotic divisions 10-13 occur more slowly, almost synchronically. The 14th cycle, zygotically controlled, is long and of different durations in the embryo.
 
-% discussion
-The difference in the timing of the major change on compartmentalization between species must relate to differences in their specific development.
-The earlier compartmentalization of \textit{Drosophila} is most probably due to its derived early development, namely, the syncytial blastoderm. 
-During the blastoderm stage, approximately 4,000 cell nuclei can `communicate' with each other only by TFs \citep{Jaeger2011}. The direct cross regulation of gene expression facilitates a rapid and highly dynamic process which seems to be responsible for the early spatial restriction of a great proportion of developmental genes.
-It could be therefore expected that these early increase in complexity in \textit{Drosophila} would be shared by all insects with a syncitial blastoderm stage. Also, it could be that the early increase in complexity might be affected by the number of cell divisions that occur until the blastoderm is cellularized. It is known that \textit{Drosophila} cellularizes relatively late (so there is more time for patterning within the syncitial bastoderm). In contrast, the desert locust (\textit{Schistocerca gregaria}) cellularization occurs very early, even before the formation of the blastoderm \citep{Ho1997}.
-
-In contrast,  \textit{Ciona}'s early embryonic patterning is based on maternal determinants and signalling events mostly between neighbouring cells \citep{Lemaire2009}, which act in a combinatorial way \citep{Hudson2007} to establish a unique TF combination in more than half of the blastomere pairs before gastrulation \citep{Imai2006} determining most of their fates.
-Thus, even when in \textit{Ciona} most of the cell fates are already determined (by the specific combination of a fraction of TFs) and the embryo can be said to be already highly compartmentalized, this is not evident at the global level of gene expression, which I am measuring here.
-
-
-Therefore, the "delay" of compartmentalization observed in \textit{Ciona} could be explained by the relatively slower process of signal transduction (as in \textit{Ciona}) compared to the gap gene network (in \textit{Drosophila}).
-
-%One would expect, and it has been implicitly assumed \citep{Carroll2001} \citep{Davidson2001} that the compartmentalization of the embryo (as I measure it here) increases during development. However, the specific temporal dynamics of this increase in any species has not been measured until now.
+With a temporal co-expression cluster analysis using microarray data through the life cycle of \textit{D. melanogaster}, \citet{Arbeitman2002} found that most cell cycle genes were expressed at high levels during the first 12h, but only a few are expressed at high level thereafter.
+My analysis is consistent with this, as I found that the profile of linear decrease (I, Fig. 5A) is enriched with such genes. In this sense, this study is complementary to Arbeitman et al., and adds the spatial dimension to their temporal expression profiles.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -119,7 +117,7 @@ This is consistent with known short range induction events by nodal and various 
 %general discussion? (X)
 
 In general, the fact that in these two species that display a very different development TFs and GFs (or SIGs in the case of \textit{Ciona}) are more compartmentalized than the rest of the genes precisely in the stage before entering gastrulation, is consistent with these genes having a special role in pattern formation and compartmentalization.
-Therefore, my results support the hypothesis of the leading role of TFs and GFs in driving pattern formation and compartmentalization in the early embryo.
+Therefore, these results support the hypothesis of the leading role of TFs and GFs in driving pattern formation and compartmentalization in the early embryo.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -130,7 +128,7 @@ Therefore, my results support the hypothesis of the leading role of TFs and GFs 
 %In here, with gene expression spatial pattern I mean the spatial distribution of the cells or tissues expressing a specific gene. 
 %
 %Considering that I had information in 2D in \textit{Drosophila} and in 3D in \textit{Ciona}, it was necessary to apply a specific method for each species.
-As explained in the methods, in order to test the hypothesis of gene expression spatial patterns becoming more complex during development, I developed a I developed a `roughness' measure \citep{Salvador-Martinez2015} for \textit{Drosophila}, which accounts for the curvature of the contour in a 2D gene expression pattern, normalizing it with the contour of a circle of the same perimeter.
+As explained in the methods, in order to test the hypothesis of gene expression spatial patterns becoming more complex during development, I developed a I developed a "roughness" measure \citep{Salvador-Martinez2015} for \textit{Drosophila}, which accounts for the curvature of the contour in a 2D gene expression pattern, normalizing it with the contour of a circle of the same perimeter.
 In \textit{Ciona}, I applied a similar measure of curvature in 3D, called `Dirichlet normal energy' (DNE), which quantifies the deviation of a surface from being planar \citep{Bunn2011}. To improve the readability of the text,  I will refer to the roughness measure in \textit{Drosophila} as 2D roughness and to the DNE measured used in \textit{Ciona} as 3D roughness.
 	\nomenclature{DNE}{Dirichlet Normal Energy}
 Both measures not only inform about the overall imbrication or convolution of the shape of a gene expression pattern, but also do it at different spatial scales.
@@ -229,7 +227,18 @@ This analysis in the early stages is similar to the one made by \citet{Imai2006}
 It is different in two aspects: I performed the clustering using the blastomeres of different stages and my analysis is not restricted to TFs. As I said previously, using various stages is informative of the overall differentiation process and can be used to discern between differentiation scenarios, as the differences between early and tailbud stages I found here.
 
 %%% general discussion
+\subsection{General discussion}
 
-The main difference between species is that, in \textit{Drosophila} the differentiation process continues throughout whole embryogenesis (as new STs were formed until the last stage I analysed) and different organs differentiate at different developmental times.
+% discussion
+The difference in the timing of the major change on the complexity measures between species must relate to differences in their specific development.
+The earlier compartmentalization of \textit{Drosophila} is most probably due to its derived early development, namely, the syncytial blastoderm. 
+During the blastoderm stage, approximately 4,000 cell nuclei can "communicate" with each other only by TFs \citep{Jaeger2011}. The direct cross regulation of gene expression facilitates a rapid and highly dynamic process which seems to be responsible for the early spatial restriction of a great proportion of developmental genes.
+It could be therefore expected that these early increase in complexity in \textit{Drosophila} would be shared by all insects with a syncitial blastoderm stage. Also, it could be that the early increase in complexity might be affected by the number of cell divisions that occur until the blastoderm is cellularized. It is known that \textit{Drosophila} cellularizes relatively late (so there is more time for patterning within the syncitial bastoderm). In contrast, the desert locust (\textit{Schistocerca gregaria}) cellularization occurs very early, even before the formation of the blastoderm \citep{Ho1997}.
+
+In contrast,  \textit{Ciona}'s early embryonic patterning is based on maternal determinants and signalling events mostly between neighbouring cells \citep{Lemaire2009}, which act in a combinatorial way \citep{Hudson2007} to establish a unique TF combination in more than half of the blastomere pairs before gastrulation \citep{Imai2006} determining most of their fates.
+Thus, even when in \textit{Ciona} most of the cell fates are already determined (by the specific combination of a fraction of TFs) and the embryo can be said to be already highly compartmentalized, this is not evident at the global level of gene expression, which I am measuring here.
+Therefore, the "delay" of compartmentalization observed in \textit{Ciona} could be explained by the relatively slower process of signal transduction (as in \textit{Ciona}) compared to the gap gene network (in \textit{Drosophila}).
+
+Another main difference between species is that, based on the synexpression terriories analysis the the differentiation process in \textit{Drosophila} seems to continue throughout whole embryogenesis (as new STs were formed until the last stage I analysed) and different organs differentiate at different developmental times.
 In contrast, the \textit{Ciona} embryo seems to be already genetically differentiated at the early tailbud (as the STs of all the tissues in the tailbud stages cluster together) so the last embryo stages consist only of moderate morphogenetic movements (mainly cell elongation; \citealp{Hotta2007}).
 Therefore, the ST analysis is a valuable tool, based on differential gene expression, to get a global perspective on the local differentiation of the embryo.
