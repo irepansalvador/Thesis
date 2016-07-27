@@ -48,7 +48,7 @@ The dendrograms resulting from the early and tailbud stages were cut in 24 and 1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Roughness}
-
+\label{Methods_roughness}
 The roughness measure analyses the complexity of the shape of a gene expression pattern. In the case of 2D images, the shape of the gene expression pattern is extracted as a closed outline formed by the boundaries of gene expression, while for 3D patterns, the shape of the expression pattern is the 3D external surface of the union of the cells that are expressing such gene.
 
 Therefore, a gene expression pattern reflects necessarily the spatial distribution of the cells expressing such gene. When analysing and comparing the shape of diverse gene expression patterns, i.e., the cells/tissues with expression are different between genes, there is an obvious impossibility to determine landmark points (whether around a 2D outline or 3D surface) that would establish a clear one-to-one correspondence between them. This could be done in the case of comparing the expression pattern of a single gene at a specific developmental stage between different individuals.
@@ -65,7 +65,8 @@ I selected the roughness measure instead of some other measure outline based met
 Other feature of the roughness measure is that allows to measure the complexity of shape at different spatial scales (varying the L length). 
 %Therefore, it can be tested not only if the complexity of the gene expression shape increases during development, also if this increase is the same at different spatial scales.
 
-\paragraph{DNE}
+\paragraph{Dirichlet Normal Energy (DNE)}
+	\nomenclature{DNE}{Dirichlet Normal Energy}
 In order to use a similar measure of curvature in 3D, I used the Dirichlet normal energy (DNE; described briefly in section \ref{DNE_explanation} which quantifies the deviation of a surface from being planar (Fig. \ref{fig:DNE}; see study II). 
 Importantly, both measures are normalized to remove size and orientation effects.
 

@@ -117,28 +117,19 @@ This is consistent with known short range induction events by nodal and various 
 %general discussion? (X)
 
 In general, the fact that in these two species that display a very different development TFs and GFs (or SIGs in the case of \textit{Ciona}) are more compartmentalized than the rest of the genes precisely in the stage before entering gastrulation, is consistent with these genes having a special role in pattern formation and compartmentalization.
-Therefore, these results support the hypothesis of the leading role of TFs and GFs in driving pattern formation and compartmentalization in the early embryo.
+Therefore, these results confirm the leading role of TFs and GFs in driving pattern formation and compartmentalization in the early embryo.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \subsection{2D and 3D roughness analyses}
-%% objective
-%
-%I wanted to test the hypothesis of gene expression spatial patterns becoming more complex during development.
-%In here, with gene expression spatial pattern I mean the spatial distribution of the cells or tissues expressing a specific gene. 
-%
-%Considering that I had information in 2D in \textit{Drosophila} and in 3D in \textit{Ciona}, it was necessary to apply a specific method for each species.
-As explained in the methods, in order to test the hypothesis of gene expression spatial patterns becoming more complex during development, I developed a I developed a "roughness" measure \citep{Salvador-Martinez2015} for \textit{Drosophila}, which accounts for the curvature of the contour in a 2D gene expression pattern, normalizing it with the contour of a circle of the same perimeter.
-In \textit{Ciona}, I applied a similar measure of curvature in 3D, called `Dirichlet normal energy' (DNE), which quantifies the deviation of a surface from being planar \citep{Bunn2011}. To improve the readability of the text,  I will refer to the roughness measure in \textit{Drosophila} as 2D roughness and to the DNE measured used in \textit{Ciona} as 3D roughness.
-	\nomenclature{DNE}{Dirichlet Normal Energy}
-Both measures not only inform about the overall imbrication or convolution of the shape of a gene expression pattern, but also do it at different spatial scales.
-%
-%In the following paragraphs, to improve the readability of the text,  I will refer to the roughness measure implemented in \textit{Drosophila} as 2D roughness and to the DNE measured used in \textit{Ciona} as 3D roughness.
-%
+
+%As explained in the methods, in order to test the hypothesis of gene expression spatial patterns becoming more complex during development, I developed a I developed a "roughness" measure \citep{Salvador-Martinez2015} for \textit{Drosophila}, which accounts for the curvature of the contour in a 2D gene expression pattern, normalizing it with the contour of a circle of the same perimeter.
+%In \textit{Ciona}, I applied a similar measure of curvature in 3D, called `Dirichlet normal energy' (DNE), which quantifies the deviation of a surface from being planar \citep{Bunn2011}. To improve the readability of the text,  I will refer to the roughness measure in \textit{Drosophila} as 2D roughness and to the DNE measured used in \textit{Ciona} as 3D roughness.
+%Both measures not only inform about the overall imbrication or convolution of the shape of a gene expression pattern, but also do it at different spatial scales.
 
 %results
-The results show that both 2D and 3D roughness increase in a non-linear way during development.
-As with the compartmentalization and disparity, the difference between species is where the major change is found. 
+The results show that both 2D and 3D roughness (measured with DNE; see section \ref{Methods_roughness}) increase in a non-linear way during development.
+As with the compartmentalization and disparity, the difference between species is when the major change occurs. 
 
 %drosophila
 In \textit{Drosophila}, the major change is found in the transition from the blastoderm to the early gastrula (Fig. \ref{fig:Art-I-3measures}).
@@ -147,14 +138,14 @@ The maximal values are informative about the overall morphological spatial compl
 When comparing roughness at different spatial scales (I, Methods), I found that in the last three stages the roughness values are significantly higher at smaller spatial scales is significantly higher that at the higher spatial scales.(Fig. S2 in article I). 
 
 %Ciona
-In Ciona, the 3D roughness increase throughout development (II, Fig. 5), with the major change between the 112-cell and the early tailbud (Fig. \ref{fig:Art-II-3measures})  
+In Ciona, the 3D roughness increase throughout development (II, Fig. 5), with the major change between the 112-cell and the early tailbud (Fig. \ref{fig:Art-II-3measures}).  
 The max (mean of the last decile) values increase substantially already between the 64 and 112 cells stages (with 1000 and 10000 polygonal faces), while the min values (mean of the first decile) remain practically constant during development, showing that the most complex patterns in each stage get increase their DNE value but there is always a proportion of very simple expression pattern.
 Also, I found that at low spatial scales (1000 and 10000 polygons per mesh; II, Fig. 5) I found that the mean DNE of the late tailbud is higher than at the mid tailbud (one-way ANOVA pvals < 0.05).
 	\nomenclature{ANOVA}{Analysis of Variance}
 
 %% general discussion
-In summary, this results show that the complexity of distribution in space of cells/tissues expressing a gene increases through development, and that these complexity (measured with the 2D and 3D roughness) increase in both \textit{Ciona} and \textit{Drosophila} in a similar way than the other two measures, compartmentalization and disparity.
-Also, by analysing the roughness at different scales, I found compelling evidence that complexity may be increasing not only through all the development but also that it does at finer spatial scales over time.
+In summary, this results show that the complexity of distribution in space of cells/ tissues expressing a gene increases through development, and that these complexity (measured with the 2D and 3D roughness) increase in both \textit{Ciona} and \textit{Drosophila} in a similar way than the other two measures, compartmentalization and disparity. 
+Both measures not only inform about the overall imbrication or convolution of the shape of a gene expression pattern, but also do it at different spatial scales. By analysing the 2D and 3D roughness at different scales, I found compelling evidence that complexity may be increasing not only through development but also that it does at finer spatial scales over time.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \subsection{Synexpression territories}
@@ -168,15 +159,8 @@ In both species I used a clustering algorithm to produce dendrogram representing
 I will refer to the regions that clustered together as "synexpression territories" (STs).
 	\nomenclature{ST}{Synexpression territories}
 
-%%%%%%%%%% drosophila
-In \textit{Drosophila}, after cutting the dendrogram at a specific threshold and filtering out STs with less than 50 genes expressed with a minimum specificity (see methods in I for a detailed description), 30 STs were selected for further analyses (Fig. \ref{fig:Art-I-territories} B).
-
-%Finally, I grouped the STs in eight `meta-territories' to analyse how the different STs relate between them.
-Finally, I grouped the STs in eight `meta-territories', as I wanted not only to see how the regions in the embryo formed different STs, but also how different STs cluster with each other, as this is informative of the degree of differentiation between stages. If STs cluster with other STs in the same stage, it would mean that the majority of genes change their expression in a similar way over time independently of where they are.
-If STs cluster with other STs in the same part of the embryo in successive stages, it would mean that this part of the embryo has expression dynamics independent from other parts of the embryo, which would be expected in already differentiated cells/tissues.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}[!t]
   \includegraphics[width=0.65\textwidth]{./Images/Art-I/territories.png}
   \centering
   \caption{Synexpression territories (ST). (A) Dendrogram produced by hierarchical clustering on a similarity matrix (pearson's correlation) of all the embryo regions of the six stages. Red line shows the cut-off to produce 40 STs. (B) Dendrogram reconstructed using only territories with at least 50 genes with a minimum specificity (I, methods). The coloured boxes show the main branches of the dendrogram. The number indicated inside the boxes represent the stages each ST corresponds to (3 is stage 7-8, 4 is stage 9-10, 5 is stage 11-12 and 6 is stage 13-16). The ST number is at the right. (C) STs mapped onto the embryo. Gray regions have less than 50 genes expressed. Background color refers to which `meta-territory' (in B) each ST is part of. Coloured circles represent GOterm enrichment of a specific tissue/germ layer derivative (shown in E). Stages in the lower-left part of each embryo. From stage 7-8, the ST number (as in B) is indicated. (D) Hartenstein's embryo schemes \citep{Hartenstein1993} with their respective stages in the left upper part. (E) Colour code of specific tissue/germ layer derivative used in C.)}
@@ -184,6 +168,11 @@ If STs cluster with other STs in the same part of the embryo in successive stage
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+In \textit{Drosophila}, after cutting the dendrogram at a specific threshold and filtering out STs with less than 50 genes expressed with a minimum specificity (see methods in I for a detailed description), 30 STs were selected for further analyses (Fig. \ref{fig:Art-I-territories} B).
+
+%Finally, I grouped the STs in eight `meta-territories' to analyse how the different STs relate between them.
+Finally, I grouped the STs in eight `meta-territories', as I wanted not only to see how the regions in the embryo formed different STs, but also how different STs cluster with each other, as this is informative of the degree of differentiation between stages. If STs cluster with other STs in the same stage, it would mean that the majority of genes change their expression in a similar way over time independently of where they are.
+If STs cluster with other STs in the same part of the embryo in successive stages, it would mean that this part of the embryo has expression dynamics independent from other parts of the embryo, which would be expected in already differentiated cells/tissues.
 %results
 The results show that stages 1-3 and 4-6 each one form a ST. If a cut-off is selected so that stage 4-6 is divided in four sub-territories (I,Fig. S3) the embryo splits in four parts: anterior, posterior, dorsal and ventral.
 This correspond to a nearly Cartesian system one could expect from the two signalling systems known in the earliest patterning in \textit{Drosophila} (the A/V and D/V signalling cascades; \citep{Gilbert2014}).
@@ -192,16 +181,17 @@ The STs seem to coincide with the known embryo fate map (see Fig. \ref{fig:Art-I
 For example, in stage 7-8 (just after gastrulation) there is a ST that corresponds spatially with the germband and is enriched with mesodermal GOterms (Fig. Fig. \ref{fig:Art-I-territories} C).
 
 Two meta-territories appear in the last stage (light blue and green, Fig. \ref{fig:Art-I-territories} C), which suggests that the tissues/organs related to those STs differentiate quite late.
-%
+
+
 %% discussion
 One of these meta-territories is enriched with terms related to epidermis such as cuticle development ("chitin catabolic process" [GO:0006032] and "cuticle development" [GO:0042335] STs 33 and 38), which coincides with cuticle deposition by epithelial cells during stage 16 \citep{Ostrowski2002}.
 %
 The other meta-territory corresponds spatially with the CNS of the embryo and is indeed enriched with CNS GO-terms.
 The CNS territory is enriched with GOterms like "dendrite morphogenesis" (GO:0048813) and "axon guidance" (GO:0007411). 
 	\nomenclature{CNS}{Central Nervous System}
-
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
+\begin{figure}[!t]
   \includegraphics[width=\textwidth]{./Images/Art-II/territories.png}
   \centering
   \caption{Ciona synexpression territories. 
@@ -212,10 +202,10 @@ The CNS territory is enriched with GOterms like "dendrite morphogenesis" (GO:004
   \label{fig:Art-II-territories}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Ciona
 
 In \textit{Ciona}, because gene expression information in tailbud stages is based on tissues and not on individual cells as the early stages, I analysed the STs of these stages separately (II, Methods). 
-
-%results
+%
 If in the early stages, three "meta-territories" are formed, each one would correspond to one stage, i.e., STs in early stages cluster by stage.
 Thus, even if at the first three stages a high proportion of blastomeres express a nearly unique combination of transcriptional factors \citep{Imai2006}, the bulk change in gene expression is common to all blastomeres. Within each early stage, STs coincides very well with the know fate map (II, Fig 6A; II, Fig. S8), with some exceptions I will describe in the next subsection.
 %
@@ -226,8 +216,9 @@ This is consistent with studies analysing these stages at the level of individua
 This analysis in the early stages is similar to the one made by \citet{Imai2006}, who used the expression profile of 53 zygotically TFs in single cells in the 16, 32, 64, and 112-cell stages, to perform a hierarchical clustering (for each stage separately). 
 It is different in two aspects: I performed the clustering using the blastomeres of different stages and my analysis is not restricted to TFs. As I said previously, using various stages is informative of the overall differentiation process and can be used to discern between differentiation scenarios, as the differences between early and tailbud stages I found here.
 
+
 %%% general discussion
-\subsection{General discussion}
+\subsection{Coda}
 
 % discussion
 The difference in the timing of the major change on the complexity measures between species must relate to differences in their specific development.
