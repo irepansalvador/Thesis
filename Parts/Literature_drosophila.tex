@@ -1,10 +1,10 @@
 The fruit fly, \textit{Drosophila melanogaster}, has been a great valuable tool for biological research.
 Its use as a model system dates back to the beginning of the 20th century.
-In 1908, Thomas H. Morgan (see section X) started to grow flies in large quantities to study gene mutations. At that time, the gene concept was an abstract one, as the nature and location of the genes was still disputed.
+In 1908, Thomas H. Morgan started to grow flies in large quantities to study gene mutations. At that time, the gene concept was an abstract one, as the nature and location of the genes was still disputed.
 %
-The main advantages of using flies were their rapid generation time, it was easy to culture and cheap to maintain \citep{Arias2008}.
+The main advantages of using flies were their rapid generation time and that they were easy to culture and cheap to maintain \citep{Arias2008}.
 %
-In his lab, at the University of Columbia, Morgan encountered a fly with white eyes (the wild-type eye color is red), which became a subject of his research for many years.
+In his lab at the University of Columbia, Morgan found a fly with white eyes (the wild-type eye color is red), which became a subject of his research for many years.
 Eventually, he discovered that the allele of the gene, that he called \textit{white}, was located in a sex chromosome, demonstrating for the first time the sex-linkage of genes \citep{Morgan1919}.
 %
 Morgan's students also demonstrated that mutations were inducible with X-rays and introduced the use of "balancer" chromosomes to keep stable stocks of mutants \citep{Arias2008}.
@@ -12,16 +12,17 @@ Morgan's students also demonstrated that mutations were inducible with X-rays an
 The research carried in Morgan's lab laid the basis modern genetics, and its fly room became a central node in the genetics research, establishing \textit{Drosophila} as a organism model.
 
 However, \textit{Drosophila}'s development was difficult to study, as the embryos were not large enough to experimentally manipulate them, and not transparent enough to visualize with a microscope \citep{Gilbert2014}.
-
+Molecular biology techniques allowed finally to study fly genes and their effect on embryogenesis, unravelling some of the mysteries of \textit{Drosophila}'s development.
+Also, histological methods (which consisted in following back to the blastoderm stage the location of larval organ precursors) and cell ablation methods (killing cells in the blastoderm and correlate its position with the position of the defects detected later) were used to create a fate map of the \textit{Drosophila} blastoderm \citep{Campos-Ortega1985} (see Fig. \ref{fig:blastoderm_fatemap} in Box 1).
 
 %In 1976, E. Lewis published a seminal work, in which he determined the effects of mutations in the Bithorax complex (BX-C).
 %He determined that the BX-C consisted of distinct genetic elements and there was a correlation in the order of the mutations within the complex and the A/P order of the body affected by them \citep{Lewis1978}, a phenomenon called spatial co-linearity.
 %
 %Lewis discoveries were complemented with the discovery of the Hox genes (REF), a family of transcription factors that was shown to be conserved with vertebrates (REF).
 %Hox genes in \textit{D. melanogaster} are arranged in two clusters, the Antennapedia (ANT-C) and the Bithorax cluster.
-%Molecular biology techniques allowed finally to study fly genes and their effect on embryogenesis, unravelling the mysteries of \textit{Drosophila}'s development.
 
-In the next subsections, I will describe briefly the \textit{D. melanogaster} life cycle with special focus on its embryonic development and the blastoderm fatemap and the relation of fate maps with gene expression maps.
+%In the next subsection, I will describe briefly the \textit{D. melanogaster} life cycle with special focus on its embryonic development.
+%and the blastoderm fatemap and the relation of fate maps with gene expression maps.
 %This feature, called spatial collinearity, would turn out to be a defining feature of both vertebrate and invertebrate homeotic genes. Lewis showed remarkable vision by arguing that the identity of an individual body segment is produced by the particular combination of BX-C genes, and that these were activated in reponse to an A–P gradient.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \label{Table_droso}
@@ -73,25 +74,16 @@ In the next subsections, I will describe briefly the \textit{D. melanogaster} li
 
 \subsection{\textit{D. melanogaster} life cycle}
 
-\textit{Drosophila melanogaster} is a holometabolous insect, which means that it goes through a complete metamorphosis, i.e., the larva and the adult forms are very different.
-%Its embryonic development is very fast, the larva hatches after around 20 hours (at  X degrees).
-The larva grows and passes through two moults before becoming a resting stage called a pupa in which
-the body is remoulded to form the adult. 
-
-Much of the adult body is formed
-from the imaginal discs and the abdominal histoblasts which are only present
-as undifferentiated buds in the larva.
+\textit{Drosophila melanogaster} is a holometabolous insect, which means that it goes through a complete metamorphosis, i.e., the larva and the adult forms are very different. The entire life cycle is usually not longer than 10 days. Its embryonic development is very fast, the larva hatches in less than 24 hours at 25$^\circ$C. The larva grows and passes through two moults (in 4 days it increases 200-fold its weight) before becoming a resting stage called a pupa in which the body is remoulded to form the adult \citep{Stocker2008}.
+Much of the adult body is formed from the imaginal discs and the abdominal histoblasts which are only present as undifferentiated buds in the larva.
 
 \subsubsection{Developmental stages}
 
 In Table 1, a brief summary of the embryonic development of \textit{D. melanogaster} is shown. For a comprehensive lecture, see \citep{Campos-Ortega1985,Roberts1998,Gilbert2014}.
-
+%
 The staging system shown in Table 1, correspond to the 16-stage system proposed by \citep{Roberts1998}, with approximate developmental timings at 22 $^\circ$C. 
 The numbering of the stages shown are similar to the one proposed by \citet{Campos-Ortega1985}, except that the latter add a stage 17 to the fully differentiated embryo.
 The 16-stage system is used by the BDGP \citep{Tomancak2002}. Therefore, Table 1 can serve as a reference when mentioning specific developmental stages in this work.
-
-
-
 
 %\subsection{Dorso-ventral patterning}
 %
@@ -282,7 +274,13 @@ Hybridization is carried out in fixed Drosophila embryos in 96-well plates. Succ
 %
 Finally, images and annotation data are stored in a modified version of Gene Ontology database. The entire dataset is available to browse or can be download from its webpage (http://insitu.fruitfly.org/cgi-bin/ex/insitu.pl).
 
-In here I used data from the BDGP insitu project whether by directly downloading data from their webpage (e.g., gene expression annotation data) or indirectly from the FlyExpress database (see next section). 
+%Taking advantage of recent high-throughput methods of in situ hybridization \citep{Tomancak2002,Weiszmann2009}, the expression pattern of thousands of genes through \textit{Drosophila} embryogenesis have been systematically determined \citep{Tomancak2002,Tomancak2007,Hammonds2013}, and publicly available databases have been developed \citep{Tomancak2002,Kumar2011} so any researcher can see where and when a gene is expressed in the embryo.
+Databases like BDGP are suitable for computational image analysis, as the protocols used to produce the images are standardized \citep{Tomancak2002} and the images can be aligned to an anatomical view (e.g., dorsal, lateral) \citep{Kumar2011}.
+An example of the power of using a computational image analysis approach is the work of Frise and collaborators.
+\citet{Frise2010} analysed the spatial expression pattern of 1800 genes (from the BDGP database) in the blastoderm stage of \textit{Drosophila}, projecting them into a virtual representation of the embryo made of ca. 300 triangles.
+After clustering the triangles based on their expression similarity, they produced a co-expression map that resembled the fate map shown in Figure \ref{fig:blastoderm_fatemap} (see Box 1 for a brief discussion of the relation between fate map and expression map).
+
+%In here I used data from the BDGP insitu project whether by directly downloading data from their webpage (e.g., gene expression annotation data) or indirectly from the FlyExpress database (see next section). 
 
 \subsubsection{Flyexpress}
 
@@ -295,7 +293,7 @@ FlyExpress uses a semi-automated pipeline to standardize and align embryos, sepa
 After that, images are assigned to one of three an anatomical views: dorsal, ventral or lateral. Therefore, the expression pattern of a gene in a specific stage and view could be represented in FlyExpress by more than one in-situ image in more than one anatomical view.
 
 
-In here, from the images available in FlyExpress, I downloaded only those from BDGP, since BDGP uses more stage ranges than FlyFISH and these represent better the whole embryogenesis of \textit{D. melanogaster}. In the Fly-FISH database is focused specially in the early stages, as the last eight developmental stages are contained in one stage range (stages 10-17).
+In this work, from the images available in FlyExpress, I downloaded only those from BDGP, since BDGP uses more stage ranges than FlyFISH and these represent better the whole embryogenesis of \textit{D. melanogaster}. In the Fly-FISH database is focused specially in the early stages, as the last eight developmental stages are contained in one stage range (stages 10-17).
 I used the FlyExpress database, instead of the BDGP directly, because the standardization protocol used by FlyExpress produces images with embryos in the same orientation and with a cleared background that are more suitable for image computational analysis.
 
 %In addition to the methods, these databases differ in the number of stages and the staging system, making comparisons between them difficult. We used only the images coming from BDGP, since these expand over more developmental stages than the Fly-FISH database.
