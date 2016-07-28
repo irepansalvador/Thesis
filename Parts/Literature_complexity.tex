@@ -2,10 +2,14 @@
 \setlength{\epigraphwidth}{.7\textwidth}
 \epigraph{\textit{"The embryo in the course of development generally rises in organisation (...) I am aware that it is hardly possible to define clearly what is meant by the organisation being higher or lower. But no one probably will dispute that the butterfly is higher than the caterpillar."}}{Charles Darwin 1859}
 
-In this section, I will talk about the increase in complexity during embryonic development. Is important to mention that there is no consensus in the definition of complexity, or how to measure it. It is indeed hard to find a definition of complexity that could be applied to the many different phenomena. A common intuitive notion of complexity relates to a system composed of many elements in a system and multiple interactions between these elements. However, some could see something as complex that is considered simple to others. Therefore, in this work I will use three different measures that relate to different intuitive aspects of complexity during embryonic development. \textbf{REVISAR}
-I will first try to explain different existing definitions of complexity applied to organisms and why I preferentially selected one and no another.
-Then, I will explore the relationship between complexity in evolution and development, and discuss the possibility of a trend in terms of complexity increase.
-
+In this section, I will talk about the increase in complexity during embryonic development. Is important to mention that there is no consensus in the definition of complexity, or how to measure it.
+%
+It is indeed hard to find a definition of complexity that could be applied to the many different phenomena. A common intuitive notion of complexity relates to a system composed of many elements in a system and multiple interactions between these elements. However, some could consider something to be complex while other consider it to be simple.
+%
+Also, it could be that a specific method to estimate complexity only account for one complexity feature.
+Therefore, in this work I will use three different measures that relate to different intuitive aspects of complexity during embryonic development.
+But first, I will review some of the current definitions (and measures) of complexity that have been applied to organisms.
+Then, I will explore the notion of complexity increase during development, the relation between complexity in evolution and development, and discuss the possibility of a trend in terms of complexity increase through evolution.
 
 \subsection{Different definitions of complexity}
 
@@ -60,7 +64,7 @@ However it has been proved useful to analyse different aspects of these molecula
 %It has also been noted \citep{Jaeger2014devmech} that the use of the informational approach is not appropriate to the study of development, simply because Shannon's information can not increase while it is transmitted. If applied to development, it would imply that the amount of information (or complexity) of the egg and the adult remain constant \citep{Jaeger2014devmech}, which contradicts the generalized notion that the complexity increases during embryogenesis.
 
 \paragraph{Algorithmic complexity}
-Another definition of complexity that has been very popular is the algorithmic complexity. The algorithmic complexity (also called Kolmogorov complexity) of a data string would be the shortest algorithm necessary to describe such string. As the description of a string can be thought as a program to produce the data \citep{Wolfram2002} \textbf{BUSCAR UNA REFERENCIA MAS ANTIGUA}, the algorithmic complexity can also be defined as the shortest program that can produce the data.
+Another definition of complexity that has been very popular is the algorithmic complexity. The algorithmic complexity (also called Kolmogorov complexity) of a data string would be the shortest algorithm necessary to describe such string. As the description of a string can be thought as a program to produce the data \citep{Kolmogorov1963,Wolfram2002}, the algorithmic complexity can also be defined as the shortest program that can produce the data.
 
 Algorithmic complexity is related to randomness, as in algorithmic information theory if a program is as long as the data itself, then the data is considered to be algorithmically random \citep{Wolfram2002}. This measure of complexity that seems specially suited to analyse data strings  is not easily applicable to other issues, like measuring phenotypic complexity. Even in the case of strings, it has been said that it is impossible to distinguish if most long sequences are random or not \citep{Wolfram2002}. 
 
@@ -156,7 +160,8 @@ This lack of correspondence at different levels using "the number of part types"
 %Some decades ago, there was the expectation that the morphological complexity should correlate with the number of genes in an organism. 
 %With the release of the first eukaryotic genome sequences, such correspondence was not observed.
 Before that, the lack of correspondence between genome size and organism complexity (using again an intuitive notion of complexity),  or "C-value paradox", was also noted.
-The lack of correspondence between the number of genes with an intuitive notion of complexity is now partly explain by some authors by the amount of post-transcriptional regulation. It has been therefore propose that alternative splicing (\textbf{REF}) or the amount of miRNA regulation is related with the complexity in vertebrates (\textbf{REF}). \textbf{PARTE DE LA PARADOJA SE RESUELVE CON EL HECHO DE COMO SE REGULA EL DESARROLLO EN LOS ORGANISMOS, QUE NO ES DEPENDIENTE SOLAMENTE DEL NUMERO DE GENES, POR EJEMPLO LA TOPOLOGIA DE REDES ES UN MECHANISMO QUE AFECTA LA COMPLEJIDAD FENOTIPICA }
+The lack of correspondence between the number of genes with an intuitive notion of complexity is now partly explain by some authors by the amount of post-transcriptional regulation \citep{Sempere2006}.
+This paradox can also be partially explained by the currently acknowledged notion that during development, genes do not act individually, but they act within gene networks. Therefore, the phenotypic complexity is affected not only by the number of genes involved in its development, but also by the topology of the gene networks.
 
 McShea also makes the distinction between "object complexity" that refers to the number of parts of a system and "process complexity" that refers to the interaction among parts in a system \citep{McShea1996}.
 %An alternative definition of complexity includes not only the "number of parts" but also the "interaction among parts" 
@@ -203,7 +208,7 @@ Early views of evolution saw the increase in complexity as inexorable, with all 
 
 
 Recent views recognize that complexity of can increase or decrease in a lineage.
-Using the number of cell-types as complexity measure, there are clear examples of taxa that have decreased their complexity over time, specially in parasites \citep{Canning2003,Arthur2010} (although morphological simplification can not be considered universal in parasitic taxa \citealp{poulin2011evolutionary}).In the other hand, there are many lineages that have remain unicellular (therefore their complexity would have remained constant), while some lineages (e.g., vertebrates) have increased their complexity. Therefore, it seems that there is no unique trend to increase the complexity over time. Therefore, the complexity of a specific lineage might decrease, increase or stay the same (see Figure \ref{boxfigure}.
+Using the number of cell-types as complexity measure, there are clear examples of taxa that have decreased their complexity over time, specially in parasites \citep{Canning2003,Arthur2010} (although morphological simplification can not be considered universal in parasitic taxa \citealp{poulin2011evolutionary}).In the other hand, there are many lineages that have remain unicellular (therefore their complexity would have remained constant), while some lineages (e.g., vertebrates) have increased their complexity. Therefore, it seems that there is no unique trend to increase the complexity over time. Therefore, the complexity of a specific lineage might decrease, increase or stay the same (see Figure \ref{complexity_trend}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \par
 {\centering
@@ -212,17 +217,18 @@ Using the number of cell-types as complexity measure, there are clear examples o
   \captionof{figure}{Two lineages with different complexity change through their evolutionary trajectories.
   b) Representation of the minimum, mean and maximum complexity of many lineages over evolutionary time in which the minimum stay constant while the mean and maximum increase.
 Redrawn from \citep{Arthur2010}.}
-%\label{boxfigure}
+\label{complexity_trend}
 }
 \par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-If we consider uni-cellularity as the minimum complexity, it can be said that complexity has remained more or less constant in evolution, as unicellular organisms like bacteria, have been present from 3.5 billion years. However, if we consider instead maximum complexity a trend for increasing complexity would be apparent, as complexity would have increased with the appearance of simple multicellular organisms (only few cell types) and would have further increase until the appearance of organisms composed of hundreds of cell types. Some authors consider that this apparent trend of increasing complexity is the product of natural selection (\textbf{REF}). This notion can lead to circular reasoning, saying that organisms are complex because they have been selected for that, and that they have been selected because they are complex. \textbf{EXPLICAR MEJOR}
+If we consider uni-cellularity as the minimum complexity, it can be said that complexity has remained more or less constant in evolution, as unicellular organisms like bacteria, have been present from 3.5 billion years. However, if we consider instead maximum complexity a trend for increasing complexity would be apparent, as complexity would have increased with the appearance of simple multicellular organisms (only few cell types) and would have further increase until the appearance of organisms composed of hundreds of cell types. Some authors consider that this apparent trend of increasing complexity is the product of natural selection \citep{bonner1988evolution,Carroll2001}.
+%This notion can lead to circular reasoning, saying that organisms are complex because they have been selected for that, and that they have been selected because they are complex. \textbf{EXPLICAR MEJOR}
 
 Other authors consider that this apparent trend does not necessarily imply that it has been selected for \citep{McShea2015}, and that this trend might appear even in scenarios without natural selection. 
-For example, if we consider an evolutionary scenario in which the complexity of the organisms follow a random walk scenario without any selection regime but with the condition of a lower boundary (i.e., is not possible to have less than once cell), and starting from unicellular organisms, we will see an increase of the maximum complexity. with an initial increase in the mean complexity (in a random walk the mean distance of a point after $n$ time steps is $\sqrt[2]{n}$)
+For example, if we consider an evolutionary scenario in which the complexity of the organisms follow a random walk scenario without any selection regime but with the condition of a lower boundary (i.e., is not possible to have less than once cell), and starting from unicellular organisms, we will see an increase of the maximum complexity. with an initial increase in the mean complexity (in a random walk the expected distance of a point after $n$ time steps is $\sqrt[2]{n}$, but when considering many points the mean distance at any time point is 0).
 %, the mean and maximum would show a trend towards increasing complexity \ref{boxfigure} given that there is a minimum complexity requirement (it is not possible to have less than one cell) \citep{gould1996fullhouse}.
-\textbf{DESCRIBIRLO MAS CLARAMENTE}
+%\textbf{DESCRIBIRLO MAS CLARAMENTE}
 %\end{mdframed}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -370,15 +376,13 @@ as one aspect that reflects the increase in complexity during development.
 Another aspect that is intuitively related to the increasing embryonic complexity is the shape (or form) of the embryo. 
 Focusing on the shape of the embryo, embryonic development can be thought as a process that starts with a simple spherical or oblate fertilized egg and that ends with complex shapes and forms (in the adult or larva) \citep{Forgacs_Newman2005}. 
 
-In addition to the external shape of the embryo, the shape complexity of its internal structures (e.g., organs) is expected to increase during development \citep{Sharpe2003}.  However, is not always possible to appreciate the morphological change of inner structures at simple view. The first attempts to describe the shape of internal organs during the development in vertebrates was in the 19th century, and it required  section cutting and wax reconstruction (Hopwood). The use of staining techniques have facilitated the visualization of the inner morphology of the embryo. Techninques such as the horseradish peroxidase staining facilitated not only the visualization of the inner morphology, they were also crucial to create the first fate maps, while being able to trace the cell-lineage of different organs. 
+In addition to the external shape of the embryo, the shape complexity of its internal structures (e.g., organs) is expected to increase during development \citep{Sharpe2003}. Also, it could be expected that when analysing a large number of genes, the shape complexity would increase at a statistical level.
 
-Since now is known that many genes are expressed in a tissue/cell type specific manner, another useful tecnique to visualize inner structures is the use of labelling techniques that highlight the distribution of such tissue-specific gene products (e.g., whole-mount in situ mRNA hybridization or immuno-histochemistry techniques).
-\textbf{GENE EXPLICA EN PART DISTRIBUCION Y FORMA DE ORGANOS AUNQUE NO SEA UNA CORRESPONDENCIA DE UNO A UNO.}
+However, is not always possible to appreciate the morphological change of inner structures at simple view. The first attempts to describe the shape of internal organs during the development in vertebrates was in the 19th century, and it required  section cutting and wax reconstruction \citep{Hopwood2007}. The use of staining techniques have facilitated the visualization of the inner morphology of the embryo. Techniques such as the horseradish peroxidase staining facilitated not only the visualization of the inner morphology, they were also crucial to create the first fate maps, while being able to trace the cell-lineage of different organs. 
 
-If the embryo external and internal morphology are expected to increase their spatial complexity, and the gene expression patterns (visualized with a labelling technique) is expected to correspond to specific regions (e.g., internal organs) or the whole embryo (in case the expression is ubiquitous), therefore the shape of gene expression patterns can be used to describe the morphological complexity of the embryo.
+Since now is known that many genes are expressed in a tissue/cell type specific manner, another useful technique to visualize inner structures is the use of labelling techniques that highlight the distribution of such tissue-specific gene products (e.g., whole-mount in situ mRNA hybridization or immuno-histochemistry techniques). 
+If the embryo external and internal morphology are expected to increase their spatial complexity, and some gene expression patterns (visualized with a labelling technique) is expected to correspond to specific regions (e.g., internal organs) or the whole embryo (in case the expression is ubiquitous), therefore the shape of gene expression patterns can be used to describe the morphological complexity of the embryo. It is important to mention that even when some gene expression patterns might reflect (and could partially explain) the organ distribution and form, usually there is no simple one-to-one correspondence between genes and organs. Indeed, many developmental genes are expressed in many organs at different developmental stages.
 % When analysing the shape of a gene expression through development, it could be that the expression pattern: 1) does not change its complexity, 2) becomes more complex, or 3) becomes less complex.
-Also, it could be expected that when analysing a large number of genes, the shape complexity would increase at a statistical level.
-%
 %also be expected to increase its spatial complexity during development. 
 
 The study of morphometrics refers to the quantitative analysis of morphological shape. In the last decades, morphometric tools have been used widely as a tool to quantify, characterize and compare biological shapes \citep{JamesRohlf1993}. In the next paragraphs I will briefly explain the most important morphometric methods. For an extensive review, see \citep{Bookstein1997,Dryden1998,Zelditch2008,Slice2005}.
