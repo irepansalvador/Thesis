@@ -117,7 +117,7 @@ This is consistent with known short range induction events by nodal and various 
 %general discussion? (X)
 
 In general, the fact that in these two species that display a very different development TFs and GFs (or SIGs in the case of \textit{Ciona}) are more compartmentalized than the rest of the genes precisely in the stage before entering gastrulation, is consistent with these genes having a special role in pattern formation and compartmentalization.
-Therefore, these results confirm the leading role of TFs and GFs in driving pattern formation and compartmentalization in the early embryo.
+Thus, these results confirm the leading role of TFs and GFs in driving pattern formation and compartmentalization in the early embryo.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -138,7 +138,7 @@ The maximal values are informative about the overall morphological spatial compl
 When comparing roughness at different spatial scales (I, Methods), I found that in the last three stages the roughness values are significantly higher at smaller spatial scales is significantly higher that at the higher spatial scales.(Fig. S2 in article I). 
 
 %Ciona
-In Ciona, the 3D roughness increase throughout development (II, Fig. 5), with the major change between the 112-cell and the early tailbud (Fig. \ref{fig:Art-II-3measures}).  
+In \textit{Ciona}, the 3D roughness increase throughout development (II, Fig. 5), with the major change between the 112-cell and the early tailbud (Fig. \ref{fig:Art-II-3measures}).  
 The max (mean of the last decile) values increase substantially already between the 64 and 112 cells stages (with 1000 and 10000 polygonal faces), while the min values (mean of the first decile) remain practically constant during development, showing that the most complex patterns in each stage get increase their DNE value but there is always a proportion of very simple expression pattern.
 Also, I found that at low spatial scales (1000 and 10000 polygons per mesh; II, Fig. 5) I found that the mean DNE of the late tailbud is higher than at the mid tailbud (one-way ANOVA pvals < 0.05).
 	\nomenclature{ANOVA}{Analysis of Variance}
@@ -167,7 +167,7 @@ I will refer to the regions that clustered together as "synexpression territorie
   \label{fig:Art-I-territories}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\subsubsection{Drosophila}
 In \textit{Drosophila}, after cutting the dendrogram at a specific threshold and filtering out STs with less than 50 genes expressed with a minimum specificity (see methods in I for a detailed description), 30 STs were selected for further analyses (Fig. \ref{fig:Art-I-territories} B).
 
 %Finally, I grouped the STs in eight `meta-territories' to analyse how the different STs relate between them.
@@ -181,8 +181,6 @@ The STs seem to coincide with the known embryo fate map (see Fig. \ref{fig:Art-I
 For example, in stage 7-8 (just after gastrulation) there is a ST that corresponds spatially with the germband and is enriched with mesodermal GOterms (Fig. Fig. \ref{fig:Art-I-territories} C).
 
 Two meta-territories appear in the last stage (light blue and green, Fig. \ref{fig:Art-I-territories} C), which suggests that the tissues/organs related to those STs differentiate quite late.
-
-
 %% discussion
 One of these meta-territories is enriched with terms related to epidermis such as cuticle development ("chitin catabolic process" [GO:0006032] and "cuticle development" [GO:0042335] STs 33 and 38), which coincides with cuticle deposition by epithelial cells during stage 16 \citep{Ostrowski2002}.
 %
@@ -190,6 +188,10 @@ The other meta-territory corresponds spatially with the CNS of the embryo and is
 The CNS territory is enriched with GOterms like "dendrite morphogenesis" (GO:0048813) and "axon guidance" (GO:0007411). 
 	\nomenclature{CNS}{Central Nervous System}
 %
+
+This analysis is similar to the work of \citet{Frise2010} (mentioned in section \ref{Intro_BDGP}), who created a representation of gene expression patterns in the \textit{Drosophila} blastoderm and then, using a clustering algorithm, found that spatial clusters of co-expression resembled the known blastoderm fatemap (Fig. \ref{fig:blastoderm_fatemap}).
+In contrast with Frise et al., the objective in here is not to create a fatemap in the early embryo, but to quantitatively characterize the overall spatio-temporal dynamics of development and differentiation through the entire embryonic development (as mirrored in the spatio-temporal gene expression).
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!t]
   \includegraphics[width=\textwidth]{./Images/Art-II/territories.png}
@@ -204,6 +206,7 @@ The CNS territory is enriched with GOterms like "dendrite morphogenesis" (GO:004
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Ciona
 
+\subsubsection{Ciona}
 In \textit{Ciona}, because gene expression information in tailbud stages is based on tissues and not on individual cells as the early stages, I analysed the STs of these stages separately (II, Methods). 
 %
 If in the early stages, three "meta-territories" are formed, each one would correspond to one stage, i.e., STs in early stages cluster by stage.
@@ -224,7 +227,7 @@ It is different in two aspects: I performed the clustering using the blastomeres
 The difference in the timing of the major change on the complexity measures between species must relate to differences in their specific development.
 The earlier compartmentalization of \textit{Drosophila} is most probably due to its derived early development, namely, the syncytial blastoderm. 
 During the blastoderm stage, approximately 4,000 cell nuclei can "communicate" with each other only by TFs \citep{Jaeger2011}. The direct cross regulation of gene expression facilitates a rapid and highly dynamic process which seems to be responsible for the early spatial restriction of a great proportion of developmental genes.
-It could be therefore expected that these early increase in complexity in \textit{Drosophila} would be shared by all insects with a syncitial blastoderm stage. Also, it could be that the early increase in complexity might be affected by the number of cell divisions that occur until the blastoderm is cellularized. It is known that \textit{Drosophila} cellularizes relatively late (so there is more time for patterning within the syncitial bastoderm). In contrast, the desert locust (\textit{Schistocerca gregaria}) cellularization occurs very early, even before the formation of the blastoderm \citep{Ho1997}.
+It could be then expected that these early increase in complexity in \textit{Drosophila} would be shared by all insects with a syncitial blastoderm stage. Also, it could be that the early increase in complexity might be affected by the number of cell divisions that occur until the blastoderm is cellularized. It is known that \textit{Drosophila} cellularizes relatively late (so there is more time for patterning within the syncitial bastoderm). In contrast, the desert locust (\textit{Schistocerca gregaria}) cellularization occurs very early, even before the formation of the blastoderm \citep{Ho1997}.
 
 In contrast,  \textit{Ciona}'s early embryonic patterning is based on maternal determinants and signalling events mostly between neighbouring cells \citep{Lemaire2009}, which act in a combinatorial way \citep{Hudson2007} to establish a unique TF combination in more than half of the blastomere pairs before gastrulation \citep{Imai2006} determining most of their fates.
 Thus, even when in \textit{Ciona} most of the cell fates are already determined (by the specific combination of a fraction of TFs) and the embryo can be said to be already highly compartmentalized, this is not evident at the global level of gene expression, which I am measuring here.
@@ -232,4 +235,4 @@ Therefore, the "delay" of compartmentalization observed in \textit{Ciona} could 
 
 Another main difference between species is that, based on the synexpression terriories analysis the the differentiation process in \textit{Drosophila} seems to continue throughout whole embryogenesis (as new STs were formed until the last stage I analysed) and different organs differentiate at different developmental times.
 In contrast, the \textit{Ciona} embryo seems to be already genetically differentiated at the early tailbud (as the STs of all the tissues in the tailbud stages cluster together) so the last embryo stages consist only of moderate morphogenetic movements (mainly cell elongation; \citealp{Hotta2007}).
-Therefore, the ST analysis is a valuable tool, based on differential gene expression, to get a global perspective on the local differentiation of the embryo.
+Hence, the ST analysis is a valuable tool based on differential gene expression to get a global perspective on the local differentiation of the embryo.
