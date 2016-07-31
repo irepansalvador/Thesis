@@ -8,14 +8,14 @@ The work presented here is mainly based on the analysis of publicly available da
 
 Images were systematically downloaded (with an ad hoc Perl script) from FlyExpress version 5.1 \citep{Kumar2011} on February 2013. Only genes with laterally oriented images for the six stages used in BDGP \citep{Tomancak2002} were considered.
 
-Images were resized as in \citet{Konikoff2012}) and the gene expression pattern was extracted using an adaptive threshold, based on the mean and variance of a grey-scale version of each image (see study I). Genes with ubiquitous expression in stages 1-3 and 4-6 were considered as entirely black images.
-To correct for small variations in the shape of the embryos, I morphometrically deformed each embryo to an stage ideal embryo shape (see study I). Finally, I applied a "smoothing filter" and eliminate isolated white/black pixels. 
+Images were resized as in \citet{Konikoff2012} and the gene expression pattern was extracted using an adaptive threshold, based on the mean and variance of a grey-scale version of each image. Genes with ubiquitous expression in stages 1-3 and 4-6 were considered as entirely black images.
+To correct for small variations in the shape of the embryos, I morphometrically deformed each embryo to an stage ideal embryo shape. Finally, I applied a "smoothing filter" and eliminate isolated white/black pixels (see study I for details). 
 I manually filtered images from the literature or directly from BDGP of Transcription Factors or Growth Factor genes that did not have information in FlyExpress.
  
 For study I, the resulting dataset contained 1218 genes with expression information in the six stages used in BDGP. For study III, obsolete or repeated genes were removed from the 1218 genes, after checking for gene annotation updates with the \textit{biomaRt} package \citep{Durinck2009}, leaving a dataset of 1199 genes.
 
 \paragraph{Main spatio-temporal expression profiles (study I).}
-I performed a time series cluster analysis (with the STEM software; \citealp{Ernst2006}) using the relative area of expression to know which are the most common spatio-temporal profiles. The resulting clusters were analysed with a GO term analysis with the same software, as it is integrated with the Gene Ontology.
+I performed a time series cluster analysis (with the STEM software; \citealp{Ernst2006}) using the relative area of expression to know which are the most common spatio-temporal profiles. The resulting clusters were analysed with a GO term analysis with the same software.
 
 \paragraph{Anatomical terms (study III).}
 In addition to the whole-mount in situ mRNA hybridization images, the BDGP database contains, for each gene, the list of the embryonic anatomical structures in which such gene is expressed \citep{Tomancak2007}. Each gene expression is described by one or several of those of anatomical terms by an expert. 
@@ -28,7 +28,7 @@ The expression data for the first three stages is at the cell level, while in th
 I extracted the information of the 32 cells, 64 cells, 112 cells, early tailbud, mid tailbud and late tailbud stages. Only expression data from experiments reported to have Wild type phenotype, "public" publication status, with in situ hybridization as experiment design and whose probe was assigned to a Kyoto Hoya (KH) \citep{Satou2008} gene model.
 I excluded data from experiments whose image characterization was reported as "not sure" or too broadly as "part of whole embryo".
 
-The number of genes analyzed is n=745 for the 32-cell stage, n=758 for the 64-cell stage, n=809 for the 112-cell stage, n=1082 for the early tailbud, 1092 for the mid tailbud and 887 for the late tailbud. 
+The number of genes analyzed is n=745 for the 32-cell stage, n=758 for the 64-cell stage, n=809 for the 112-cell stage, n=1082 for the early tailbud, n=1092 for the mid tailbud and n=887 for the late tailbud. 
 The gene expression as text-based annotation was transformed into a 3D expression pattern using 3D embryo models (see below) with the Meshlab software version v1.3.3\_64bit (Meshlab Visual Computing Lab ISTI-CNR; see study II for details).
 
 \paragraph{Transcription factors and signalling genes}

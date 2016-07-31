@@ -49,12 +49,12 @@ The dendrograms resulting from the early and tailbud stages were cut in 24 and 1
 
 \subsubsection{Roughness}
 \label{Methods_roughness}
-The roughness measure analyses the complexity of the shape of a gene expression pattern. In the case of 2D images, the shape of the gene expression pattern is extracted as a closed outline formed by the boundaries of gene expression, while for 3D patterns, the shape of the expression pattern is the 3D external surface of the union of the cells that are expressing such gene.
+The roughness measure analyses the complexity of the shape of a gene expression pattern. In the case of 2D images, the shape of the gene expression pattern is extracted as a closed outline formed by the boundaries of gene expression. For 3D patterns, the shape of the expression pattern is the 3D external surface of the union of the cells that are expressing such gene.
 
 Therefore, a gene expression pattern reflects necessarily the spatial distribution of the cells expressing such gene. When analysing and comparing the shape of diverse gene expression patterns, i.e., the cells/tissues with expression are different between genes, there is an obvious impossibility to determine landmark points (whether around a 2D outline or 3D surface) that would establish a clear one-to-one correspondence between them. This could be done in the case of comparing the expression pattern of a single gene at a specific developmental stage between different individuals.
 Therefore, a landmark-free method (like outline methods for 2D or surface methods for 3D data) is best suited to deal with the type of data analysed in here.
 
-There are practically no studies in the literature that have quantified and compared the shape of gene expression patterns in a systematic manner (one exception is the recent study of \citealp{Martinez-Abadias2016}). In here, I will consider that a gene expression pattern is complex if based on the curvature of its 2D contour or 3D surface.
+There are practically no studies in the literature that have quantified and compared the shape of gene expression patterns in a systematic manner (one exception is the recent study of \citealp{Martinez-Abadias2016}). In here, I will consider that a gene expression pattern is complex based on the curvature of its 2D contour or 3D surface.
 
 \paragraph{2D Roughness}
 For 2D gene expression patterns, I used a "roughness measure", that is similar to the shape function $\phi^{*}(l)$ used in eigenshape analyses \citep{Lohmann1983}, as it measures how much the curvature of a closed outline deviates from the angles of a circle of the same perimeter (Fig. \ref{fig:roughness_regions}B; see study I). 
@@ -67,7 +67,7 @@ Other feature of the roughness measure is that allows to measure the complexity 
 
 \paragraph{Dirichlet Normal Energy (DNE)}
 	\nomenclature{DNE}{Dirichlet Normal Energy}
-In order to use a similar measure of curvature in 3D, I used the Dirichlet normal energy (DNE; described briefly in section \ref{DNE_explanation} which quantifies the deviation of a surface from being planar (Fig. \ref{fig:DNE}; see study II). 
+In order to use a similar measure of curvature in 3D, I used the Dirichlet normal energy (DNE; described briefly in section \ref{DNE_explanation}) which quantifies the deviation of a surface from being planar (Fig. \ref{fig:DNE}; see study II). 
 Importantly, both measures are normalized to remove size and orientation effects.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
