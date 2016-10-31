@@ -5,11 +5,11 @@ In 1908, Thomas H. Morgan started to grow flies in large quantities to study gen
 The main advantages of using flies were their rapid generation time and that they were easy to culture and cheap to maintain \citep{Arias2008}.
 %
 In his lab at the University of Columbia, Morgan found a fly with white eyes (the wild-type eye color is red), which became a subject of his research for many years.
-Eventually, he discovered that the allele of the gene, that he called \textit{white}, was located in a sex chromosome, demonstrating for the first time the sex-linkage of genes \citep{Morgan1919}.
+Eventually, he discovered that the allele of the gene, that he called \textit{white}, was located on a sex chromosome, demonstrating for the first time the sex-linkage of genes \citep{Morgan1919}.
 %
 Morgan's students also demonstrated that mutations were inducible with X-rays and introduced the use of "balancer" chromosomes to keep stable stocks of mutants \citep{Arias2008}.
 %
-The research carried in Morgan's lab laid the basis modern genetics, and its fly room became a central node in the genetics research, establishing \textit{Drosophila} as a organism model.
+The research carried out in Morgan's lab laid the basis modern genetics, and its fly room became a central node in the genetics research, establishing \textit{Drosophila} as a organism model.
 
 However, \textit{Drosophila}'s development was difficult to study, as the embryos were not large enough to experimentally manipulate them, and not transparent enough to visualize with a microscope \citep{Gilbert2014}.
 Molecular biology techniques allowed finally to study fly genes and their effect on embryogenesis, unravelling some of the mysteries of \textit{Drosophila}'s development.
@@ -240,7 +240,7 @@ In the 1980's Jos\'{e} A. Campos-Ortega and Volker Hartenstein combined labellin
 
 \paragraph{Gene expression maps}
 
-Techniques such as mRNA in situ hybridization allow to map gene expression patterns directly in the embryo, allowing the creation of "gene expression maps". In situ hybridization is based on labelled probes that are complementary to the mRNA (or DNA) that is wanted to map \citep{Gall1969}. The probe accumulates then only where the mRNA of interest is found.
+Techniques such as mRNA in situ hybridization allow to map gene expression patterns directly on the embryo, allowing the creation of "gene expression maps". In situ hybridization is based on labelled probes that are complementary to the mRNA (or DNA) that is wanted to map \citep{Gall1969}. The probe accumulates then only where the mRNA of interest is found.
 Another technique to map gene expression is the use of a reporter gene. A reporter gene, which codes for a protein that can be easily identified (like the green fluorescence protein or beta-galactosidase), is linked to the regulatory region of the gene of interest so the reporter gene is going to be expressed where the gene of interest is expressed.
 Gene expression maps can also be used to create (or refine) fate maps \citep{gilbert2007fatemap}. 
 For example, if a gene is know to be expressed only in mesoderm precursors, mapping their gene expression in the early embryo will reveal where such mesodermal precursors are located.
@@ -270,14 +270,14 @@ BDGP divides the first 16 stages of embryogenesis into six stage ranges (stages 
 
 A brief description of the hybridization protocol follows, for details see \citep{Tomancak2002}.
 For the hybridization, they used a set of cDNA clones from the Drosophila Gene Collection \citep{Stapleton2002}, to produce a digoxigenin-labeled antisense RNA probe \citep{Tomancak2002}.
-Hybridization is carried out in fixed Drosophila embryos in 96-well plates. Successful hybridization plates are mounted on slides to document the expression pattern of each gene with high-resolution digital photographs. Then each image is assigned to one of six developmental stage ranges \citep{Weiszmann2009a}.
+Hybridization is carried out in fixed \textit{Drosophila} embryos in 96-well plates. Successful hybridization plates are mounted on slides to document the expression pattern of each gene with high-resolution digital photographs. Then each image is assigned to one of six developmental stage ranges \citep{Weiszmann2009a}.
 %
 Finally, images and annotation data are stored in a modified version of Gene Ontology database. The entire dataset is available to browse or can be download from its webpage (http://insitu.fruitfly.org/cgi-bin/ex/insitu.pl).
 
 %Taking advantage of recent high-throughput methods of in situ hybridization \citep{Tomancak2002,Weiszmann2009}, the expression pattern of thousands of genes through \textit{Drosophila} embryogenesis have been systematically determined \citep{Tomancak2002,Tomancak2007,Hammonds2013}, and publicly available databases have been developed \citep{Tomancak2002,Kumar2011} so any researcher can see where and when a gene is expressed in the embryo.
 Databases like BDGP are suitable for computational image analysis, as the protocols used to produce the images are standardized \citep{Tomancak2002} and the images can be aligned to an anatomical view (e.g., dorsal, lateral) \citep{Kumar2011}.
 An example of the power of using a computational image analysis approach is the work of Frise and collaborators.
-\citet{Frise2010} analysed the spatial expression pattern of 1800 genes (from the BDGP database) in the blastoderm stage of \textit{Drosophila}, projecting them into a virtual representation of the embryo made of ca. 300 triangles.
+\citet{Frise2010} analysed the spatial expression pattern of 1800 genes (from the BDGP database) in the blastoderm stage of \textit{Drosophila}, projecting them onto a virtual representation of the embryo made of ca. 300 triangles.
 After clustering the triangles based on their expression similarity, they produced a co-expression map that resembled the fate map shown in Figure \ref{fig:blastoderm_fatemap} (see Box 1 for a brief discussion of the relation between fate map and expression map).
 
 %In here I used data from the BDGP insitu project whether by directly downloading data from their webpage (e.g., gene expression annotation data) or indirectly from the FlyExpress database (see next section). 
@@ -290,10 +290,10 @@ The high-throughput databases from which FlyExpress extracts and computationally
 In contrast with the BDGP database (described in the previous subsection), Fly-FISH uses fluorescence in-situ hybridization probes \citep{Lecuyer2007} a 17-stage system (compared to a 16-stage system in BDGP) and five stage ranges (compared to six in BDGP).
 %These databases also differ in the number of stages and the staging system, making comparisons between them difficult.
 FlyExpress uses a semi-automated pipeline to standardize and align embryos, separating the multi- embryo images of BDGP into single images and discarding partial embryo images \citep{Konikoff2012}. 
-After that, images are assigned to one of three an anatomical views: dorsal, ventral or lateral. Therefore, the expression pattern of a gene in a specific stage and view could be represented in FlyExpress by more than one in-situ image in more than one anatomical view.
+After that, images are assigned to one of three anatomical views: dorsal, ventral or lateral. Therefore, the expression pattern of a gene at a specific stage and view could be represented in FlyExpress by more than one in-situ image in more than one anatomical view.
 
 
-In this work, from the images available in FlyExpress, I downloaded only those from BDGP, since BDGP uses more stage ranges than FlyFISH and these represent better the whole embryogenesis of \textit{D. melanogaster}. In the Fly-FISH database is focused specially in the early stages, as the last eight developmental stages are contained in one stage range (stages 10-17).
+In this work, from the images available in FlyExpress, I downloaded only those from BDGP, since BDGP uses more stage ranges than FlyFISH and these represent better the whole embryogenesis of \textit{D. melanogaster}. In the Fly-FISH database is focused specially on the early stages, as the last eight developmental stages are contained in one stage range (stages 10-17).
 I used the FlyExpress database, instead of the BDGP directly, because the standardization protocol used by FlyExpress produces images with embryos in the same orientation and with a cleared background that are more suitable for image computational analysis.
 
 %In addition to the methods, these databases differ in the number of stages and the staging system, making comparisons between them difficult. We used only the images coming from BDGP, since these expand over more developmental stages than the Fly-FISH database.
