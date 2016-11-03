@@ -43,7 +43,10 @@ frametitlerulecolor=red!15, backgroundcolor=red!15,frametitlerulewidth=2pt}
 \usepackage[figuresleft]{rotating}
 %%% change header and spacing of chapters %%%%%%%%%%%%%%%%%%
 \usepackage{titlesec}
-\titleformat{\chapter}[display] {\selectfont\huge\bfseries}{}{0pt}{\huge}
+\titleformat{\chapter}[block] {\selectfont\huge\bfseries}{\thechapter}{1em}{\huge}
+\titleformat{\section}[block] {\selectfont\Large\bfseries}{\thesection}{1em}{\Large}
+\titleformat{\subsection}[block] {\selectfont\large\bfseries}{\thesubsection}{1em}{\large}
+
 \titlespacing{\chapter}{0pt}{-40pt}{5pt}
 \titlespacing*{name=\chapter,numberless}{0pt}{-10pt}{5pt}
 %\titlespacing{\section}{0pt}{15pt}{5pt}

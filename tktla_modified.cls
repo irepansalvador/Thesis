@@ -128,11 +128,11 @@ Science]
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
   \pagestyle{fancy}
-  \titleformat{\chapter}[hang] % I modified here so the number of the chapter and the name are in the same line
-              {\huge\bfseries\filright}
-              {\thechapter}
-              {20pt}
-              {}
+%  \titleformat{\chapter}[hang] % I modified here so the number of the chapter and the name are in the same line
+%              {\huge\bfseries\filright}
+%              {\thechapter}
+%              {20pt}
+%              {}
               
 %%---------- TITLE PAGE              
   \newcommand{\tktla@titlepage}{
