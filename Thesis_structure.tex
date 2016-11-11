@@ -19,7 +19,7 @@
 %\usepackage{showframe} % just to show the alignment
 %\usepackage{layout}   %% prints the layout of the page when is indicated
 \let\cleardoublepage\clearpage %% delete the blank pages between sections
-\usepackage{hyperref}
+%\usepackage{hyperref}
 %%% can fine tune the margins of the book %%%%%%%%%%%%%%%%
 \usepackage[
   left=0.7in, right=0.7in,
@@ -159,6 +159,7 @@ in the embryo:
 	\input{./Parts/Publications.tex}
 
 %%%% ---------ABREVIATIONS------------------------------------------
+\setlength{\nomitemsep}{-\parsep}
 \printnomenclature
 
 %%%% ---------- ABSTRACT---------------------------------------------
