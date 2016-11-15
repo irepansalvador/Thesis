@@ -7,7 +7,7 @@
 \usepackage[latin1]{inputenc}
 \usepackage{latexsym}
 \usepackage{graphicx}
-\usepackage[intoc]{nomencl}
+\usepackage[notintoc]{nomencl}
 \renewcommand{\nomname}{Abbreviations}
 %\usepackage{etoolbox}
 %\bibliographystyle{plainnat}
@@ -140,7 +140,7 @@ in the embryo:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% reduces the space between lines in table of contents
-\renewcommand{\baselinestretch}{0.8}\small
+\renewcommand{\baselinestretch}{0.85}\small
 \tableofcontents
 %% back to normal
 \renewcommand{\baselinestretch}{1.0}\normalsize
@@ -155,7 +155,7 @@ in the embryo:
 \pagenumbering{gobble}% Remove page numbers (and reset to 1)
 
 %%%% ---------ABREVIATIONS------------------------------------------
-\mychapter{0}{List of publications}
+\chapter*{List of publications}
 	\input{./Parts/Publications.tex}
 
 %%%% ---------ABREVIATIONS------------------------------------------
@@ -164,7 +164,7 @@ in the embryo:
 
 %%%% ---------- ABSTRACT---------------------------------------------
 
-\mychapter{0}{Abstract}
+\chapter*{Abstract}
 	\input{./Parts/abstract.tex}
 
 %%%% -----------------------------------------------------------------
@@ -282,6 +282,30 @@ in the embryo:
 \bibliography{Bibliography}
 }
 \end{multicols}
+
+\newpage
+\pagestyle{empty} 
+\setcounter{page}{66}
+\addcontentsline{toc}{section}{Study I}
+\mbox{}
+
+\newpage
+\pagestyle{empty} 
+\setcounter{page}{80}
+\addcontentsline{toc}{section}{Study II}
+\mbox{}
+
+\newpage
+\pagestyle{empty} 
+\setcounter{page}{102}
+\addcontentsline{toc}{section}{Study III}
+\mbox{}
+
+\newpage
+\pagestyle{empty} 
+\setcounter{page}{120}
+\addcontentsline{toc}{section}{Study IV}
+\mbox{}
 
 %%%% -----------------------------------------------------------------
 %%%% -----------------------------------------------------------------
