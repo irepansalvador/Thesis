@@ -128,11 +128,11 @@ Science]
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
   \pagestyle{fancy}
-  \titleformat{\chapter}[hang] % I modified here so the number of the chapter and the name are in the same line
-              {\huge\bfseries\filright}
-              {\thechapter}
-              {20pt}
-              {}
+%  \titleformat{\chapter}[hang] % I modified here so the number of the chapter and the name are in the same line
+%              {\huge\bfseries\filright}
+%              {\thechapter}
+%              {20pt}
+%              {}
               
 %%---------- TITLE PAGE              
   \newcommand{\tktla@titlepage}{
@@ -182,7 +182,7 @@ Science]
 
       \ifx\tktla@permission\@undefined\relax\else
         \begin{minipage}{98mm}
-          \small\tktla@permission\par
+          \small\centering\tktla@permission\par
         \end{minipage}
         \par
       \fi
@@ -239,6 +239,7 @@ Science]
       \vspace{\fill}
       \tktla@copyright\par
       \tktla@printisxns{}
+      http://ethesis.helsinki.fi \par
 %      Computing Reviews (1998) Classification: \tktla@crcshort\par
       Helsinki \tktla@pubyear\par
       \ifx\tktla@printhouse\@undefined\relax\else\tktla@printhouse\par\fi

@@ -7,7 +7,7 @@
 \usepackage[latin1]{inputenc}
 \usepackage{latexsym}
 \usepackage{graphicx}
-\usepackage[intoc]{nomencl}
+\usepackage[notintoc]{nomencl}
 \renewcommand{\nomname}{Abbreviations}
 %\usepackage{etoolbox}
 %\bibliographystyle{plainnat}
@@ -19,7 +19,7 @@
 %\usepackage{showframe} % just to show the alignment
 %\usepackage{layout}   %% prints the layout of the page when is indicated
 \let\cleardoublepage\clearpage %% delete the blank pages between sections
-\usepackage{hyperref}
+%\usepackage{hyperref}
 %%% can fine tune the margins of the book %%%%%%%%%%%%%%%%
 \usepackage[
   left=0.7in, right=0.7in,
@@ -43,7 +43,10 @@ frametitlerulecolor=red!15, backgroundcolor=red!15,frametitlerulewidth=2pt}
 \usepackage[figuresleft]{rotating}
 %%% change header and spacing of chapters %%%%%%%%%%%%%%%%%%
 \usepackage{titlesec}
-\titleformat{\chapter}[display] {\selectfont\huge\bfseries}{}{0pt}{\huge}
+\titleformat{\chapter}[block] {\selectfont\huge\bfseries}{\thechapter}{1em}{\huge}
+\titleformat{\section}[block] {\selectfont\Large\bfseries}{\thesection}{1em}{\Large}
+\titleformat{\subsection}[block] {\selectfont\large\bfseries}{\thesubsection}{1em}{\large}
+
 \titlespacing{\chapter}{0pt}{-40pt}{5pt}
 \titlespacing*{name=\chapter,numberless}{0pt}{-10pt}{5pt}
 %\titlespacing{\section}{0pt}{15pt}{5pt}
@@ -74,11 +77,11 @@ in the embryo:
 \authorcontact{irepan_salvador@hotmail.com\par
   http://cs.helsinki.fi/John.Smith/}
 \pubtime{November}{2016}
-\reportno{0}
-\isbnpaperback{000-00-0000-0}
-\isbnpdf{000-00-0000-0}
-\issn{1238-8645}
-\printhouse{Unigrafia}
+\reportno{86/2016}
+\isbnpaperback{978-951-51-2744-0}
+\isbnpdf{978-951-51-2745-7}
+\issn{2342-3161}
+\printhouse{Hansaprint}
 \pubpages{7} % --- remember to update this! 
 
 % For article-based theses, the number of the last page of the list of
@@ -90,10 +93,10 @@ in the embryo:
 \preexaminera{Gregor Bucher, Georg-August-University G{\"o}ttingen, Germany}
 \preexaminerb{Pavel Tomancak, Max Planck Institute of Molecular Cell Biology and \par
               \quad\quad Genetics in Dresden, Germany}
-%\opponent{Johannes J{\"a}ger, Konrad Lorenz Institute, Austria}
-\opponent{Name, University, Country}
+\opponent{Johannes J{\"a}ger, Konrad Lorenz Institute, Austria}
+%\opponent{Name, University, Country}
 
-\custos{Name, University, Country}
+\custos{Juha Partanen, University of Helsinki, Finland}
 
 \thesiscommitteea{Jukka Jernvall, University of Helsinki}
 \thesiscommitteeb{Osamu Shimmi, University of Helsinki}
@@ -108,12 +111,12 @@ in the embryo:
 %\item[A.0] Example Category
 %\item[C.0.0] Another Example
 %}
-%\permissionnotice{
-%  To be presented in \ldots{} text of a long permission notice. Text of
-%  a long permission notice. Text of a long permission notice. Text of
-%  a long permission notice. Text of a long permission notice. Text of
-%  a long permission notice.
-%}
+\permissionnotice{
+  To be presented, with the permission of the Faculty of Biological and Environmental 
+  Sciences of the University of Helsinki, for public examination 
+  in Walter Hall (Ee-building, Agnes Sj\"{o}berg 2, Helsinki), 	\\
+  on 12 December 2016, at 12 noon.
+}
 
 %\newtheorem{theorem}{Theorem}[chapter]
 %\newenvironment{proof}{\noindent\textbf{Proof.} }{$\Box$}
@@ -132,12 +135,12 @@ in the embryo:
 %\end{abstract}
 
 \begin{acknowledgements}
-  
+	\input{./Parts/Acknowledgements.tex}
 \end{acknowledgements}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% reduces the space between lines in table of contents
-\renewcommand{\baselinestretch}{0.8}\small
+\renewcommand{\baselinestretch}{0.85}\small
 \tableofcontents
 %% back to normal
 \renewcommand{\baselinestretch}{1.0}\normalsize
@@ -152,15 +155,16 @@ in the embryo:
 \pagenumbering{gobble}% Remove page numbers (and reset to 1)
 
 %%%% ---------ABREVIATIONS------------------------------------------
-\mychapter{0}{List of publications}
+\chapter*{List of publications}
 	\input{./Parts/Publications.tex}
 
 %%%% ---------ABREVIATIONS------------------------------------------
+\setlength{\nomitemsep}{-\parsep}
 \printnomenclature
 
 %%%% ---------- ABSTRACT---------------------------------------------
 
-\mychapter{0}{Abstract}
+\chapter*{Abstract}
 	\input{./Parts/abstract.tex}
 
 %%%% -----------------------------------------------------------------
@@ -251,7 +255,7 @@ in the embryo:
 \section{Adaptation in \textit{Drosophila} embryogenesis (III and IV)}
 	\input{./Parts/Results_adaptation_embryo.tex}
 %	\clearpage
-\section{Adaptation trough \textit{Drosophila} life cycle (IV)}
+\section{Adaptation through \textit{Drosophila} life cycle (IV)}
 	\input{./Parts/Results_adaptation_lifecycle.tex}
 	\clearpage
 
@@ -278,6 +282,30 @@ in the embryo:
 \bibliography{Bibliography}
 }
 \end{multicols}
+
+\newpage
+\pagestyle{empty} 
+\setcounter{page}{66}
+\addcontentsline{toc}{section}{Study I}
+\mbox{}
+
+\newpage
+\pagestyle{empty} 
+\setcounter{page}{80}
+\addcontentsline{toc}{section}{Study II}
+\mbox{}
+
+\newpage
+\pagestyle{empty} 
+\setcounter{page}{102}
+\addcontentsline{toc}{section}{Study III}
+\mbox{}
+
+\newpage
+\pagestyle{empty} 
+\setcounter{page}{120}
+\addcontentsline{toc}{section}{Study IV}
+\mbox{}
 
 %%%% -----------------------------------------------------------------
 %%%% -----------------------------------------------------------------
