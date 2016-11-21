@@ -67,6 +67,7 @@ Science]
 \newcommand{\reportno}[1]{\newcommand{\tktla@pubno}{{#1}}}
 \newcommand{\isbnpaperback}[1]{\newcommand{\tktla@isbnpaperback}{{#1}}}
 \newcommand{\issn}[1]{\newcommand{\tktla@issn}{{#1}}}
+\newcommand{\issnonline}[1]{\newcommand{\tktla@issnonline}{{#1}}}
 \newcommand{\pubpages}[1]{\newcommand{\tktla@pages}{#1}}
 \newcommand{\generalterms}[1]{\newcommand{\tktla@generalterms}{{#1}}}
 \newcommand{\additionalkeywords}[1]{
@@ -98,6 +99,7 @@ Science]
 }
 \newcommand{\tktla@printisxns}{
   ISSN \tktla@issn\par
+  ISSN \tktla@issnonline{} (online)\par
   ISBN \tktla@isbnpaperback{} (paperback)\par
   \ifx\tktla@isbnpdf\@undefined\relax\else
     ISBN \tktla@isbnpdf{} (PDF)\par
